@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import { Header } from '@/layout';
 
 import { getMetaByLocale } from '@/utils/getMetaData';
+import { i18n } from 'i18n';
 
 import './globals.css';
 
@@ -15,6 +16,10 @@ export async function generateMetadata({ params }) {
     title: metaDictionary.title,
     description: metaDictionary.description,
   };
+}
+
+export async function generateStaticParams() {
+  return i18n.locales.map(locale => ({ locale: locale }));
 }
 
 export default function RootLayout({ children, params: { locale } }) {
