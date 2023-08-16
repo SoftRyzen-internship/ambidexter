@@ -1,6 +1,15 @@
 {
   "schoolName": "Ambidexter",
   "applyButtonLabel": "Записатись",
+  "socialsLabel": "Соціальні мережі",
+  "navigtion": {
+    "aboutMe": "ПРО МЕНЕ",
+    "aboutSchool": "ПРО ШКОЛУ",
+    "orientedClient": "ДЛЯ КОГО",
+    "educationForma": "ФОРМАТ",
+    "courses": "КУРСИ",
+    "reviews": "ВІДГУКИ"
+  },
   "hero": {
     "speciality": [
       "Професійний актор театру і кіно",
@@ -13,7 +22,7 @@
     ],
     "mainTitle": "Галушка Кирило"
   },
-  "about": {
+  "aboutMe": {
     "label": "про мене",
     "titleMain": "Цілі",
     "title": "які я ставлю на кожному занятті:",
