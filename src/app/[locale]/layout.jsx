@@ -1,9 +1,10 @@
 import { Inter } from 'next/font/google';
 
+import { Header } from '@/layout';
+
 import { getMetaByLocale } from '@/utils/getMetaData';
 
 import './globals.css';
-import { Header } from '@/layout';
 
 const inter = Inter({ subsets: ['latin'] });
 
