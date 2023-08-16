@@ -1,0 +1,13 @@
+@tailwind base;
+
+@layer base {
+  section {
+    @apply w-full;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+} */

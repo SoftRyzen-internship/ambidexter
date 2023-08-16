@@ -7,7 +7,7 @@ module.exports = {
     screens: {
       sm: '480px',
       md: '768px',
-      xl: '1280px',
+      xl: '1440px',
     },
     extend: {
       container: {
@@ -15,14 +15,15 @@ module.exports = {
         padding: {
           DEFAULT: '1.25rem',
           sm: '1.25rem',
-          md: '2rem',
-          xl: '1.437rem',
+          md: '2.5rem',
+          xl: '5rem',
         },
       },
 
       colors: {
-        white: '#FFFFFF',
-        red: '#FF5757',
+        accent: '#7ED956',
+        white: '#FFF',
+        black: '#222',
       },
 
       fontFamily: {
@@ -30,12 +31,8 @@ module.exports = {
       },
 
       fontSize: {
-        little: ['12px', '24px'], // class="text-little"
-        small: ['18px', '24px'], // class="text-small"
-      },
-
-      content: {
-        crossIcon: 'url("/icons/error-cross.svg")',
+        // little: ['12px', '24px'], // class="text-little"
+        // small: ['18px', '24px'], // class="text-small"
       },
     },
   },

@@ -3,6 +3,6 @@ const dictionaries = {
   uk: () => import('../../dictionaries/uk.json').then(r => r.default),
 };
 
-export const getDictionary = lang => {
-  return dictionaries[lang]();
+export const getDictionary = locale => {
+  return dictionaries[locale]();
 };
