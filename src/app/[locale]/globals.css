@@ -1,4 +1,6 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   section {
@@ -6,8 +8,36 @@
   }
 }
 
-@tailwind components;
-@tailwind utilities;
+@layer components {
+  .mainText {
+    @apply text-[12px] md:text-[16px] xl:text-[24px] font-medium leading-normal text-black;
+  }
+}
 
-/* body {
-} */
+body {
+  color: #222;
+  background-color: #efefef;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+@media (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 1440px;
+    padding: 0 80px;
+  }
+}

@@ -22,8 +22,11 @@ module.exports = {
 
       colors: {
         accent: '#7ED956',
+        secondary: '#A1A1A1',
+        bgColor: '#EFEFEF',
         white: '#FFF',
         black: '#222',
+        red: '#FF7272',
       },
 
       fontFamily: {
