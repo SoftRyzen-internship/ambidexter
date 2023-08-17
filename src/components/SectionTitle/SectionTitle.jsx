@@ -1,20 +1,26 @@
 import PropTypes from 'prop-types';
-import Image from 'next/image';
-
-import icon from '../../../public/icons/down.svg';
 
 export const SectionTitle = ({ text }) => {
   return (
-    <div className="flex flex-col justify-center items-center h-[31px] md:h-[43px] xl:h-[61px]">
-      <h3 className="mainText">{text}</h3>
-      <Image
-        className="w-[12px] h-[12px] md:w-[16px] md:h-[16px] xl:w-[24px] xl:h-[24px]"
-        src={icon}
-        alt="Down arrow"
-        width={12}
-        height={12}
-      />
-    </div>
+    <>
+      <h2 className="mainText text-center mb-[4px] md:mb-[8px] xl:mb-[12px]">
+        {text}
+      </h2>
+      <svg
+        width="24"
+        height="24"
+        className="mx-auto w-[12px] h-[12px] md:w-[16px] md:h-[16px] xl:w-[24px] xl:h-[24px]"
+        aria-label="Arrow down"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M20.7281 4.36407L12 13.0922L3.27188 4.36407L0 7.63595L12 19.6359L24 7.63595L20.7281 4.36407Z"
+          fill="#222222"
+        />
+      </svg>
+    </>
   );
 };
 

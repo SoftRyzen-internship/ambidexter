@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply text-black bg-bgColor;
+  }
+
   section {
     @apply w-full;
   }
@@ -11,33 +15,5 @@
 @layer components {
   .mainText {
     @apply text-small md:text-medium xl:text-large font-medium leading-normal text-black;
-  }
-}
-
-body {
-  color: #222;
-  background-color: #efefef;
-}
-
-.container {
-  width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-@media (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    width: 768px;
-    padding: 0 40px;
-  }
-}
-@media (min-width: 1440px) {
-  .container {
-    width: 1440px;
-    padding: 0 80px;
   }
 }
