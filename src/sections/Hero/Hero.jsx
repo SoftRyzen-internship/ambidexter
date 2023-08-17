@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
 
-import { Container, SectionTitle } from '@/components';
+import { Container } from '@/components';
 
 export const Hero = ({ data }) => {
   return (
     <section>
       <Container>{<h1>{data.mainTitle}</h1>}</Container>
-      <SectionTitle text="Title" />
     </section>
   );
 };
