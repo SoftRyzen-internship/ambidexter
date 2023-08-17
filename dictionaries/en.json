@@ -1,3 +1,12 @@
 {
-  "mainTitle": "Halushka Kyrylo"
+  "mainTitle": "Halushka Kyrylo",
+  "navBar": [
+    { "label": "about me", "link": "about_me" },
+    { "label": "about school", "link": "about_school" },
+    { "label": "for whom", "link": "for_whom" },
+    { "label": "format", "link": "format" },
+    { "label": "courses", "link": "courses" },
+    { "label": "reviews", "link": "reviews" }
+  ],
+  "socialNetworks": "social Networks"
 }

@@ -5,7 +5,8 @@ import { usePathname } from 'next/navigation';
 
 import { i18n } from '../../../i18n';
 
-export const LocaleSwitcher = () => {
+export const LocaleSwitcher = ({ className }) => {
+  console.log('className', className);
   const locales = i18n.locales;
   const pathName = usePathname();
 
@@ -20,20 +21,24 @@ export const LocaleSwitcher = () => {
     if (!pathName) return '/';
 
     const segments = pathName.split('/');
+
     segments[1] = locale;
+
     return segments.join('/');
   };
 
   return (
-    <ul>
+    <ul
+      className={`${className} uppercase text-[12px]   md:flex gap-6 xl:gap-3 md: navBar-text  `}
+    >
       {locales.map(locale => (
         <li key={locale}>
           <Link
             href={redirectedPathName(locale)}
             className={
               locale === getCurrentLocale()
-                ? 'uppercase font-bold'
-                : 'uppercase font-thin'
+                ? ' font-bold text-activ_nav  hover:text-accent focus:text-accent '
+                : '  font-normal  hover:text-accent focus:text-accent'
             }
           >
             {locale}

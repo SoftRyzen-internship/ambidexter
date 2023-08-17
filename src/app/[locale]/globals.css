@@ -9,5 +9,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.navBar-text {
+  @apply font-medium leading-normal xl:text-[24px];
+}
+.color-navBar {
+  color: #222;
+}
+
 /* body {
 } */

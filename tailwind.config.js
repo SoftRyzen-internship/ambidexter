@@ -24,6 +24,7 @@ module.exports = {
         accent: '#7ED956',
         white: '#FFF',
         black: '#222',
+        activ_nav: '#a1a1a1',
       },
 
       fontFamily: {
