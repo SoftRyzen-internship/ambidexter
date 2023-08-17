@@ -10,7 +10,7 @@
 
 @layer components {
   .mainText {
-    @apply text-[12px] md:text-[16px] xl:text-[24px] font-medium leading-normal text-black;
+    @apply text-small md:text-medium xl:text-large font-medium leading-normal text-black;
   }
 }
 

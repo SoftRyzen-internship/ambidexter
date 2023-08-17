@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import icon from '../../../public/icons/down.svg';
 
-export const Title = ({ text }) => {
+export const SectionTitle = ({ text }) => {
   return (
     <div className="flex flex-col justify-center items-center h-[31px] md:h-[43px] xl:h-[61px]">
       <h3 className="mainText">{text}</h3>
@@ -18,6 +18,6 @@ export const Title = ({ text }) => {
   );
 };
 
-Title.propTypes = {
+SectionTitle.propTypes = {
   text: PropTypes.string.isRequired,
 };
