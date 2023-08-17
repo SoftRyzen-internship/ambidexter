@@ -2,11 +2,10 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
 import { i18n } from '../../../i18n';
+import PropTypes from 'prop-types';
 
 export const LocaleSwitcher = ({ className }) => {
-  console.log('className', className);
   const locales = i18n.locales;
   const pathName = usePathname();
 
@@ -29,7 +28,7 @@ export const LocaleSwitcher = ({ className }) => {
 
   return (
     <ul
-      className={`${className} uppercase text-[12px]   md:flex gap-6 xl:gap-3 md: navBar-text  `}
+      className={`${className} uppercase text-[12px]   md:flex xl:gap-3  navBar-text  `}
     >
       {locales.map(locale => (
         <li key={locale}>
@@ -37,8 +36,8 @@ export const LocaleSwitcher = ({ className }) => {
             href={redirectedPathName(locale)}
             className={
               locale === getCurrentLocale()
-                ? ' font-bold text-activ_nav  hover:text-accent focus:text-accent '
-                : '  font-normal  hover:text-accent focus:text-accent'
+                ? ' font-bold text-activ_nav p-3 xl:p-0  hover:text-accent focus:text-accent '
+                : '  font-normal  p-3 xl:p-0 hover:text-accent focus:text-accent'
             }
           >
             {locale}
@@ -47,4 +46,8 @@ export const LocaleSwitcher = ({ className }) => {
       ))}
     </ul>
   );
+};
+
+LocaleSwitcher.propTypes = {
+  className: PropTypes.string,
 };

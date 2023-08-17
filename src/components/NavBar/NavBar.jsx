@@ -1,15 +1,12 @@
 'use client';
 import PropTypes from 'prop-types';
-
-import { getDictionary } from '@/utils/getDictionary';
-
-import { useParams } from 'next/navigation';
-
 import { useEffect, useState } from 'react';
-
+import { useParams } from 'next/navigation';
+import { getDictionary } from '@/utils/getDictionary';
 import { LinkNavBar } from '../LinkNavBar/LinkNavBar';
 
-export const NavBar = ({ className, handleClick }) => {
+export const NavBar = ({ className, handleMenuToggle }) => {
+  // console.log('dataNavBar', data);
   const { locale } = useParams();
   const [navBar, setNavBar] = useState(null);
 
@@ -19,7 +16,7 @@ export const NavBar = ({ className, handleClick }) => {
 
   return (
     <nav
-      className={`${className} md:flex uppercase   items-center gap-4 md:gap-6 navBar-text color-navBar `}
+      className={`${className} md:flex uppercase   items-center gap-4 md:gap-6 navBar-text text-black `}
     >
       {navBar &&
         navBar.map(({ label, link }) => (
@@ -27,7 +24,7 @@ export const NavBar = ({ className, handleClick }) => {
             key={label}
             link={link}
             label={label}
-            handleClick={handleClick}
+            handleMenuToggle={handleMenuToggle}
           />
         ))}
     </nav>
@@ -35,4 +32,5 @@ export const NavBar = ({ className, handleClick }) => {
 };
 NavBar.propTypes = {
   className: PropTypes.string,
+  handleMenuToggle: PropTypes.func,
 };

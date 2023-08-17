@@ -1,7 +1,5 @@
 import { Inter } from 'next/font/google';
-
-import { Header } from '@/layout';
-
+import Header from '@/layout/Header/Header';
 import { getMetaByLocale } from '@/utils/getMetaData';
 import { i18n } from 'i18n';
 
@@ -26,7 +24,7 @@ export default function RootLayout({ children, params: { locale } }) {
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <Header />
+        <Header locale={{ params: { locale } }} />
 
         <main className="flex min-h-screen flex-col items-center justify-between">
           {children}

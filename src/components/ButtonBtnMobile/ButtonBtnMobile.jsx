@@ -1,26 +1,27 @@
 'use client';
-
-import Image from 'next/image';
 import React, { useState } from 'react';
-import menuBtn from 'public/icons/menuIcon.svg';
+import Image from 'next/image';
 import { MobileMenu } from '../MobileMenu/MobileMenu';
-export const ButtonBtnMobile = () => {
-  const [openMenu, setOpenMenu] = useState(false);
+import menuBtn from 'public/icons/menu.svg';
 
-  const handleClick = () => {
-    setOpenMenu(prev => !prev);
+export const ButtonBtnMobile = () => {
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsOpenMenu(prev => !prev);
   };
   return (
     <>
-      {openMenu && <MobileMenu handleClick={handleClick} />}
-      <button type="button" className="md:hidden cursor-pointer">
+      {isOpenMenu && <MobileMenu handleMenuToggle={handleMenuToggle} />}
+      <button type="button" className="md:hidden cursor-pointer p-[10px]">
+        {/* <Menu_mobile width={20} height={20} /> */}
+
         <Image
           src={menuBtn}
           width={20}
           height={20}
           alt="menu Btn"
-          className=""
-          onClick={handleClick}
+          onClick={handleMenuToggle}
         />
       </button>
     </>
