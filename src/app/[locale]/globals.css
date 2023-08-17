@@ -1,6 +1,12 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
+  body {
+    @apply text-black bg-bgColor;
+  }
+
   section {
     @apply w-full;
   }
@@ -18,3 +24,8 @@
 
 /* body {
 } */
+@layer components {
+  .mainText {
+    @apply text-small md:text-medium xl:text-large font-medium leading-normal text-black;
+  }
+}

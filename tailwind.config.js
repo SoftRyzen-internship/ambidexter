@@ -22,9 +22,12 @@ module.exports = {
 
       colors: {
         accent: '#7ED956',
+        secondary: '#A1A1A1',
+        bgColor: '#EFEFEF',
         white: '#FFF',
         black: '#222',
         activ_nav: '#a1a1a1',
+        red: '#FF7272',
       },
 
       fontFamily: {
@@ -32,8 +35,23 @@ module.exports = {
       },
 
       fontSize: {
-        // little: ['12px', '24px'], // class="text-little"
-        // small: ['18px', '24px'], // class="text-small"
+        extraSmall: ['8px'],
+        small: ['12px'],
+        base: ['14px'],
+        middle: ['16px'],
+        medium: ['18px'],
+        large: ['24px'],
+        large36: ['36px'],
+        large46: ['46px'],
+        large48: ['48px'],
+        large56: ['56px'],
+        large62: ['62px'],
+        large64: ['64px'],
+        large70: ['70px'],
+        large92: ['92px'],
+        large124: ['124px'],
+        large134: ['134px'],
+        large140: ['140px'],
       },
     },
   },
