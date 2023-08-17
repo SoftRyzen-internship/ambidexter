@@ -8,6 +8,14 @@
     { "label": "курси", "link": "courses" },
     { "label": "відгуки", "link": "reviews" }
   ],
+  "navigation": {
+    "aboutMe": "ПРО МЕНЕ",
+    "aboutSchool": "ПРО ШКОЛУ",
+    "orientedClient": "ДЛЯ КОГО",
+    "format": "ФОРМАТ",
+    "courses": "КУРСИ",
+    "reviews": "ВІДГУКИ"
+  },
   "socialNetworks": "соціальні мережі",
   "applyButtonLabel": "Записатись",
   "socialsLabel": "Соціальні мережі",
