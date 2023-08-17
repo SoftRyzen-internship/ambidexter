@@ -9,6 +9,10 @@ module.exports = {
       md: '768px',
       xl: '1440px',
     },
+    borderColor: {
+      border_item: '#7ED956',
+    },
+
     extend: {
       container: {
         center: true,
