@@ -13,14 +13,12 @@ export const ApplyButton = ({ data, isFree }) => {
       type="button"
       onClick={() => {}}
     >
-      {data.applyButtonLabel}
+      {data}
     </button>
   );
 };
 
 ApplyButton.propTypes = {
   isFree: PropTypes.bool.isRequired,
-  data: PropTypes.shape({
-    applyButtonLabel: PropTypes.string.isRequired,
-  }).isRequired,
+  data: PropTypes.string.isRequired,
 };
