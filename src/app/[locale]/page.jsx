@@ -1,4 +1,4 @@
-import { Hero } from '@/sections';
+import { FormatSection, Hero } from '@/sections';
 
 import { getDictionary } from '@/utils/getDictionary';
 
@@ -8,6 +8,7 @@ export default async function Home({ params: { locale } }) {
   return (
     <>
       <Hero data={localeData} />
+      <FormatSection data={localeData} />
     </>
   );
 }
