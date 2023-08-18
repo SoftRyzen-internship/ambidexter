@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 export const SectionTitle = ({ text }) => {
   return (
     <>
-      <h2 className="mainText text-center mb-[4px] md:mb-[8px] xl:mb-[12px]">
-        {text}
-      </h2>
+      <h2 className="text-center mb-[4px] md:mb-[8px] xl:mb-[12px]">{text}</h2>
       <svg
         width="24"
         height="24"
