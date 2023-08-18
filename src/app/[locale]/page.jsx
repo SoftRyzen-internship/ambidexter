@@ -1,4 +1,5 @@
 import { Hero } from '@/sections';
+import { AboutMeSection } from '@/sections/AboutMeSection/AboutMeSection';
 
 import { getDictionary } from '@/utils/getDictionary';
 
@@ -8,6 +9,7 @@ export default async function Home({ params: { locale } }) {
   return (
     <>
       <Hero data={localeData} />
+      <AboutMeSection data={localeData.aboutMe} />
     </>
   );
 }
