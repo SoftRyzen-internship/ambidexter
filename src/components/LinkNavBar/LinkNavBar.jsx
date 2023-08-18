@@ -1,3 +1,4 @@
+'use client';
 import { Link } from 'react-scroll';
 import PropTypes from 'prop-types';
 
@@ -9,11 +10,9 @@ export const LinkNavBar = ({ link, label, handleMenuToggle }) => {
         to={link}
         smooth
         spy
-        duration={500}
-        href="/"
-        // className="cursor-pointer hover:text-accent focus:text-accent duration-300"
+        href={`#${link}`}
         onClick={handleMenuToggle}
-        activeClass="text-accent"
+        activeClass="text-secondary"
       >
         {label}
       </Link>
