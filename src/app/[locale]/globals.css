@@ -8,6 +8,6 @@
   }
 
   section {
-    @apply w-full;
+    @apply w-full pb-10 md:pb-20 xl:pb-40;
   }
 }
