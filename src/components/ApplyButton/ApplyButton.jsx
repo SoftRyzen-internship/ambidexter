@@ -2,9 +2,7 @@
 
 import PropTypes from 'prop-types';
 
-import data from 'dictionaries/uk.json';
-
-export const ApplyButton = ({ isFree }) => {
+export const ApplyButton = ({ data, isFree }) => {
   return (
     <button
       className={`${
@@ -22,4 +20,7 @@ export const ApplyButton = ({ isFree }) => {
 
 ApplyButton.propTypes = {
   isFree: PropTypes.bool.isRequired,
+  data: PropTypes.shape({
+    applyButtonLabel: PropTypes.string.isRequired,
+  }).isRequired,
 };
