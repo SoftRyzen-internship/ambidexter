@@ -28,7 +28,7 @@ export default function RootLayout({ children, params: { locale } }) {
       <body className={inter.className}>
         <Header />
 
-        <main className="flex min-h-screen flex-col items-center justify-between">
+        <main className="flex min-h-screen flex-col items-center">
           {children}
         </main>
       </body>

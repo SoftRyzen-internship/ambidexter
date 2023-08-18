@@ -52,6 +52,9 @@ module.exports = {
         large134: ['134px'],
         large140: ['140px'],
       },
+      borderRadius: {
+        10: ['10px'],
+      },
     },
   },
   plugins: [require('prettier-plugin-tailwindcss')],
