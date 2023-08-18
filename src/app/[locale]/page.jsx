@@ -1,5 +1,5 @@
 import { Hero } from '@/sections';
-import { AboutMeSection } from '@/sections/AboutMeSection/AboutMeSection';
+import { AboutMeSection } from '@/sections';
 
 import { getDictionary } from '@/utils/getDictionary';
 
