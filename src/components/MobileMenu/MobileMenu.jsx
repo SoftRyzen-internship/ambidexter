@@ -7,7 +7,7 @@ import closeMobile from 'public/icons/close.svg';
 
 export const MobileMenu = ({ handleMenuToggle, data }) => {
   return (
-    <div className="z-10 absolute md:hidden top-0 left-0 pt-3 min-h-screen w-full bg-white">
+    <div className="z-10 absolute md:hidden top-0 left-0 pt-3 min-h-screen w-full bg-white translate-y-96">
       <Container>
         <div className="flex justify-between items-center">
           <Logo isColored={true} />

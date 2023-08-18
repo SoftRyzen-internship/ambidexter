@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { Container, SectionTitle } from '@/components';
-import { aboutSchool } from '../../../dictionaries/en.json';
+// import { aboutSchool } from '../../../dictionaries/en.json';
 
 export const AboutSchool = ({ data }) => {
-  //console.log(aboutSchool);
-
+  const { aboutSchool } = data;
+  console.log(aboutSchool);
   const getNumber = number => {
     if (String(number).length < 2) {
       return `0${number}`;
@@ -28,7 +28,7 @@ export const AboutSchool = ({ data }) => {
                 className="w-[80px] md:w-[216px] xl:w-[305px] text-start flex flex-col"
                 key={item}
               >
-                <div className="text-[36px] md:text-[48px] font-bold xl:text-[72px] text-start opacity-20">
+                <div className=" text-[36px] md:text-[48px] font-bold xl:text-[72px] text-start opacity-20">
                   {getNumber(index + 1)}
                 </div>
                 <div>{item}</div>
@@ -44,5 +44,3 @@ export const AboutSchool = ({ data }) => {
 AboutSchool.propTypes = {
   data: PropTypes.any,
 };
-// h-[388px] md:h-[576px] xl:h-[653px]
-//h-[526px]
