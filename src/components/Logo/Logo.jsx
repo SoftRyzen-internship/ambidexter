@@ -7,7 +7,7 @@ export const Logo = ({ isColored }) => {
       href="/"
       className={`${
         isColored ? 'font-medium' : 'font-bold'
-      } text-middle md:text-small xl:text-large uppercase cursor-pointer`}
+      } text-middle md:text-small xl:text-large uppercase cursor-pointer `}
     >
       AMBI
       <span

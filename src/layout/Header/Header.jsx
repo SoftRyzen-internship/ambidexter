@@ -8,11 +8,16 @@ export default async function Header({ params }) {
   const localeData = await getDictionary(params.params.locale);
 
   return (
-    <header className="py-6 px-5 fixed w-full ">
+    <header className=" mt-3 md:mt-9 xl:mt-16 fixed w-full ">
       <Container>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between md:h-[39px] xl:h-[29px]">
           <Logo isColored={true} />
-          <ButtonBtnMobile data={localeData.navBar} />
+          <ButtonBtnMobile
+            data={{
+              navBar: localeData.navBar,
+              socialNetworks: localeData.socialNetworks,
+            }}
+          />
           <NavBar className="hidden text-[12px]" data={localeData.navBar} />
           <LocaleSwitcher className="hidden" />
         </div>

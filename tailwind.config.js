@@ -10,6 +10,10 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
+      backgroundImage: {
+        school_section: 'var(--bg-image-school_section)',
+      },
+
       container: {
         center: true,
         padding: {

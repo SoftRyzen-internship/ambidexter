@@ -15,7 +15,10 @@ export const ButtonBtnMobile = ({ data }) => {
       {isOpenMenu && (
         <MobileMenu handleMenuToggle={handleMenuToggle} data={data} />
       )}
-      <button type="button" className="md:hidden cursor-pointer p-[10px]">
+      <button
+        type="button"
+        className="md:hidden cursor-pointer p-[10px] xl:pt-0"
+      >
         {/* <Menu_mobile width={20} height={20} /> */}
 
         <Image
