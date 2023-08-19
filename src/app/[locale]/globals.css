@@ -12,15 +12,6 @@
   }
 }
 
-@tailwind components;
-@tailwind utilities;
-
-.navBar-text {
-  @apply font-medium leading-normal xl:text-[24px];
-}
-
-/* body {
-} */
 @layer components {
   .mainText {
     @apply text-small md:text-medium xl:text-large font-medium leading-normal text-black;
@@ -29,6 +20,7 @@
 :root {
   --bg-image-school_section: url('../../../public/images/school-bg.png');
 }
+
 @media (min-device-pixel-ratio: 2),
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),

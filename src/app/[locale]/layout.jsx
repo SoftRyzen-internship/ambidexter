@@ -1,9 +1,8 @@
 import { Inter } from 'next/font/google';
-import Header from '@/layout/Header/Header';
 import { getMetaByLocale } from '@/utils/getMetaData';
 import { i18n } from 'i18n';
-
 import './globals.css';
+import Header from '@/layout/Header/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,7 +23,7 @@ export default function RootLayout({ children, params: { locale } }) {
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <Header params={{ params: { locale } }} />
+        <Header locale={locale} />
 
         <main className="flex min-h-screen flex-col items-center ">
           {children}

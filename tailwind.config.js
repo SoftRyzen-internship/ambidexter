@@ -30,7 +30,6 @@ module.exports = {
         bgColor: '#EFEFEF',
         white: '#FFF',
         black: '#222',
-        activ_nav: '#a1a1a1',
         red: '#FF7272',
       },
 

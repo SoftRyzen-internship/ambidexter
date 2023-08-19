@@ -2,3 +2,8 @@ export * from './Container/Container';
 export * from './LocaleSwitcher/LocaleSwitcher';
 export * from './SectionTitle/SectionTitle';
 export * from './Logo/Logo';
+export * from './MobileMenu/MobileMenu';
+export * from './Features/Features';
+export * from './LinkNavBar/LinkNavBar';
+export * from './NavBar/NavBar';
+export * from './SocialNetworks/SocialNetworks';

@@ -1,8 +1,8 @@
 'use client';
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { MobileMenu } from '../MobileMenu/MobileMenu';
-import menuBtn from 'public/icons/menu.svg';
+import { useState } from 'react';
+import PropTypes from 'prop-types';
+import { MobileMenu } from '@/components';
+import MenuBtn from 'public/icons/menu.svg';
 
 export const ButtonBtnMobile = ({ data }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -12,23 +12,30 @@ export const ButtonBtnMobile = ({ data }) => {
   };
   return (
     <>
-      {isOpenMenu && (
-        <MobileMenu handleMenuToggle={handleMenuToggle} data={data} />
-      )}
+      <MobileMenu
+        handleMenuToggle={handleMenuToggle}
+        data={data}
+        isModalShow={isOpenMenu}
+      />
+
       <button
         type="button"
         className="md:hidden cursor-pointer p-[10px] xl:pt-0"
       >
-        {/* <Menu_mobile width={20} height={20} /> */}
-
-        <Image
-          src={menuBtn}
-          width={20}
-          height={20}
-          alt="menu Btn"
-          onClick={handleMenuToggle}
-        />
+        <MenuBtn width={20} height={20} onClick={handleMenuToggle} />
       </button>
     </>
   );
+};
+
+ButtonBtnMobile.propTypes = {
+  data: PropTypes.shape({
+    navBar: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string,
+        link: PropTypes.string,
+      }),
+    ),
+    socialNetworks: PropTypes.string,
+  }),
 };

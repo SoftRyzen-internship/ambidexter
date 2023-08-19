@@ -9,7 +9,7 @@ export default async function Home({ params: { locale } }) {
   return (
     <>
       <Hero data={localeData} />
-      <AboutSchool data={localeData} />
+      <AboutSchool aboutSchool={localeData.aboutSchool} />
     </>
   );
 }

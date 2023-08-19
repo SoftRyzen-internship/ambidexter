@@ -1,41 +1,33 @@
-import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { motion } from 'framer-motion';
-import { Container, LocaleSwitcher, Logo } from '@/components';
-import { NavBar } from '../NavBar/NavBar';
-import { SocialNetworks } from '../SocialNetworks/SocialNetworks';
-import closeMobile from 'public/icons/close.svg';
-//min-h-screen
-export const MobileMenu = ({ handleMenuToggle, data }) => {
+import {
+  Container,
+  LocaleSwitcher,
+  Logo,
+  NavBar,
+  SocialNetworks,
+} from '@/components';
+
+import CloseMobile from 'public/icons/close.svg';
+//import Header from '@/layout/Header/Header';
+
+export const MobileMenu = ({ handleMenuToggle, data, isModalShow }) => {
   const { navBar, socialNetworks } = data;
   return (
-    <motion.div
-      initial={{
-        x: -800,
-        opacity: 0,
-      }}
-      animate={{
-        x: 0,
-        opacity: 1,
-      }}
-      transition={{
-        duration: 0.25,
-      }}
-      className="absolute z-10 h-[568px] md:hidden top-0 left-0 pt-3 mt-[-12px] w-full bg-white  "
+    <div
+      className={`${
+        isModalShow ? 'translate-0 opacity-100' : 'translate-x-full opacity-0'
+      } absolute transition-all    h-[568px] md:hidden top-0 left-0 pt-3 mt-[-12px] w-full bg-white   max-w-full duration-700  `}
     >
       <Container>
-        <header className="flex justify-between items-center  mb-6">
+        <header className="flex justify-between items-center  mb-6 h-[68px]">
           <Logo isColored={true} />
           <button
             type="button"
             className="md:hidden cursor-pointer p-[10px] xl:pt-0"
           >
-            <Image
-              src={closeMobile}
+            <CloseMobile
               width={20}
               height={20}
-              alt="close mobile menu"
-              className=""
               onClick={() => handleMenuToggle()}
             />
           </button>
@@ -50,11 +42,12 @@ export const MobileMenu = ({ handleMenuToggle, data }) => {
           <SocialNetworks socialNetworks={socialNetworks} />
         </div>
       </Container>
-    </motion.div>
+    </div>
   );
 };
 
 MobileMenu.propTypes = {
   handleMenuToggle: PropTypes.func,
   data: PropTypes.object,
+  isModalShow: PropTypes.bool,
 };

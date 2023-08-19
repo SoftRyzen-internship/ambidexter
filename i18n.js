@@ -1,4 +1,4 @@
 export const i18n = {
-  defaultLocale: 'uk',
-  locales: ['en', 'uk'],
+  defaultLocale: 'ua',
+  locales: ['en', 'ua'],
 };

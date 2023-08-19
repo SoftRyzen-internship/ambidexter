@@ -1,14 +1,11 @@
 import PropTypes from 'prop-types';
-import { Container, SectionTitle } from '@/components';
-import { Features } from '@/components/Features/Features';
+import { Container, SectionTitle, Features } from '@/components';
 
-export const AboutSchool = ({ data }) => {
-  const { aboutSchool } = data;
-
+export const AboutSchool = ({ aboutSchool }) => {
   return (
     <section
       id="about_school"
-      className="bg-school_section  bg-no-repeat  bg-cover "
+      className="bg-school_section  bg-no-repeat bg-center  bg-cover "
     >
       <Container>
         <div className=" text-center flex flex-col gap-[8px] md:gap-3 mb-6 md:mb-[72px]">
@@ -27,5 +24,7 @@ export const AboutSchool = ({ data }) => {
 };
 
 AboutSchool.propTypes = {
-  data: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired,
+  features: PropTypes.arrayOf([PropTypes.string]),
 };

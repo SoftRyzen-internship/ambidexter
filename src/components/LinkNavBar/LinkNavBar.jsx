@@ -10,9 +10,9 @@ export const LinkNavBar = ({ link, label, handleMenuToggle }) => {
         to={link}
         smooth
         spy
-        href={`#${link}`}
+        href="/"
         onClick={handleMenuToggle}
-        activeClass="text-secondary"
+        activeClass="text-secondary "
       >
         {label}
       </Link>

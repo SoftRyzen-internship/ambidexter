@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { LinkNavBar } from '../LinkNavBar/LinkNavBar';
+import { LinkNavBar } from '@/components';
 
 export const NavBar = ({ className, data, handleMenuToggle }) => {
   return (
