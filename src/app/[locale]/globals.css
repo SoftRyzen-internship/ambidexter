@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --tick-image: url('../../../public//icons/tick.svg');
+}
+
 @layer base {
   body {
     @apply text-small md:text-medium xl:text-large font-medium leading-normal text-black bg-bgColor;

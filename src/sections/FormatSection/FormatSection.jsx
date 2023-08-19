@@ -4,7 +4,6 @@ import { Container, SectionTitle, FormatCard } from '@/components';
 
 export const FormatSection = ({ data }) => {
   const { title, subTitle, boldSubTitle, cards, advantageList } = data.format;
-  console.log(advantageList);
 
   return (
     <section>
@@ -20,6 +19,12 @@ export const FormatSection = ({ data }) => {
               data={card}
               btnText={data.applyButtonLabel}
             />
+          ))}
+        </ul>
+
+        <ul>
+          {advantageList.map((advantage, index) => (
+            <li key={index}>{advantage}</li>
           ))}
         </ul>
       </Container>
