@@ -7,3 +7,4 @@ export * from './Features/Features';
 export * from './LinkNavBar/LinkNavBar';
 export * from './NavBar/NavBar';
 export * from './SocialNetworks/SocialNetworks';
+export * from './ApplyButton/ApplyButton';
