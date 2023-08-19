@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import { BtnShowMore } from '@/components';
 import Image from 'next/image';
-// import img from 'public/images/actor.png';
-// const img = 'public/images/actor.png';
 
 export const CoursesCard = ({ data }) => {
   return (
