@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
-import { Container, SectionTitle, ApplyButton } from '@/components';
+import { Container, SectionTitle, FormatCard } from '@/components';
 
-export const FormatSection = ({ data: { format, applyButtonLabel } }) => {
-  const { title, subTitle, boldSubTitle, cards, advantageList } = format;
-  console.log(cards, advantageList);
+export const FormatSection = ({ data }) => {
+  const { title, subTitle, boldSubTitle, cards, advantageList } = data.format;
+  console.log(advantageList);
 
   return (
     <section>
@@ -12,7 +12,16 @@ export const FormatSection = ({ data: { format, applyButtonLabel } }) => {
         <SectionTitle text={title} />
         <h3>{subTitle}</h3>
         <p>{boldSubTitle}</p>
-        <ApplyButton data={applyButtonLabel} isFree={false} />
+
+        <ul>
+          {cards.map((card, index) => (
+            <FormatCard
+              key={index}
+              data={card}
+              btnText={data.applyButtonLabel}
+            />
+          ))}
+        </ul>
       </Container>
     </section>
   );
@@ -31,5 +40,4 @@ FormatSection.propTypes = {
     }).isRequired,
   ).isRequired,
   advantageList: PropTypes.arrayOf(PropTypes.string.isRequired),
-  applyButtonLabel: PropTypes.string.isRequired,
 };
