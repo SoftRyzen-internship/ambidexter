@@ -10,6 +10,10 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
+      backgroundImage: {
+        coursesBg: 'var(--bg-courses-section)',
+      },
+
       container: {
         center: true,
         padding: {
