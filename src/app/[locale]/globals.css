@@ -11,3 +11,12 @@
     @apply w-full;
   }
 }
+
+@layer components {
+  .circleSocialItems {
+    @apply w-[24px] h-[24px] rounded-full bg-black  md:w-[32px] md:h-[32px] xl:w-[44px] xl:h-[44px] duration-300;
+  }
+  .socialMediaIcon {
+    @apply w-[13px] h-[13px] md:w-[17.5px] md:h-[17.5px] xl:w-[24px] xl:h-[24px];
+  }
+}
