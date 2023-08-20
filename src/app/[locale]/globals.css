@@ -11,22 +11,3 @@
     @apply w-full;
   }
 }
-
-@layer components {
-  .mainText {
-    @apply text-small md:text-medium xl:text-large font-medium leading-normal text-black;
-  }
-}
-
-:root {
-  --bg-courses-section: url('../../../public/images/courses-bg.png');
-}
-
-@media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  :root {
-    --bg-courses-section: url('../../../public/images/courses-bg-x2.png');
-  }
-}

@@ -146,8 +146,16 @@
     "title": "Курси",
     "subTitle": "Який шлях обереш ти?",
     "cards": [
-      { "label": "Акторська майстерність" },
-      { "label": "Ораторська майстерність" }
+      {
+        "label": "Акторська майстерність",
+        "imageURL": "/_next/static/media/actor.c3538cda.png",
+        "alt": "Theatrical masks"
+      },
+      {
+        "label": "Ораторська майстерність",
+        "imageURL": "/_next/static/media/orator.102b2436.png",
+        "alt": "Microphones"
+      }
     ],
     "bntShowMore": "Дізнатися більше"
   },

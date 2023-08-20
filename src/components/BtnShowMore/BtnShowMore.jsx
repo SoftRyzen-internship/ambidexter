@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 export const BtnShowMore = ({ title, link }) => {
   return (
-    <a
+    <Link
       href={link}
-      target="_blank"
-      className="flex items-center justify-center bg-bgColor text-black hover:bg-white p-4 rounded-[10px] text-middle min-w-full xl:text-large duration-300 xl:px-20 xl:min-w-max"
+      className="flex items-center justify-center bg-bgColor hover:bg-white focus:bg-white h-[51px] xl:h-[61px] rounded-10 text-middle font-medium min-w-full xl:text-large duration-300 xl:px-20 xl:min-w-max"
     >
       {title}
-    </a>
+    </Link>
   );
 };
 
