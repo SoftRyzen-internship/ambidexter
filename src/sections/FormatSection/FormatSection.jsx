@@ -12,7 +12,7 @@ export const FormatSection = ({ data }) => {
         <h3 className="text-middle md:text-large xl:text-large36 text-center mb-4 md:mb-0">
           {subTitle}
         </h3>
-        <p className="text-large42 md:text-large62 xl:text-large124 text-center text-accent mb-6 md:mb-[118px]">
+        <p className="relative text-large42 md:text-large62 xl:text-large124 text-center text-accent leading-tight mb-6 md:mb-[118px] md:before:absolute md:before:content-[var(--format-left)] md:before:w-[185px] md:before:h-[104px] xl:before:w-[237px] md:before:bottom-[-104px] xl:before:bottom-[-80px] md:before:left-[150px] xl:before:left-[30%] md:after:absolute md:after:content-[var(--format-right)] md:after:w-[185px] xl:after:w-[237px] md:after:h-[104px] md:after:bottom-[-104px] xl:after:bottom-[-80px] md:after:left-1/2">
           {boldSubTitle}
         </p>
 
@@ -28,7 +28,10 @@ export const FormatSection = ({ data }) => {
 
         <ul className="w-full md:w-[452px] xl:w-[630px] text-justify mx-auto pl-5">
           {advantageList.map((advantage, index) => (
-            <li className="list-disc md:text-middle mb-2 last:mb-0" key={index}>
+            <li
+              className="list-disc md:text-middle md:leading-tight mb-2 last:mb-0"
+              key={index}
+            >
               {advantage}
             </li>
           ))}
