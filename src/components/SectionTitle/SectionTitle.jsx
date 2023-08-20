@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 
-export const SectionTitle = ({ className, text }) => {
+export const SectionTitle = ({ className = '', text }) => {
   return (
     <h2
-      className={`text-center mb-[16px] md:mb-[36px] ${className}
-      after:content-[var(--arrow-image)] after:mx-auto
-      after:w-[12px] after:md:w-[16px] after:xl:w-[24px] 
-      after:h-[12px] after:md:h-[16px] after:xl:h-[24px] 
-      flex flex-col gap-[4px] md:gap-[8px] xl:gap-[12px]`}
+      className={`text-center mb-4 md:mb-9
+      after:content-arrow-down after:mx-auto
+      after:w-3 after:md:w-4 after:xl:w-6 
+      after:h-3 after:md:h-4 after:xl:h-6 
+      flex flex-col gap-1 md:gap-2 xl:gap-3 
+      ${className}`}
     >
       {text}
     </h2>
