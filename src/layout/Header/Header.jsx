@@ -1,4 +1,4 @@
-import { Container, LocaleSwitcher } from '@/components';
+import { Container, LocaleSwitcher, Logo } from '@/components';
 import { ItemCourse } from '@/components/ItemCourse/ItemCourse';
 
 const item = {
@@ -16,6 +16,7 @@ export const Header = () => {
   return (
     <header>
       <Container>
+        <Logo isColored={true} />
         <LocaleSwitcher />
         <ItemCourse title={item.title} list={item.list} />
       </Container>
