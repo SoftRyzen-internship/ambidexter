@@ -2,7 +2,7 @@ import { Container, LocaleSwitcher, Logo } from '@/components';
 import { ItemCourse } from '@/components/ItemCourse/ItemCourse';
 
 const item = {
-  title: 'Вміння говорити',
+  title: 'Сторітелінг. Історія - валюта ХХІ сторіччя.',
   list: [
     'Ораторська майстерність: зоровий контакт, жестикуляція, інтонації, темпоритм мовлення',
     'Грамотне висловлювання думок та підвищення комунікаційних навичок',
@@ -18,7 +18,7 @@ export const Header = () => {
       <Container>
         <Logo isColored={true} />
         <LocaleSwitcher />
-        <ItemCourse title={item.title} list={item.list} />
+        <ItemCourse data={item} />
       </Container>
     </header>
   );
