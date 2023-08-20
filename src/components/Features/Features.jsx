@@ -13,7 +13,7 @@ export const Features = ({ data }) => {
       } else {
         setActiveNumber(activeNumber + 1);
       }
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   });
 
