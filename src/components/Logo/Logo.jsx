@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 
-export const Logo = ({ isColored }) => {
+export const Logo = ({ isColored, className }) => {
   return (
     <Link
       href="/"
       className={`${
         isColored ? 'font-medium' : 'font-bold'
-      } text-middle md:text-small xl:text-large uppercase cursor-pointer `}
+      } ${className} placeholder:text-middle md:text-small xl:text-large uppercase cursor-pointer `}
     >
       AMBI
       <span
