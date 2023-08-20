@@ -6,13 +6,17 @@ export const FormatSection = ({ data }) => {
   const { title, subTitle, boldSubTitle, cards, advantageList } = data.format;
 
   return (
-    <section>
+    <section className="bg-format bg-no-repeat bg-center bg-cover" id="format">
       <Container>
         <SectionTitle text={title} />
-        <h3>{subTitle}</h3>
-        <p>{boldSubTitle}</p>
+        <h3 className="text-middle md:text-large xl:text-large36 text-center mb-4 md:mb-0">
+          {subTitle}
+        </h3>
+        <p className="text-large42 md:text-large62 xl:text-large124 text-center text-accent mb-6 md:mb-[118px]">
+          {boldSubTitle}
+        </p>
 
-        <ul>
+        <ul className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-5 xl:gap-[88px] mb-8 md:mb-9 xl:mb-16">
           {cards.map((card, index) => (
             <FormatCard
               key={index}
@@ -22,9 +26,11 @@ export const FormatSection = ({ data }) => {
           ))}
         </ul>
 
-        <ul>
+        <ul className="w-full md:w-[452px] xl:w-[630px] text-justify mx-auto pl-5">
           {advantageList.map((advantage, index) => (
-            <li key={index}>{advantage}</li>
+            <li className="list-disc md:text-middle mb-2 last:mb-0" key={index}>
+              {advantage}
+            </li>
           ))}
         </ul>
       </Container>

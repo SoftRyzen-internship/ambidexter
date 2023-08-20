@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --tick-image: url('../../../public//icons/tick.svg');
+  --bg-image-school_section: url('../../../public/images/school-bg.png');
+  --arrow-image: url('../../../public/icons/arrow-down.svg');
+  --tick-image: url('../../../public/icons/tick.svg');
 }
 
 @layer base {
