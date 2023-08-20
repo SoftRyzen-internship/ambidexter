@@ -11,3 +11,12 @@
     @apply w-full;
   }
 }
+
+@layer components {
+  .formInput {
+    @apply mb-[12px] border rounded-[10px]  px-[12px] py-[8px] leading-[1.15]   placeholder:text-base placeholder:font-normal xl:px-[24px] xl:py-[16px] xl:placeholder:text-large;
+  }
+  .formLabel {
+    @apply mb-[8px] text-base font-normal leading-[1.15] xl:text-large 
+  }
+}
