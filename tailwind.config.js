@@ -55,6 +55,9 @@ module.exports = {
       borderRadius: {
         10: ['10px'],
       },
+      backgroundImage: {
+        'free-class': `url('../../../public/images/free-bg-x2.png')`,
+      },
     },
   },
   plugins: [require('prettier-plugin-tailwindcss')],
