@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 
-//list-disc
 export const ItemCourse = ({ data }) => {
   const { title, list } = data;
 
