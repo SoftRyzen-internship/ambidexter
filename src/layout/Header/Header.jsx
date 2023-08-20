@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import PropTypes from 'prop-types';
@@ -10,12 +11,11 @@ import {
   NavBar,
 } from '@/components';
 import CloseMobile from 'public/icons/close.svg';
-
 import MenuBtn from 'public/icons/menu.svg';
 
 export const Header = ({ navBar, socialNetworks }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const [isMobile, setIsMobile] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   const mobile = useMediaQuery({ maxWidth: 767.9 });
 

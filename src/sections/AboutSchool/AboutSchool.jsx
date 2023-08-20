@@ -24,7 +24,7 @@ export const AboutSchool = ({ aboutSchool }) => {
 };
 
 AboutSchool.propTypes = {
-  title: PropTypes.string.isRequired,
-  subTitle: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  subTitle: PropTypes.string,
   features: PropTypes.arrayOf([PropTypes.string]),
 };
