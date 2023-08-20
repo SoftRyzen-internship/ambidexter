@@ -8,10 +8,13 @@ import {
 } from '@/components';
 
 import CloseMobile from 'public/icons/close.svg';
-//import Header from '@/layout/Header/Header';
 
-export const MobileMenu = ({ handleMenuToggle, data, isModalShow }) => {
-  const { navBar, socialNetworks } = data;
+export const MobileMenu = ({
+  handleMenuToggle,
+  navBar,
+  socialNetworks,
+  isModalShow,
+}) => {
   return (
     <div
       className={`${
@@ -21,6 +24,7 @@ export const MobileMenu = ({ handleMenuToggle, data, isModalShow }) => {
       <Container>
         <header className="flex justify-between items-center  mb-6 h-[68px]">
           <Logo isColored={true} />
+
           <button
             type="button"
             className="md:hidden cursor-pointer p-[10px] xl:pt-0"
@@ -32,13 +36,16 @@ export const MobileMenu = ({ handleMenuToggle, data, isModalShow }) => {
             />
           </button>
         </header>
+
         <div className="flex flex-col gap-9">
           <NavBar
             className={'flex flex-col   text-[16px]'}
             handleMenuToggle={handleMenuToggle}
             data={navBar}
           />
+
           <LocaleSwitcher className=" flex items-center justify-center text-[12px] " />
+
           <SocialNetworks socialNetworks={socialNetworks} />
         </div>
       </Container>
@@ -48,6 +55,7 @@ export const MobileMenu = ({ handleMenuToggle, data, isModalShow }) => {
 
 MobileMenu.propTypes = {
   handleMenuToggle: PropTypes.func,
-  data: PropTypes.object,
+  // navBar
+  // socialNetworks:
   isModalShow: PropTypes.bool,
 };

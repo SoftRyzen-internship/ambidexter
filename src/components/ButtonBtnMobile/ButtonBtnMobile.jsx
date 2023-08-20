@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { MobileMenu } from '@/components';
 import MenuBtn from 'public/icons/menu.svg';
 
-export const ButtonBtnMobile = ({ data }) => {
+export const ButtonBtnMobile = ({ navBar, socialNetworks }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const handleMenuToggle = () => {
@@ -14,7 +14,8 @@ export const ButtonBtnMobile = ({ data }) => {
     <>
       <MobileMenu
         handleMenuToggle={handleMenuToggle}
-        data={data}
+        navBar={navBar}
+        socialNetworks={socialNetworks}
         isModalShow={isOpenMenu}
       />
 
@@ -29,13 +30,11 @@ export const ButtonBtnMobile = ({ data }) => {
 };
 
 ButtonBtnMobile.propTypes = {
-  data: PropTypes.shape({
-    navBar: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string,
-        link: PropTypes.string,
-      }),
-    ),
-    socialNetworks: PropTypes.string,
-  }),
+  navBar: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      link: PropTypes.string,
+    }),
+  ),
+  socialNetworks: PropTypes.string,
 };
