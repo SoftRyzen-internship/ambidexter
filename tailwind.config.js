@@ -20,6 +20,7 @@ module.exports = {
 
       content: {
         tickIcon: "url('../../../public/icons/tick.svg')",
+        arrowDown: "url('../../../public/icons/arrow-down.svg')",
         formatLeft: "url('../../../public/icons/format-left.svg')",
         formatRight: "url('../../../public/icons/format-right.svg')",
       },
@@ -69,9 +70,6 @@ module.exports = {
       },
       borderRadius: {
         10: ['10px'],
-      },
-      content: {
-        'arrow-down': 'url(/_next/static/media/arrow-down.23e009f2.svg)',
       },
     },
   },

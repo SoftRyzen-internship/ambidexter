@@ -9,9 +9,9 @@ export default async function Home({ params: { locale } }) {
   return (
     <>
       <Hero data={localeData} />
-      <Courses data={courses} />
       <AboutMeSection data={aboutMe} />
-      <FormatSection data={{ ...format, btnText: applyButtonLabel }} />
+      <FormatSection data={format} btnText={applyButtonLabel} />
+      <Courses data={courses} />
     </>
   );
 }

@@ -2,16 +2,16 @@ import PropTypes from 'prop-types';
 
 import { Container, SectionTitle, FormatCard } from '@/components';
 
-export const FormatSection = ({ data }) => {
-  const { title, subTitle, boldSubTitle, cards, advantageList, btnText } = data;
+export const FormatSection = ({ data, btnText }) => {
+  const { title, subTitle, boldSubTitle, cards, advantageList } = data;
 
   return (
     <section className="bg-format bg-no-repeat bg-center bg-cover" id="format">
       <Container>
         <SectionTitle text={title} />
-        <h3 className="text-middle md:text-large xl:text-large36 text-center mb-4 md:mb-0">
+        <p className="text-middle md:text-large xl:text-large36 text-center mb-4 md:mb-0">
           {subTitle}
-        </h3>
+        </p>
         <p className="relative text-large42 md:text-large62 xl:text-large124 text-center text-accent leading-tight mb-6 md:mb-[118px] md:before:absolute md:before:content-formatLeft md:before:w-[185px] md:before:h-[104px] xl:before:w-[237px] md:before:bottom-[-104px] xl:before:bottom-[-80px] md:before:left-[150px] xl:before:left-[30%] md:after:absolute md:after:content-formatRight md:after:w-[185px] xl:after:w-[237px] md:after:h-[104px] md:after:bottom-[-104px] xl:after:bottom-[-80px] md:after:left-1/2">
           {boldSubTitle}
         </p>
