@@ -12,6 +12,12 @@
   }
 }
 
+@layer components {
+  .contactsIcon {
+    @apply fill-black w-[12px] h-[12px] xl:w-[24px] xl:h-[24px] hover:fill-white focus:fill-white duration-300;
+  }
+}
+
 .videoPoster {
   @apply absolute top-0 left-0 w-full h-full hover:cursor-pointer opacity-100 max-h-screen transition-opacity duration-300;
   @apply after:h-0 after:w-0 after:absolute after:bottom-1/2 after:right-1/2 after:translate-x-3/4 after:translate-y-1/2;
