@@ -18,6 +18,10 @@ module.exports = {
         format: "url('/images/format-bg-x2.png')",
       },
 
+      backgroundPosition: {
+        free: '75%',
+      },
+
       content: {
         tickIcon: "url('/icons/tick.svg')",
         arrowDown: "url('/icons/arrow-down.svg')",
@@ -70,9 +74,6 @@ module.exports = {
       },
       borderRadius: {
         10: ['10px'],
-      },
-      backgroundImage: {
-        'free-class': `url('../../../public/images/free-bg-x2.png')`,
       },
     },
   },
