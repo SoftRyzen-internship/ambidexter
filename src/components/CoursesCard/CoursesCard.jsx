@@ -21,7 +21,7 @@ export const CoursesCard = ({ data }) => {
 
 CoursesCard.propTypes = {
   data: PropTypes.shape({
-    cardImg: PropTypes.objectOf.isRequired,
+    cardImg: PropTypes.shape({}).isRequired,
     linkForBtn: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,

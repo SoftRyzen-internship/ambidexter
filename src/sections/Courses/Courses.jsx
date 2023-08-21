@@ -40,7 +40,12 @@ Courses.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string.isRequired,
     subTitle: PropTypes.string.isRequired,
-    cards: PropTypes.arrayOf.isRequired,
+    cards: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        alt: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
     btnShowMore: PropTypes.string.isRequired,
   }).isRequired,
 };
