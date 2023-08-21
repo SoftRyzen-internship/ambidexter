@@ -27,6 +27,10 @@ export const LocaleSwitcher = ({ className }) => {
     return segments.join('/');
   };
 
+  const titleLocale = locale => {
+    return locale === 'uk' ? 'ua' : locale;
+  };
+
   return (
     <ul
       className={`${className} uppercase text-[12px] xl:text-[24px]   md:flex xl:gap-3  navBar-text  `}
@@ -44,7 +48,7 @@ export const LocaleSwitcher = ({ className }) => {
                 : '  font-normal  p-3 xl:p-0 hover:text-accent focus:text-accent'
             }
           >
-            {locale}
+            {titleLocale(locale)}
           </Link>
         </li>
       ))}

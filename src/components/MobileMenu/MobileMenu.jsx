@@ -1,11 +1,10 @@
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import {
   Container,
   LocaleSwitcher,
   NavBar,
   SocialNetworks,
 } from '@/components';
-import { createPortal } from 'react-dom';
 
 export const MobileMenu = ({
   handleMenuToggle,
@@ -13,11 +12,13 @@ export const MobileMenu = ({
   socialNetworks,
   isModalShow,
 }) => {
-  const modal = (
+  return (
     <div
       className={`${
-        isModalShow ? ' opacity-100' : ' opacity-0 '
-      } absolute transition-all   h-[568px] md:hidden top-0 left-0 pt-3 mt-[-12px] w-full bg-white duration-700  `}
+        isModalShow
+          ? 'translate-x-0 opacity-100'
+          : ' opacity-0 translate-x-full '
+      } absolute    h-[568px] md:hidden top-0 left-0 pt-3 mt-[-12px] w-full bg-white duration-700  `}
     >
       <Container>
         <header className="flex justify-between items-center  mb-6 h-[68px]"></header>
@@ -33,12 +34,17 @@ export const MobileMenu = ({
       </Container>
     </div>
   );
-  return createPortal(modal, document.getElementById('modals_menu'));
+  // return createPortal(modal, document.getElementById('modals_menu'));
 };
 
 MobileMenu.propTypes = {
-  //  handleMenuToggle: PropTypes.func,
-  // navBar
-  // socialNetworks:
-  // isModalShow: PropTypes.bool,
+  handleMenuToggle: PropTypes.func,
+  navBar: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+    }),
+  ),
+  socialNetworks: PropTypes.string.isRequired,
+  isModalShow: PropTypes.bool,
 };

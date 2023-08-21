@@ -1,4 +1,5 @@
 'use client';
+
 import { Link } from 'react-scroll';
 import PropTypes from 'prop-types';
 
