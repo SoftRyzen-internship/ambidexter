@@ -3,13 +3,16 @@ import PropTypes from 'prop-types';
 import { routes } from 'routes';
 import { Container, CoursesCard, SectionTitle } from '@/components';
 
+import actorImg from 'public/images/actor.png';
+import oratorImg from 'public/images/orator.png';
+
 export const Courses = ({ data }) => {
-  const { cards, title, subTitle, bntShowMore } = data;
+  const { cards, title, subTitle, btnShowMore } = data;
 
   const newData = [
-    { linkForBtn: routes.ACTING_SKILL },
-    { linkForBtn: routes.ORATORICAL_SKILL },
-  ].map((el, i) => ({ ...el, ...cards[i], bntShowMore }));
+    { cardImg: actorImg, linkForBtn: routes.ACTING_SKILL },
+    { cardImg: oratorImg, linkForBtn: routes.ORATORICAL_SKILL },
+  ].map((element, index) => ({ ...element, ...cards[index], btnShowMore }));
 
   return (
     <section
@@ -22,9 +25,9 @@ export const Courses = ({ data }) => {
           {subTitle}
         </h2>
         <ul className="flex flex-col items-center gap-4 md:flex-row md:gap-5">
-          {newData.map((el, i) => (
-            <li className="w-full" key={i}>
-              <CoursesCard data={el}></CoursesCard>
+          {newData.map((element, index) => (
+            <li className="w-full" key={index}>
+              <CoursesCard data={element}></CoursesCard>
             </li>
           ))}
         </ul>
@@ -38,6 +41,6 @@ Courses.propTypes = {
     title: PropTypes.string.isRequired,
     subTitle: PropTypes.string.isRequired,
     cards: PropTypes.arrayOf.isRequired,
-    bntShowMore: PropTypes.string.isRequired,
+    btnShowMore: PropTypes.string.isRequired,
   }).isRequired,
 };

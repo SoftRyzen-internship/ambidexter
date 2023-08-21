@@ -148,16 +148,14 @@
     "cards": [
       {
         "label": "Акторська майстерність",
-        "imageURL": "/_next/static/media/actor.c3538cda.png",
         "alt": "Театральні маски"
       },
       {
         "label": "Ораторська майстерність",
-        "imageURL": "/_next/static/media/orator.102b2436.png",
         "alt": "Мікрофони"
       }
     ],
-    "bntShowMore": "Дізнатися більше"
+    "btnShowMore": "Дізнатися більше"
   },
   "reviews": {
     "label": "Відгуки випускників",

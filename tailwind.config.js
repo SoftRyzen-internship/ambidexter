@@ -11,7 +11,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        coursesBg: "url('/_next/static/media/courses-bg.ec4de785.png')",
+        coursesBg: "url('../../../public/images/courses-bg.png')",
       },
 
       container: {
