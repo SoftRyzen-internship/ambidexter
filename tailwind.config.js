@@ -8,8 +8,23 @@ module.exports = {
       sm: '480px',
       md: '768px',
       xl: '1440px',
+      dpr: {
+        raw: 'screen and (min-device-pixel-ratio: 2)',
+      },
     },
     extend: {
+      backgroundImage: {
+        coursesBg: "url('/images/courses-bg.png')",
+        format: "url('/images/format-bg-x2.png')",
+      },
+
+      content: {
+        tickIcon: "url('/icons/tick.svg')",
+        arrowDown: "url('/icons/arrow-down.svg')",
+        formatLeft: "url('/icons/format-left.svg')",
+        formatRight: "url('/icons/format-right.svg')",
+      },
+
       container: {
         center: true,
         padding: {
@@ -41,6 +56,7 @@ module.exports = {
         medium: ['18px'],
         large: ['24px'],
         large36: ['36px'],
+        large42: ['42px'],
         large46: ['46px'],
         large48: ['48px'],
         large56: ['56px'],

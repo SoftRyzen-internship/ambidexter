@@ -1,27 +1,21 @@
 import PropTypes from 'prop-types';
 
-export const SectionTitle = ({ text }) => {
+export const SectionTitle = ({ className = '', text }) => {
   return (
-    <>
-      <h2 className="text-center mb-[4px] md:mb-[8px] xl:mb-[12px]">{text}</h2>
-      <svg
-        width="24"
-        height="24"
-        className="mx-auto w-[12px] h-[12px] md:w-[16px] md:h-[16px] xl:w-[24px] xl:h-[24px]"
-        aria-label="Arrow down"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M20.7281 4.36407L12 13.0922L3.27188 4.36407L0 7.63595L12 19.6359L24 7.63595L20.7281 4.36407Z"
-          fill="#222222"
-        />
-      </svg>
-    </>
+    <h2
+      className={`text-center mb-4 md:mb-9
+      after:content-arrowDown after:mx-auto
+      after:w-3 after:md:w-4 after:xl:w-6 
+      after:h-3 after:md:h-4 after:xl:h-6 
+      flex flex-col gap-1 md:gap-2 xl:gap-3 
+      ${className}`}
+    >
+      {text}
+    </h2>
   );
 };
 
 SectionTitle.propTypes = {
+  className: PropTypes.string,
   text: PropTypes.string.isRequired,
 };
