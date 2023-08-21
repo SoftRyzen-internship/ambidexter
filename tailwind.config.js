@@ -18,6 +18,12 @@ module.exports = {
         format: "url('../../../public/images/format-bg-x2.png')",
       },
 
+      content: {
+        tickIcon: "url('../../../public/icons/tick.svg')",
+        formatLeft: "url('../../../public/icons/format-left.svg')",
+        formatRight: "url('../../../public/icons/format-right.svg')",
+      },
+
       container: {
         center: true,
         padding: {

@@ -4,14 +4,14 @@ import { getDictionary } from '@/utils/getDictionary';
 
 export default async function Home({ params: { locale } }) {
   const localeData = await getDictionary(locale);
-  const { aboutMe, courses } = localeData;
+  const { aboutMe, courses, format, applyButtonLabel } = localeData;
 
   return (
     <>
       <Hero data={localeData} />
       <Courses data={courses} />
       <AboutMeSection data={aboutMe} />
-      <FormatSection data={localeData} />
+      <FormatSection data={{ ...format, btnText: applyButtonLabel }} />
     </>
   );
 }

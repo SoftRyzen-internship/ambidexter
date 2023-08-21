@@ -13,7 +13,7 @@ export const FormatCard = ({ data, btnText }) => {
       <ul className="flex-grow pb-6">
         {list.map((item, index) => (
           <li
-            className="flex items-center gap-1 md:gap-2 xl:gap-1 font-normal md:text-middle leading-none xl:leading-tight mb-2 md:mb-3 xl:mb-0 last:mb-0 before:content-[var(--tick-image)] before:w-3 md:before:w-4 before:h-3 md:before:h-4"
+            className="flex items-center gap-1 md:gap-2 xl:gap-1 font-normal md:text-middle leading-none xl:leading-tight mb-2 md:mb-3 xl:mb-0 last:mb-0 before:content-tickIcon before:w-3 md:before:w-4 before:h-3 md:before:h-4"
             key={index}
           >
             {item}
