@@ -10,3 +10,4 @@ export * from './FeedbackForm/FeedbackForm';
 export * from './IncorrectForm/IncorrectForm';
 export * from './VideoPlayer/VideoPlayer';
 export * from './NotificationForm/NotificationForm';
+export * from './VideoPlayer/VideoPlayer';
