@@ -59,6 +59,9 @@ module.exports = {
       borderRadius: {
         10: ['10px'],
       },
+      content: {
+        'arrow-down': 'url(/_next/static/media/arrow-down.23e009f2.svg)',
+      },
     },
   },
   plugins: [require('prettier-plugin-tailwindcss')],
