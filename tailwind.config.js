@@ -10,6 +10,10 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
+      backgroundImage: {
+        coursesBg: "url('../../../public/images/courses-bg.png')",
+      },
+
       container: {
         center: true,
         padding: {
@@ -54,6 +58,9 @@ module.exports = {
       },
       borderRadius: {
         10: ['10px'],
+      },
+      content: {
+        'arrow-down': 'url(/_next/static/media/arrow-down.23e009f2.svg)',
       },
     },
   },
