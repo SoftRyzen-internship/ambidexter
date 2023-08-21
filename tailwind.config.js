@@ -10,6 +10,10 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
+      backgroundImage: {
+        coursesBg: "url('../../../public/images/courses-bg.png')",
+      },
+
       container: {
         center: true,
         padding: {
