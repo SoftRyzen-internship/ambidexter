@@ -5,6 +5,7 @@ import {
   NavBar,
   SocialNetworks,
 } from '@/components';
+import { createPortal } from 'react-dom';
 
 export const MobileMenu = ({
   handleMenuToggle,
@@ -12,7 +13,7 @@ export const MobileMenu = ({
   socialNetworks,
   isModalShow,
 }) => {
-  return (
+  const modal = (
     <div
       className={`${
         isModalShow ? ' opacity-100' : ' opacity-0 '
@@ -32,6 +33,7 @@ export const MobileMenu = ({
       </Container>
     </div>
   );
+  return createPortal(modal, document.getElementById('modals_menu'));
 };
 
 MobileMenu.propTypes = {

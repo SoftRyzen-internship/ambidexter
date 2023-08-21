@@ -31,8 +31,8 @@ export default async function RootLayout({ children, params: { locale } }) {
   return (
     <html lang={locale}>
       <body className={inter.className}>
+        <div id="modals_menu"></div>
         <Header navBar={navBar} socialNetworks={socialNetworks} />
-
         <main className="flex min-h-screen flex-col items-center">
           {children}
         </main>

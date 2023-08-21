@@ -32,7 +32,7 @@ export const Header = ({ navBar, socialNetworks }) => {
       <Container>
         <div className="flex items-center justify-between md:h-[39px] xl:h-[29px]">
           <Logo isColored={true} className={isOpenMenu ? 'z-10' : ''} />
-          <NavBar className="hidden text-[12px]" data={navBar} />
+          {!isMobile && <NavBar className=" text-[12px]" data={navBar} />}
           {isMobile && (
             <button
               type="button"
