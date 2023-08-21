@@ -9,3 +9,4 @@ export * from './ApplyButton/ApplyButton';
 export * from './FeedbackForm/FeedbackForm';
 export * from './IncorrectForm/IncorrectForm';
 export * from './VideoPlayer/VideoPlayer';
+export * from './NotificationForm/NotificationForm';

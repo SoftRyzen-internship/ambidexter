@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import IncorrectIcon from 'public/icons/incorrect.svg';
 
 export const IncorrectForm = ({ text }) => {
@@ -9,4 +11,8 @@ export const IncorrectForm = ({ text }) => {
       </p>
     </div>
   );
+};
+
+IncorrectForm.propTypes = {
+  text: PropTypes.string.isRequired,
 };

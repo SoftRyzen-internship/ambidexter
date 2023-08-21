@@ -1,10 +1,18 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import PropTypes from 'prop-types';
+
+import 'dotenv/config';
+
 import { IncorrectForm } from '../IncorrectForm/IncorrectForm';
 import CloseIcon from 'public/icons/close.svg';
+import { NotificationForm } from '../NotificationForm/NotificationForm';
+import { sendMessageTelegram } from '@/utils/sendMessageTelegram';
 
 export const FeedbackForm = ({ toggleModal }) => {
+  const [notificationState, setNotificationState] = useState(null);
+
   const {
     register,
     handleSubmit,
@@ -19,6 +27,7 @@ export const FeedbackForm = ({ toggleModal }) => {
     },
   });
 
+  // console.log(process.env);
   useEffect(() => {
     const handleESC = e => {
       if (e.code === 'Escape') toggleModal();
@@ -37,10 +46,12 @@ export const FeedbackForm = ({ toggleModal }) => {
 
   const onSubmit = data => {
     localStorage.clear();
-    console.log(data);
+    setNotificationState('Correct');
+    sendMessageTelegram(data);
   };
   const onError = data => {
     console.log(data);
+    setNotificationState('Incorrect');
   };
 
   const onChange = e => {
@@ -148,9 +159,37 @@ export const FeedbackForm = ({ toggleModal }) => {
         <input
           type="submit"
           value="Відправити"
-          className="bg-accent rounded-[10px] py-[8px] text-middle font-medium xl:py-[16px] xl:text-large36"
+          className="bg-accent rounded-[10px] py-[8px] text-middle font-medium max-h-[35px] xl:max-h-[76px] xl:py-[16px] xl:text-large36"
         />
+        <div className="relative flex justify-center">
+          {notificationState && (
+            <NotificationForm notificationState={notificationState} />
+          )}
+        </div>
       </form>
     </div>
   );
 };
+
+FeedbackForm.propTypes = {
+  toggleModal: PropTypes.func.isRequired,
+};
+
+//----------ЩО ПОТРІБНО ПРОПИСАТИ В КОМПОМЕНТІ, ЯКИЙ БУДЕ ВИКЛИКАТИ ЦЮ ФОРМУ--------------:
+//
+// import { Transition } from '@headlessui/react';
+// const [isOpen, setIsOpen] = useState(false);
+// const toggleModal = () => {
+//  setIsOpen(!isOpen);
+// };
+// <Transition
+// show={isOpen}
+// enter="transition-opacity duration-300"
+// enterFrom="opacity-0"
+// enterTo="opacity-100"
+// leave="transition-opacity duration-300"
+// leaveFrom="opacity-100"
+// leaveTo="opacity-0"
+// >
+// <FeedbackForm toggleModal={toggleModal} />
+// </Transition>
