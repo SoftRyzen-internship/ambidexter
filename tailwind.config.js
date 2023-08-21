@@ -10,6 +10,10 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
+      backgroundImage: {
+        heroBg: "url('../../../public/images/hero-bg.png')",
+      },
+
       container: {
         center: true,
         padding: {
