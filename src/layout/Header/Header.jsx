@@ -17,7 +17,7 @@ export const Header = ({ navBar, socialNetworks }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  const mobile = useMediaQuery({ maxWidth: 767.9 });
+  const mobile = useMediaQuery({ maxWidth: 767 });
 
   useEffect(() => {
     setIsMobile(mobile);
@@ -26,9 +26,9 @@ export const Header = ({ navBar, socialNetworks }) => {
   const handleMenuToggle = () => {
     setIsOpenMenu(prev => !prev);
   };
-
+  // mt-3 md:mt-9 xl:mt-16
   return (
-    <header className="flex items-center h-[68px] md:h-[63px] xl:h-[93px] mt-3 md:mt-9 xl:mt-16 fixed w-full  backdrop-blur-[100px] ">
+    <header className="flex items-center h-[68px] md:h-[63px] xl:h-[93px]  fixed w-full  backdrop-blur-[100px] ">
       <Container>
         <div className="flex items-center justify-between md:h-[39px] xl:h-[29px]">
           <Logo isColored={true} className={isOpenMenu ? 'z-10' : ''} />
