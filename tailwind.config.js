@@ -14,15 +14,15 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        coursesBg: "url('../../../public/images/courses-bg.png')",
-        format: "url('../../../public/images/format-bg-x2.png')",
+        coursesBg: "url('/images/courses-bg.png')",
+        format: "url('/images/format-bg-x2.png')",
       },
 
       content: {
-        tickIcon: "url('../../../public/icons/tick.svg')",
-        arrowDown: "url('../../../public/icons/arrow-down.svg')",
-        formatLeft: "url('../../../public/icons/format-left.svg')",
-        formatRight: "url('../../../public/icons/format-right.svg')",
+        tickIcon: "url('/icons/tick.svg')",
+        arrowDown: "url('/icons/arrow-down.svg')",
+        formatLeft: "url('/icons/format-left.svg')",
+        formatRight: "url('/icons/format-right.svg')",
       },
 
       container: {
