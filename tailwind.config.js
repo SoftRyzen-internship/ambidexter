@@ -19,7 +19,9 @@ module.exports = {
       },
 
       backgroundPosition: {
-        free: '75%',
+        top160: '50% -80%',
+        top80: '50% 80%',
+        top40: '50% -20px',
       },
 
       content: {

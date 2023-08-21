@@ -32,17 +32,14 @@
 }
 
 .videoWrapper {
-  @apply border-accent border rounded-10 relative w-full md:w-[calc(50%-10px)] h-[calc(((min(100vw,480px)-40px)/280)*191)] md:h-[227px] xl:h-[428px] overflow-hidden md:mb-3;
+  @apply border-accent border rounded-10 relative w-full md:w-[calc(50%-10px)] h-[calc(((min(100vw,480px)-40px)/280)*191)] md:h-[227px] xl:h-[428px] overflow-hidden mb-3 md:mb-0;
 }
 
 .freeClassSection {
-  @apply bg-[url('/images/free-bg-xl.webp')] overflow-hidden bg-cover bg-free py-10 md:py-20;
-}
-
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .freeClassSection {
-    @apply bg-[url('/images/free-bg-xl-x2.webp')];
-  }
+  @apply bg-[url('/images/free-bg-xl.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit;
+  @apply dpr:bg-[url('/images/free-bg-xl-x2.png')];
+  background-image: -webkit-image-set(
+    url('/images/free-bg-xl.webp') 1x,
+    url('/images/free-bg-xl-x2.webp') 2x
+  );
 }
