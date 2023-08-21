@@ -5,8 +5,8 @@ export const AdvantageCard = ({ count, text, list: advantagesList }) => {
     <li
       className={
         advantagesList
-          ? 'py-4 xl:py-8 px-3 md:px-4 bg-accent rounded-10 max-w-full row-span-2'
-          : 'py-4 xl:py-8 px-3 md:px-4 bg-accent rounded-10 max-w-full'
+          ? 'py-4 xl:py-8 px-3 md:px-4 bg-accent rounded-10 row-span-2'
+          : 'py-4 xl:py-8 px-3 md:px-4 bg-accent rounded-10'
       }
     >
       <p

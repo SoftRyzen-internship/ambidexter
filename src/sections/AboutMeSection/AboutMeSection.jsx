@@ -1,16 +1,21 @@
 import PropTypes from 'prop-types';
 
-import { AdvantageCard, Container, SectionTitle } from '@/components';
+import {
+  AdvantageCard,
+  Container,
+  SectionTitle,
+  VideoPlayer,
+} from '@/components';
 
 export const AboutMeSection = ({
-  data: { title, cards, subTitle, boldSubTitle, goals },
+  data: { title, cards, subTitle, boldSubTitle, goals, videoLink },
 }) => {
   return (
     <section id="aboutMe">
       <Container>
         <SectionTitle text={title} />
         <div className="md:flex md:gap-5 md:items-center mb-3 md:mb-5">
-          <div className="border-accent border rounded-10 w-full md:w-[calc(50%-10px)] h-[calc(((min(100vw,480px)-40px)/280)*191)] md:h-[227px] xl:h-[428px] max-md:mb-3"></div>
+          <VideoPlayer link={videoLink} />
           <div className="md:px-4 w-full md:w-[calc(50%-10px)]">
             <p className="text-middle/[19px] xl:text-large/[29px] font-bold xl:w-[496px] flex items-center gap-2 mb-2">
               <span className="text-large64/[1] md:text-large70 xl:text-large140/[1.02] font-medium">
