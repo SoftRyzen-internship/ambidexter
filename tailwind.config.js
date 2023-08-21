@@ -10,7 +10,7 @@ module.exports = {
       xl: '1440px',
     },
     borderColor: {
-      acent: '#7ED956',
+      accent: '#7ED956',
     },
 
     extend: {
