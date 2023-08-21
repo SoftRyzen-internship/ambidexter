@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         heroBg: "url('../../../public/images/hero-bg.png')",
+        coursesBg: "url('../../../public/images/courses-bg.png')",
       },
 
       container: {
