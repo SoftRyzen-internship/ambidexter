@@ -15,11 +15,7 @@ export const VideoPlayer = ({ link }) => {
   };
 
   return (
-    <div
-      className={`${
-        isShowVideo ? 'videoActive' : ''
-      } border-accent border rounded-10 relative w-full md:w-[calc(50%-10px)] h-[calc(((min(100vw,480px)-40px)/280)*191)] md:h-[227px] xl:h-[428px] overflow-hidden`}
-    >
+    <div className={isShowVideo ? 'videoActive videoWrapper' : 'videoWrapper'}>
       {isShowVideo && embedId && (
         <iframe
           className="videoPlayer"
