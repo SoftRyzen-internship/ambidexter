@@ -7,9 +7,10 @@ import PropTypes from 'prop-types';
 export const ItemCourseCard = ({ data }) => {
   const { title, list } = data;
 
-  const [isDecktop, titleDesktop] = useState(false);
+  const [isDesktop, titleDesktop] = useState(false);
 
   const desktop = useMediaQuery({ minWidth: 1440 });
+
   useEffect(() => {
     titleDesktop(desktop);
   }, [desktop]);
@@ -17,7 +18,7 @@ export const ItemCourseCard = ({ data }) => {
   const titleSplit = title => {
     const text = title.split('.');
     text.pop();
-    if (isDecktop && text.length > 2) {
+    if (isDesktop && text.length > 2) {
       const titleDecktop = [];
       const newArray = [];
       text.forEach((item, index) => {

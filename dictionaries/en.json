@@ -27,8 +27,8 @@
   },
   "aboutMe": {
     "title": "про мене",
-    "subTitle": "Цілі",
-    "boldSubTitle": "які я ставлю на кожному занятті:",
+    "boldSubTitle": "Цілі",
+    "subTitle": "які я ставлю на кожному занятті:",
     "goals": [
       "Навчати за унікальною авторською методикою та поділитися безцінним досвідом студентів",
       "Передати універсальні знання та вміння, які стануть у нагоді, як у вашому професійному, так і в особистому житті",
@@ -146,10 +146,16 @@
     "title": "Курси",
     "subTitle": "Який шлях обереш ти?",
     "cards": [
-      { "label": "Акторська майстерність" },
-      { "label": "Ораторська майстерність" }
+      {
+        "label": "Акторська майстерність",
+        "alt": "Theatrical masks"
+      },
+      {
+        "label": "Ораторська майстерність",
+        "alt": "Microphones"
+      }
     ],
-    "bntShowMore": "Дізнатися більше"
+    "btnShowMore": "Дізнатися більше"
   },
   "reviews": {
     "label": "Відгуки випускників",
@@ -371,5 +377,39 @@
       "success": "Повідомлення успішно відправлено!"
     },
     "btnSend": "Відправити"
-  }
+  },
+  "contacts": [
+    {
+      "name": "Telegram",
+      "link": "https://t.me/+380680619457",
+      "ariaLabel": "link to Telegram"
+    },
+    {
+      "name": "Viber",
+      "link": "viber://contact?number=%2B380680619457",
+      "ariaLabel": "link to Viber"
+    },
+    {
+      "name": "Whatsapp",
+      "link": "https://api.whatsapp.com/send?phone=380680619457",
+      "ariaLabel": "link to Whatsapp"
+    }
+  ],
+  "socialMedia": [
+    {
+      "name": "Instagram",
+      "link": "https://www.instagram.com/ambidexter.school/",
+      "ariaLabel": "link to Instagram"
+    },
+    {
+      "name": "Youtube",
+      "link": "https://www.youtube.com/@Ambidexterschool",
+      "ariaLabel": "link to Youtube"
+    },
+    {
+      "name": "Tiktok",
+      "link": "http://tiktok.com/@ambidexterschool",
+      "ariaLabel": "link to Tiktok"
+    }
+  ]
 }
