@@ -378,6 +378,10 @@
     },
     "btnSend": "Відправити"
   },
+  "contacts": [
+    {"name": "Telegram", "link":"https://t.me/+380680619457", "ariaLabel":"посилання на Telegram"},
+    {"name": "Viber", "link":"viber://contact?number=%2B380680619457", "ariaLabel":"посилання на Viber"},
+    {"name": "Whatsapp", "link":"https://api.whatsapp.com/send?phone=380680619457", "ariaLabel":"посилання на Whatsapp"}],
   "socialMedia": [
     {"name": "Instagram", "link":"https://www.instagram.com/ambidexter.school/", "ariaLabel":"посилання на Instagram"},
     {"name": "Youtube", "link":"https://www.youtube.com/@Ambidexterschool", "ariaLabel":"посилання на Youtube"},
