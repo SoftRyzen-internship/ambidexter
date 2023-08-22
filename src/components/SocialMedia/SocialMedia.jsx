@@ -67,9 +67,11 @@ export const SocialMedia = ({ data, section }) => {
 
 SocialMedia.propTypes = {
   section: PropTypes.string.isRequired,
-  data: PropTypes.arrayOf({
-    name: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    ariaLabel: PropTypes.string.isRequired,
-  }),
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+      ariaLabel: PropTypes.string.isRequired,
+    }),
+  ),
 };
