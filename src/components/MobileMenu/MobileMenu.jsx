@@ -18,7 +18,7 @@ export const MobileMenu = ({
         isModalShow
           ? 'translate-x-0 opacity-100'
           : ' opacity-0 translate-x-full '
-      } absolute block  md:hidden top-0 left-0   w-full bg-white duration-300 pt-[76px] min-h-screen `}
+      } absolute block  md:hidden top-0 left-0   w-full bg-white duration-300 pt-[76px]  min-h-screen  `}
     >
       <Container>
         <NavBar

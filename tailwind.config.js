@@ -14,7 +14,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        school_section: "url('../../../public/images/school-bg.png')",
+        school_section: "url('/images/school-bg.png')",
         coursesBg: "url('/images/courses-bg.png')",
         format: "url('/images/format-bg-x2.png')",
       },

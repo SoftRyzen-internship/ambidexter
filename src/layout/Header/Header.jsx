@@ -20,24 +20,19 @@ export const Header = ({ navBar, socialNetworks }) => {
   const mobile = useMediaQuery({ maxWidth: 767 });
 
   useEffect(() => {
+    isOpenMenu
+      ? document.body.classList.add('overflow-hidden')
+      : document.body.classList.remove('overflow-hidden');
+  }, [isOpenMenu]);
+
+  useEffect(() => {
     setIsMobile(mobile);
   }, [mobile]);
-
-  const handleMenuToggle = () => {
-    const body = document.body;
-    console.log('BODY', body);
-    !isOpenMenu
-      ? body.classList.add('overflow-hidden')
-      : body.classList.remove('overflow-hidden');
-
-    setIsOpenMenu(prev => !prev);
-  };
 
   useEffect(() => {
     const closeESC = e => {
       if (e.code === 'Escape') {
-        console.log('Escape');
-        handleMenuToggle();
+        setIsOpenMenu(false);
       }
     };
     document.addEventListener('keydown', closeESC);
@@ -46,12 +41,18 @@ export const Header = ({ navBar, socialNetworks }) => {
     };
   }, []);
 
+  const handleMenuToggle = () => {
+    setIsOpenMenu(prev => !prev);
+  };
+
   return (
     <header className="z-30 flex items-center h-[68px] md:h-[63px] xl:h-[93px]  fixed w-full  backdrop-blur-[100px] ">
       <Container>
         <div className="flex items-center justify-between md:h-[39px] xl:h-[29px]">
           <Logo isColored={true} className={isOpenMenu && 'z-10'} />
-          {!isMobile && <NavBar className=" text-[12px]" data={navBar} />}
+          {!isMobile && (
+            <NavBar className=" hidden text-[12px]" data={navBar} />
+          )}
           {isMobile && (
             <button
               type="button"
@@ -67,7 +68,7 @@ export const Header = ({ navBar, socialNetworks }) => {
               )}
             </button>
           )}
-          {!isMobile && <LocaleSwitcher className="" />}
+          {!isMobile && <LocaleSwitcher className="hidden" />}
         </div>
 
         <MobileMenu
