@@ -7,5 +7,6 @@ export * from './CoursesCard/CoursesCard';
 export * from './AdvantageCard/AdvantageCard';
 export * from './ApplyButton/ApplyButton';
 export * from './Contacts/Contacts';
+export * from './SocialMedia/SocialMedia';
 export * from './VideoPlayer/VideoPlayer';
 export * from './FormatCard/FormatCard';

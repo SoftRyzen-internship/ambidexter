@@ -16,27 +16,39 @@
   .contactsIcon {
     @apply fill-black w-[12px] h-[12px] xl:w-[24px] xl:h-[24px] hover:fill-white focus:fill-white duration-300;
   }
-}
 
-.videoPoster {
-  @apply absolute top-0 left-0 w-full h-full hover:cursor-pointer opacity-100 max-h-screen transition-opacity duration-300;
-  @apply after:h-0 after:w-0 after:absolute after:bottom-1/2 after:right-1/2 after:translate-x-3/4 after:translate-y-1/2;
-  @apply after:border-transparent after:border-l-[48px] after:border-y-[28px] after:border-l-accent;
-  @apply after:transition-transform duration-300 after:hover:scale-110;
-}
+  .videoPoster {
+    @apply absolute top-0 left-0 w-full h-full hover:cursor-pointer opacity-100 max-h-screen transition-opacity duration-300;
+    @apply after:h-0 after:w-0 after:absolute after:bottom-1/2 after:right-1/2 after:translate-x-3/4 after:translate-y-1/2;
+    @apply after:border-transparent after:border-l-[48px] after:border-y-[28px] after:border-l-accent;
+    @apply after:transition-transform duration-300 after:hover:scale-110;
+  }
+  .circleSocialItems {
+    @apply w-[24px] h-[24px] rounded-full bg-black  md:w-[32px] md:h-[32px] xl:w-[44px] xl:h-[44px] duration-300;
+  }
+  .socialMediaIcon {
+    @apply w-[13px] h-[13px] md:w-[17.5px] md:h-[17.5px] xl:w-[24px] xl:h-[24px];
+  }
+  .videoPoster {
+    @apply absolute top-0 left-0 w-full h-full hover:cursor-pointer opacity-100 max-h-screen transition-opacity duration-300;
+    @apply after:h-0 after:w-0 after:absolute after:bottom-1/2 after:right-1/2 after:translate-x-3/4 after:translate-y-1/2;
+    @apply after:border-transparent after:border-l-[48px] after:border-y-[28px] after:border-l-accent;
+    @apply after:transition-transform duration-300 after:hover:scale-110;
+  }
 
-.videoActive .videoPoster {
-  @apply opacity-0 after:scale-[2] pointer-events-none;
-}
+  .videoActive .videoPoster {
+    @apply opacity-0 after:scale-[2] pointer-events-none;
+  }
 
-.videoPlayer {
-  @apply absolute top-0 left-0 h-full w-full opacity-0;
-}
+  .videoPlayer {
+    @apply absolute top-0 left-0 h-full w-full opacity-0;
+  }
 
-.videoActive .videoPlayer {
-  @apply opacity-100 transition-opacity duration-300;
-}
+  .videoActive .videoPlayer {
+    @apply opacity-100 transition-opacity duration-300;
+  }
 
-.videoWrapper {
-  @apply border-accent border rounded-10 relative w-full md:w-[calc(50%-10px)] h-[calc(((min(100vw,480px)-40px)/280)*191)] md:h-[227px] xl:h-[428px] overflow-hidden md:mb-3;
+  .videoWrapper {
+    @apply border-accent border rounded-10 relative w-full md:w-[calc(50%-10px)] h-[calc(((min(100vw,480px)-40px)/280)*191)] md:h-[227px] xl:h-[428px] overflow-hidden md:mb-3;
+  }
 }
