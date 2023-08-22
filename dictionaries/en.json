@@ -379,8 +379,8 @@
     "btnSend": "Відправити"
   },
   "socialMedia": [
-    {"name": "Instagram", "link":"https://www.instagram.com/ambidexter.school/", "ariaLabel":"посилання на Instagram"},
-    {"name": "Youtube", "link":"https://www.youtube.com/@Ambidexterschool", "ariaLabel":"посилання на Youtube"},
-    {"name": "Tiktok", "link":"http://tiktok.com/@ambidexterschool", "ariaLabel":"посилання на Tiktok"}
+    {"name": "Instagram", "link":"https://www.instagram.com/ambidexter.school/", "ariaLabel":"link to Instagram"},
+    {"name": "Youtube", "link":"https://www.youtube.com/@Ambidexterschool", "ariaLabel":"link to Youtube"},
+    {"name": "Tiktok", "link":"http://tiktok.com/@ambidexterschool", "ariaLabel":"link to Tiktok"}
   ]
 }
