@@ -24,15 +24,34 @@ export const Header = ({ navBar, socialNetworks }) => {
   }, [mobile]);
 
   const handleMenuToggle = () => {
+    const body = document.body;
+    console.log('BODY', body);
+    !isOpenMenu
+      ? body.classList.add('overflow-hidden')
+      : body.classList.remove('overflow-hidden');
+
     setIsOpenMenu(prev => !prev);
   };
-  // mt-3 md:mt-9 xl:mt-16
+
+  useEffect(() => {
+    const closeESC = e => {
+      if (e.code === 'Escape') {
+        console.log('Escape');
+        handleMenuToggle();
+      }
+    };
+    document.addEventListener('keydown', closeESC);
+    return () => {
+      document.removeEventListener('keydown', closeESC);
+    };
+  }, []);
+
   return (
-    <header className="flex items-center h-[68px] md:h-[63px] xl:h-[93px]  fixed w-full  backdrop-blur-[100px] ">
+    <header className="z-30 flex items-center h-[68px] md:h-[63px] xl:h-[93px]  fixed w-full  backdrop-blur-[100px] ">
       <Container>
         <div className="flex items-center justify-between md:h-[39px] xl:h-[29px]">
-          <Logo isColored={true} className={isOpenMenu ? 'z-10' : ''} />
-          <NavBar className="hidden text-[12px]" data={navBar} />
+          <Logo isColored={true} className={isOpenMenu && 'z-10'} />
+          {!isMobile && <NavBar className=" text-[12px]" data={navBar} />}
           {isMobile && (
             <button
               type="button"
@@ -48,7 +67,7 @@ export const Header = ({ navBar, socialNetworks }) => {
               )}
             </button>
           )}
-          <LocaleSwitcher className="hidden" />
+          {!isMobile && <LocaleSwitcher className="" />}
         </div>
 
         <MobileMenu

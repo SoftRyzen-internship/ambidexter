@@ -33,7 +33,7 @@ export const LocaleSwitcher = ({ className }) => {
 
   return (
     <ul
-      className={`${className} uppercase text-[12px] xl:text-[24px]   md:flex xl:gap-3  navBar-text  `}
+      className={`${className} uppercase text-[12px] xl:text-[24px]  md:flex xl:gap-3  navBar-text  `}
     >
       {locales.map(locale => (
         <li
