@@ -13,8 +13,15 @@
 }
 
 @layer components {
-  .mainText {
-    @apply text-small md:text-medium xl:text-large font-medium leading-normal text-black;
+  .contactsIcon {
+    @apply fill-black w-[12px] h-[12px] xl:w-[24px] xl:h-[24px] hover:fill-white focus:fill-white duration-300;
+  }
+
+  .circleSocialItems {
+    @apply w-[24px] h-[24px] rounded-full bg-black  md:w-[32px] md:h-[32px] xl:w-[44px] xl:h-[44px] duration-300;
+  }
+  .socialMediaIcon {
+    @apply w-[13px] h-[13px] md:w-[17.5px] md:h-[17.5px] xl:w-[24px] xl:h-[24px];
   }
   .videoPoster {
     @apply absolute top-0 left-0 w-full h-full hover:cursor-pointer opacity-100 max-h-screen transition-opacity duration-300;
