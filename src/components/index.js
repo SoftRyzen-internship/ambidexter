@@ -10,3 +10,4 @@ export * from './Contacts/Contacts';
 export * from './SocialMedia/SocialMedia';
 export * from './VideoPlayer/VideoPlayer';
 export * from './FormatCard/FormatCard';
+export * from './Loader/Loader';
