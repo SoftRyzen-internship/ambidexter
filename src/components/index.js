@@ -10,4 +10,7 @@ export * from './FeedbackForm/FeedbackForm';
 export * from './IncorrectForm/IncorrectForm';
 export * from './VideoPlayer/VideoPlayer';
 export * from './NotificationForm/NotificationForm';
+export * from './Contacts/Contacts';
+export * from './SocialMedia/SocialMedia';
 export * from './VideoPlayer/VideoPlayer';
+export * from './FormatCard/FormatCard';
