@@ -67,7 +67,7 @@ export const SocialMedia = ({ data, section }) => {
 
 SocialMedia.propTypes = {
   section: PropTypes.string.isRequired,
-  data: PropTypes.shape({
+  data: PropTypes.arrayOf({
     name: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     ariaLabel: PropTypes.string.isRequired,
