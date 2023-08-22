@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import TelegramIcon from 'public/icons/telegram.svg';
 import ViberIcon from 'public/icons/viber.svg';
 import WhatsappIcon from 'public/icons/whatsapp.svg';
@@ -52,4 +54,12 @@ export const Contacts = ({ data }) => {
       </li>
     </ul>
   );
+};
+
+Contacts.propTypes = {
+  data: PropTypes.arrayOf({
+    name: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    ariaLabel: PropTypes.string.isRequired,
+  }),
 };
