@@ -1,18 +1,18 @@
 'use client';
 
-import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import PropTypes from 'prop-types';
 
 export const ItemCourseCard = ({ data }) => {
   const { title, list } = data;
 
-  const [isDecktop, setIsDecktop] = useState(false);
+  const [isDecktop, titleDesktop] = useState(false);
 
-  const decktop = useMediaQuery({ minWidth: 1440 });
+  const desktop = useMediaQuery({ minWidth: 1440 });
   useEffect(() => {
-    setIsDecktop(decktop);
-  }, [decktop]);
+    titleDesktop(desktop);
+  }, [desktop]);
 
   const titleSplit = title => {
     const text = title.split('.');
@@ -30,13 +30,12 @@ export const ItemCourseCard = ({ data }) => {
   };
 
   return (
-    <div className="box-border  w-full md:w-[334px] sm:w-[440px] xl:w-[630px]  border-2 border-accent rounded-10">
+    <div className=" w-full md:w-[334px] sm:w-[440px] xl:w-[630px]  border-2 border-accent rounded-10">
       <div className="text-middle xl:text-[24px] py-3 md:py-4 bg-accent text-center font-medium ">
         <h3>
           {!title.includes('.') ? (
             <span>{title}</span>
           ) : (
-            title.includes('.') &&
             titleSplit(title).map((item, i) => (
               <span key={i} className="block">
                 {item}.
@@ -52,10 +51,10 @@ export const ItemCourseCard = ({ data }) => {
               key={item}
               className="
                flex relative gap-[10px] ml-[16px] md:ml-[6px] items-center font-medium
-               before:absolute before:top-[7px] before:left-[-10px]  before:min-w-[4px]
+               before:absolute before:top-[6px] before:left-[-10px]  before:min-w-[4px]
                before:min-h-[4px] before:rounded-full before:bg-black
-               xl:before:top-[10px]  xl:before:left-[-14px] xl:ml-[20px] 
-               xl:before:min-w-[6px] xl:before:min-h-[6px] mb-1 last:mb-0 "
+               xl:before:top-[8px]  xl:before:left-[-14px] xl:ml-[20px] 
+               xl:before:min-w-[6px] xl:before:min-h-[6px] mb-1 last:mb-0 leading-tight"
             >
               {item}
             </li>
@@ -70,5 +69,5 @@ ItemCourseCard.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string.isRequired,
     list: PropTypes.arrayOf(PropTypes.string).isRequired,
-  }),
+  }).isRequired,
 };
