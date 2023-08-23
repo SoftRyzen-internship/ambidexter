@@ -3,14 +3,14 @@
 import PropTypes from 'prop-types';
 import { Dialog } from '@headlessui/react';
 import CloseIcon from 'public/icons/close.svg';
-import { FeedbackForm } from '../FeedbackForm/FeedbackForm';
+import { FeedbackForm } from '..';
 
 export const ModalForm = ({ toggleModal, isOpen, data }) => {
   return (
     <Dialog
       open={isOpen}
       onClose={toggleModal}
-      className="relative  top-0 left-0 z-50"
+      className="relative  top-0 left-0 z-40"
     >
       <div className="bg-bgModal fixed left-0 right-0 top-0 bottom-0 flex justify-center items-center backdrop-blur-[12.5px]">
         <Dialog.Panel className="relative">

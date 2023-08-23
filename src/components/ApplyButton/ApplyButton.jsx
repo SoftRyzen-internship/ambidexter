@@ -4,7 +4,7 @@ import { Transition } from '@headlessui/react';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-import { ModalForm } from '../ModalForm/ModalForm';
+import { ModalForm } from '..';
 
 export const ApplyButton = ({ data, isFree, formData }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,7 @@ export const ApplyButton = ({ data, isFree, formData }) => {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        <ModalForm toggleModal={toggleModal} isOpen={isOpen} data={formData}/>
+        <ModalForm toggleModal={toggleModal} isOpen={isOpen} data={formData} />
       </Transition>
     </>
   );
