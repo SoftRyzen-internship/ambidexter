@@ -5,7 +5,7 @@ export const AboutSchool = ({ aboutSchool }) => {
   return (
     <section
       id="about_school"
-      className="bg-school_section  bg-no-repeat bg-center  bg-cover "
+      className="bg-schoolBg  bg-no-repeat bg-center  bg-cover "
     >
       <Container>
         <div className=" text-center flex flex-col gap-[8px] md:gap-3 mb-6 md:mb-[72px]">

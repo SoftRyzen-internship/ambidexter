@@ -12,9 +12,10 @@ import {
   ButtonMenuToggle,
 } from '@/components';
 
-export const Header = ({ navBar, socialNetworks }) => {
+export const Header = ({ navBar, socialNetworks, socialMedia }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isScrollHeight, setIsScroll] = useState(0);
 
   const mobile = useMediaQuery({ maxWidth: 767 });
 
@@ -44,15 +45,32 @@ export const Header = ({ navBar, socialNetworks }) => {
     setIsOpenMenu(prev => !prev);
   };
 
+  useEffect(() => {
+    document.addEventListener('scroll', function () {
+      setIsScroll(window.scrollY);
+    });
+  }, [isScrollHeight]);
+
+  const returnBlur = () => {
+    if (isScrollHeight > 0) {
+      return true;
+    }
+    return false;
+  };
+
   return (
-    <header className="z-30 flex items-center h-[68px] md:h-[63px] xl:h-[93px]  fixed w-full  backdrop-blur-[100px] ">
+    <header
+      className={`z-30 flex items-center h-[68px] md:h-[63px] xl:h-[93px]  fixed w-full  ${
+        returnBlur() && 'backdrop-blur-[100px]'
+      }  `}
+    >
       <Container className="flex items-center justify-between md:h-[39px] xl:h-[29px]">
-        <Logo isColored={true} className={isOpenMenu && 'z-10'} />
+        <Logo isColored={true} className="z-10" />
 
         {!isMobile && (
-          <NavBar className="max-md:hidden text-[12px]" data={navBar} />
+          <NavBar className="hidden md:block text-[12px]" data={navBar} />
         )}
-        {!isMobile && <LocaleSwitcher className="max-md:hidden" />}
+        {!isMobile && <LocaleSwitcher className="hidden md:block " />}
 
         {isMobile && (
           <ButtonMenuToggle
@@ -67,6 +85,7 @@ export const Header = ({ navBar, socialNetworks }) => {
             navBar={navBar}
             socialNetworks={socialNetworks}
             isModalShow={isOpenMenu}
+            socialMedia={socialMedia}
           />
         )}
       </Container>
@@ -82,4 +101,11 @@ Header.propTypes = {
     }),
   ),
   socialNetworks: PropTypes.string.isRequired,
+  socialMedia: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+      ariaLabel: PropTypes.string.isRequired,
+    }),
+  ),
 };

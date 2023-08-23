@@ -11,13 +11,22 @@ import { getDictionary } from '@/utils/getDictionary';
 
 export default async function Home({ params: { locale } }) {
   const localeData = await getDictionary(locale);
-  const { aboutMe, courses, format, applyButtonLabel, orientedClient } =
-    localeData;
+
+  const {
+    hero,
+    aboutMe,
+    courses,
+    format,
+    aboutSchool,
+    applyButtonLabel,
+    socialMedia,
+    orientedClient,
+  } = localeData;
 
   return (
     <>
-      <Hero data={localeData} />
-      <AboutSchool aboutSchool={localeData.aboutSchool} />
+      <Hero data={hero} icons={socialMedia} />
+      <AboutSchool aboutSchool={aboutSchool} />
       <AboutMeSection data={aboutMe} />
       <ForWhomSection data={orientedClient} />
       <FormatSection data={format} btnText={applyButtonLabel} />
