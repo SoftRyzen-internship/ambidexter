@@ -1,6 +1,13 @@
 {
-  "applyButtonLabel": "Записатись",
-  "socialsLabel": "Соціальні мережі",
+  "mainTitle": "Галушка Кирило",
+  "navBar": [
+    { "label": "про мене", "link": "about_me" },
+    { "label": "про школу", "link": "about_school" },
+    { "label": "для кого", "link": "for_whom" },
+    { "label": "формат", "link": "format" },
+    { "label": "курси", "link": "courses" },
+    { "label": "відгуки", "link": "reviews" }
+  ],
   "navigation": {
     "aboutMe": "ПРО МЕНЕ",
     "aboutSchool": "ПРО ШКОЛУ",
@@ -9,6 +16,10 @@
     "courses": "КУРСИ",
     "reviews": "ВІДГУКИ"
   },
+  "socialNetworks": "соціальні мережі",
+  "applyButtonLabel": "Записатись",
+  "socialsLabel": "Соціальні мережі",
+
   "hero": {
     "speciality": [
       [
