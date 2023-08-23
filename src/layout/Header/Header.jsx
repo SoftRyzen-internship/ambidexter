@@ -15,9 +15,7 @@ import {
 export const Header = ({ navBar, socialNetworks, socialMedia }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [isSkrollHeight, setIsSkroll] = useState(0);
-
-  //var timeoutId = null;
+  const [isScrollHeight, setIsScroll] = useState(0);
 
   const mobile = useMediaQuery({ maxWidth: 767 });
 
@@ -49,12 +47,12 @@ export const Header = ({ navBar, socialNetworks, socialMedia }) => {
 
   useEffect(() => {
     document.addEventListener('scroll', function () {
-      setIsSkroll(window.scrollY);
+      setIsScroll(window.scrollY);
     });
-  }, [isSkrollHeight]);
+  }, [isScrollHeight]);
 
   const returnBlur = () => {
-    if (isSkrollHeight > 63) {
+    if (isScrollHeight > 0) {
       return true;
     }
     return false;
