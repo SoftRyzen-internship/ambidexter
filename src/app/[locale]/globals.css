@@ -17,12 +17,6 @@
     @apply fill-black w-[12px] h-[12px] xl:w-[24px] xl:h-[24px] hover:fill-white focus:fill-white duration-300;
   }
 
-  .videoPoster {
-    @apply absolute top-0 left-0 w-full h-full hover:cursor-pointer opacity-100 max-h-screen transition-opacity duration-300;
-    @apply after:h-0 after:w-0 after:absolute after:bottom-1/2 after:right-1/2 after:translate-x-3/4 after:translate-y-1/2;
-    @apply after:border-transparent after:border-l-[48px] after:border-y-[28px] after:border-l-accent;
-    @apply after:transition-transform duration-300 after:hover:scale-110;
-  }
   .circleSocialItems {
     @apply w-[24px] h-[24px] rounded-full bg-black  md:w-[32px] md:h-[32px] xl:w-[44px] xl:h-[44px] duration-300;
   }
