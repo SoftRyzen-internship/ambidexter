@@ -12,6 +12,7 @@ module.exports = {
         raw: 'screen and (min-device-pixel-ratio: 2)',
       },
     },
+
     extend: {
       backgroundImage: {
         school_section: "url('/images/school-bg.png')",
