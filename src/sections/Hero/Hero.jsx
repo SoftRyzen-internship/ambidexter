@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 
 import { Container, SocialMedia } from '@/components';
 import heroImg from 'public/images/hero.png';
