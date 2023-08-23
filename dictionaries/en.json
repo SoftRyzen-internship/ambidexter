@@ -1,6 +1,13 @@
 {
-  "applyButtonLabel": "Записатись",
-  "socialsLabel": "Соціальні мережі",
+  "mainTitle": "Halushka Kyrylo",
+  "navBar": [
+    { "label": "about me", "link": "about_me" },
+    { "label": "about school", "link": "about_school" },
+    { "label": "for whom", "link": "for_whom" },
+    { "label": "format", "link": "format" },
+    { "label": "courses", "link": "courses" },
+    { "label": "reviews", "link": "reviews" }
+  ],
   "navigation": {
     "aboutMe": "ПРО МЕНЕ",
     "aboutSchool": "ПРО ШКОЛУ",
@@ -9,6 +16,10 @@
     "courses": "КУРСИ",
     "reviews": "ВІДГУКИ"
   },
+  "socialNetworks": "social Networks",
+  "applyButtonLabel": "Записатись",
+  "socialsLabel": "Соціальні мережі",
+
   "hero": {
     "speciality": [
       [
@@ -379,12 +390,37 @@
     "btnSend": "Відправити"
   },
   "contacts": [
-    {"name": "Telegram", "link":"https://t.me/+380680619457", "ariaLabel":"link to Telegram"},
-    {"name": "Viber", "link":"viber://contact?number=%2B380680619457", "ariaLabel":"link to Viber"},
-    {"name": "Whatsapp", "link":"https://api.whatsapp.com/send?phone=380680619457", "ariaLabel":"link to Whatsapp"}],
+    {
+      "name": "Telegram",
+      "link": "https://t.me/+380680619457",
+      "ariaLabel": "link to Telegram"
+    },
+    {
+      "name": "Viber",
+      "link": "viber://contact?number=%2B380680619457",
+      "ariaLabel": "link to Viber"
+    },
+    {
+      "name": "Whatsapp",
+      "link": "https://api.whatsapp.com/send?phone=380680619457",
+      "ariaLabel": "link to Whatsapp"
+    }
+  ],
   "socialMedia": [
-    {"name": "Instagram", "link":"https://www.instagram.com/ambidexter.school/", "ariaLabel":"link to Instagram"},
-    {"name": "Youtube", "link":"https://www.youtube.com/@Ambidexterschool", "ariaLabel":"link to Youtube"},
-    {"name": "Tiktok", "link":"http://tiktok.com/@ambidexterschool", "ariaLabel":"link to Tiktok"}
+    {
+      "name": "Instagram",
+      "link": "https://www.instagram.com/ambidexter.school/",
+      "ariaLabel": "link to Instagram"
+    },
+    {
+      "name": "Youtube",
+      "link": "https://www.youtube.com/@Ambidexterschool",
+      "ariaLabel": "link to Youtube"
+    },
+    {
+      "name": "Tiktok",
+      "link": "http://tiktok.com/@ambidexterschool",
+      "ariaLabel": "link to Tiktok"
+    }
   ]
 }

@@ -2,10 +2,10 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
 import { i18n } from '../../../i18n';
+import PropTypes from 'prop-types';
 
-export const LocaleSwitcher = () => {
+export const LocaleSwitcher = ({ className }) => {
   const locales = i18n.locales;
   const pathName = usePathname();
 
@@ -13,6 +13,7 @@ export const LocaleSwitcher = () => {
     if (!pathName) return '/';
 
     const segments = pathName.split('/');
+
     return segments[1];
   };
 
@@ -20,26 +21,41 @@ export const LocaleSwitcher = () => {
     if (!pathName) return '/';
 
     const segments = pathName.split('/');
+
     segments[1] = locale;
+
     return segments.join('/');
   };
 
+  const titleLocale = locale => {
+    return locale === 'uk' ? 'ua' : locale;
+  };
+
   return (
-    <ul>
+    <ul
+      className={`${className} uppercase text-[12px] xl:text-[24px]  md:flex xl:gap-3  navBar-text  `}
+    >
       {locales.map(locale => (
-        <li key={locale}>
+        <li
+          key={locale}
+          className="w-[41px] h-[39px] flex justify-center items-center"
+        >
           <Link
             href={redirectedPathName(locale)}
             className={
               locale === getCurrentLocale()
-                ? 'uppercase font-bold'
-                : 'uppercase font-thin'
+                ? ' font-bold text-secondary p-3 xl:p-0  hover:text-accent focus:text-accent '
+                : '  font-normal  p-3 xl:p-0 hover:text-accent focus:text-accent'
             }
           >
-            {locale}
+            {titleLocale(locale)}
           </Link>
         </li>
       ))}
     </ul>
   );
+};
+
+LocaleSwitcher.propTypes = {
+  className: PropTypes.string,
 };

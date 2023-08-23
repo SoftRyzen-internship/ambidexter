@@ -4,7 +4,7 @@ import { Container } from '@/components';
 
 export const Hero = ({ data }) => {
   return (
-    <section>
+    <section className="pt-[79px]">
       <Container>{<h1>{data.hero.title}</h1>}</Container>
     </section>
   );
