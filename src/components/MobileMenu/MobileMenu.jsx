@@ -11,6 +11,7 @@ export const MobileMenu = ({
   navBar,
   socialNetworks,
   isModalShow,
+  socialMedia,
 }) => {
   return (
     <div
@@ -29,14 +30,17 @@ export const MobileMenu = ({
 
         <LocaleSwitcher className="flex items-center justify-center text-[12px] mt-9 mb-9" />
 
-        <SocialNetworks socialNetworks={socialNetworks} />
+        <SocialNetworks
+          socialNetworks={socialNetworks}
+          socialMedia={socialMedia}
+        />
       </Container>
     </div>
   );
 };
 
 MobileMenu.propTypes = {
-  handleMenuToggle: PropTypes.func,
+  handleMenuToggle: PropTypes.func.isRequired,
   navBar: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -45,4 +49,11 @@ MobileMenu.propTypes = {
   ),
   socialNetworks: PropTypes.string.isRequired,
   isModalShow: PropTypes.bool,
+  socialMedia: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+      ariaLabel: PropTypes.string.isRequired,
+    }),
+  ),
 };

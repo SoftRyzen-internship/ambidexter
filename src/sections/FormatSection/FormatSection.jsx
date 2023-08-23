@@ -6,7 +6,10 @@ export const FormatSection = ({ data, btnText, formData }) => {
   const { title, subTitle, boldSubTitle, cards, advantageList } = data;
 
   return (
-    <section className="bg-format bg-no-repeat bg-center bg-cover" id="format">
+    <section
+      className="bg-formatBg bg-no-repeat bg-center bg-cover"
+      id="format"
+    >
       <Container>
         <SectionTitle text={title} />
         <p className="text-middle md:text-large xl:text-large36 text-center mb-4 md:mb-0">
