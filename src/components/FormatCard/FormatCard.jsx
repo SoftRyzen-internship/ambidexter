@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { ApplyButton } from '..';
 
-export const FormatCard = ({ data, btnText }) => {
+export const FormatCard = ({ data, btnText, formData }) => {
   const { title, listLabel, list, marketing } = data;
 
   return (
@@ -21,7 +21,7 @@ export const FormatCard = ({ data, btnText }) => {
         ))}
       </ul>
       <p className="text-center font-normal md:text-base mb-3">{marketing}</p>
-      <ApplyButton data={btnText} isFree={false} />
+      <ApplyButton data={btnText} isFree={false} formData={formData} />
     </li>
   );
 };
@@ -34,4 +34,30 @@ FormatCard.propTypes = {
     marketing: PropTypes.string.isRequired,
   }).isRequired,
   btnText: PropTypes.string.isRequired,
+  formData: PropTypes.shape({
+    name: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }),
+    phoneNumber: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }),
+    email: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }),
+    message: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+    }),
+    notification: PropTypes.shape({
+      error: PropTypes.string.isRequired,
+      success: PropTypes.string.isRequired,
+    }),
+    btnSend: PropTypes.string.isRequired,
+  }),
 };

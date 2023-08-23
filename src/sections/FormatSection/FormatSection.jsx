@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import { Container, SectionTitle, FormatCard } from '@/components';
 
-export const FormatSection = ({ data, btnText }) => {
+export const FormatSection = ({ data, btnText, formData }) => {
   const { title, subTitle, boldSubTitle, cards, advantageList } = data;
 
   return (
@@ -18,7 +18,12 @@ export const FormatSection = ({ data, btnText }) => {
 
         <ul className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-5 xl:gap-[88px] mb-8 md:mb-9 xl:mb-16">
           {cards.map((card, index) => (
-            <FormatCard key={index} data={card} btnText={btnText} />
+            <FormatCard
+              key={index}
+              data={card}
+              btnText={btnText}
+              formData={formData}
+            />
           ))}
         </ul>
 
@@ -53,4 +58,30 @@ FormatSection.propTypes = {
     advantageList: PropTypes.arrayOf(PropTypes.string.isRequired),
   }).isRequired,
   btnText: PropTypes.string.isRequired,
+  formData: PropTypes.shape({
+    name: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }),
+    phoneNumber: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }),
+    email: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }),
+    message: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+    }),
+    notification: PropTypes.shape({
+      error: PropTypes.string.isRequired,
+      success: PropTypes.string.isRequired,
+    }),
+    btnSend: PropTypes.string.isRequired,
+  }),
 };

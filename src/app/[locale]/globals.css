@@ -14,10 +14,10 @@
 
 @layer components {
   .formInput {
-    @apply mb-[12px] border rounded-[10px]  px-[12px] py-[8px] leading-[1.15] placeholder:opacity-50  placeholder:text-base placeholder:font-normal xl:px-[24px] xl:py-[16px] xl:placeholder:text-large;
+    @apply border rounded-10  px-[12px] py-[8px] leading-[1.15] placeholder:opacity-50  placeholder:text-base placeholder:font-normal xl:px-[24px] xl:py-[16px] xl:placeholder:text-large;
   }
   .formLabel {
-    @apply mb-[8px] text-base font-normal leading-[1.15] xl:text-large;
+    @apply mb-[12px] text-base font-normal leading-[1.15] xl:text-large;
   }
   .notificationIcon {
     @apply w-[16px] h-[16px] xl:w-[24px] xl:h-[24px];
@@ -44,9 +44,9 @@
     @apply opacity-100 transition-opacity duration-300;
   }
 
-  .videoWrapper {
+  /* .videoWrapper {
     @apply border-accent border rounded-10 relative w-full md:w-[calc(50%-10px)] h-[calc(((min(100vw,480px)-40px)/280)*191)] md:h-[227px] xl:h-[428px] overflow-hidden max-md:mb-3;
-  }
+  } */
   .videoPoster {
     @apply absolute top-0 left-0 w-full h-full hover:cursor-pointer opacity-100 max-h-screen transition-opacity duration-300;
     @apply after:h-0 after:w-0 after:absolute after:bottom-1/2 after:right-1/2 after:translate-x-3/4 after:translate-y-1/2;

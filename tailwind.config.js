@@ -45,6 +45,7 @@ module.exports = {
         white: '#FFF',
         black: '#222',
         red: '#FF7272',
+        bgModal: '#A3A3A3E6',
       },
 
       fontFamily: {

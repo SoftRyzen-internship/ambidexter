@@ -17,6 +17,7 @@ export default async function Home({ params: { locale } }) {
     format,
     aboutSchool,
     applyButtonLabel,
+    formData,
     socialMedia,
   } = localeData;
 
@@ -25,7 +26,11 @@ export default async function Home({ params: { locale } }) {
       <Hero data={hero} icons={socialMedia} />
       <AboutSchool aboutSchool={aboutSchool} />
       <AboutMeSection data={aboutMe} />
-      <FormatSection data={format} btnText={applyButtonLabel} />
+      <FormatSection
+        data={format}
+        btnText={applyButtonLabel}
+        formData={formData}
+      />
       <Courses data={courses} />
     </>
   );

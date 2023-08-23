@@ -1,4 +1,5 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import PropTypes from 'prop-types';
@@ -7,8 +8,9 @@ import { IncorrectForm } from '../IncorrectForm/IncorrectForm';
 import { NotificationForm } from '../NotificationForm/NotificationForm';
 import { sendMessageTelegram } from '@/utils/sendMessageTelegram';
 
-export const FeedbackForm = ({ toggleModal }) => {
+export const FeedbackForm = ({ toggleModal, data }) => {
   const [notificationState, setNotificationState] = useState(null);
+  const { name, phoneNumber, email, message, notification, btnSend } = data;
 
   const {
     register,
@@ -18,10 +20,10 @@ export const FeedbackForm = ({ toggleModal }) => {
   } = useForm({
     mode: 'onSubmit',
     defaultValues: {
-      name: localStorage.getItem('name') || '',
-      phone: localStorage.getItem('phone') || '',
-      email: localStorage.getItem('email') || '',
-      subject: localStorage.getItem('subject') || '',
+      name: localStorage?.getItem('name') || '',
+      phone: localStorage?.getItem('phone') || '',
+      email: localStorage?.getItem('email') || '',
+      subject: localStorage?.getItem('subject') || '',
     },
   });
 
@@ -56,18 +58,17 @@ export const FeedbackForm = ({ toggleModal }) => {
     <form
       onChange={onChange}
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col border border-accent rounded-[10px] bg-white w-[280px] mx-auto px-[12px] pb-[64px] pt-[56px] md:w-[452px] md:px-[24px] md:pt-[56px] xl:w-[844px] xl:px-[48px] xl:pt-[108px] xl:pb-[100px]"
+      className="flex flex-col border border-accent rounded-10 bg-white w-[280px] mx-auto px-[12px] pb-[64px] pt-[56px] md:w-[452px] md:px-[24px] md:pt-[56px] xl:w-[844px] xl:px-[48px] xl:pt-[108px] xl:pb-[100px]"
     >
-      <div className=" relative flex flex-col">
-        <label htmlFor="name" className="formLabel">
-          ПІБ <span className="text-red">*</span>
-        </label>
-        {errors.name && <IncorrectForm text={'Невірний ПІБ'} />}
+      <label className="formLabel relative flex flex-col">
+        <p className="mb-[8px]">
+          {name.label} <span className="text-red">*</span>
+        </p>
         <input
           type="text"
           id="name"
           name="fullname"
-          placeholder="Іванов Іван Іванович"
+          placeholder={name.placeholder}
           {...register('name', {
             required: true,
             pattern: /^[а-яА-ЯіІїЇєЄґҐa-zA-Z\s'-]+$/,
@@ -80,17 +81,18 @@ export const FeedbackForm = ({ toggleModal }) => {
               : 'formInput border-accent placeholder:text-black'
           }
         />
-      </div>
-      <div className=" relative flex flex-col">
-        <label htmlFor="phone" className="formLabel">
-          Номер телефону <span className="text-red">*</span>
-        </label>
-        {errors.phone && <IncorrectForm text={'Невірний номер'} />}
+        {errors.name && <IncorrectForm text={name.errors} />}
+      </label>
+
+      <label className="formLabel relative flex flex-col">
+        <p className="mb-[8px]">
+          {phoneNumber.label} <span className="text-red">*</span>
+        </p>
         <input
           type="all"
           id="phone"
           name="phone"
-          placeholder="+38 (097) 12 34 567 0"
+          placeholder={phoneNumber.placeholder}
           {...register('phone', {
             required: true,
             pattern: /^\+\d{12}$/,
@@ -101,17 +103,18 @@ export const FeedbackForm = ({ toggleModal }) => {
               : 'formInput border-accent placeholder:text-black'
           }
         />
-      </div>
-      <div className=" relative flex flex-col">
-        <label htmlFor="email" className="formLabel">
-          E-mail <span className="text-red">*</span>
-        </label>
-        {errors.email && <IncorrectForm text={'Невірний E-mail'} />}
+        {errors.phone && <IncorrectForm text={phoneNumber.errors} />}
+      </label>
+
+      <label className="formLabel relative flex flex-col">
+        <p className="mb-[8px]">
+          {email.label} <span className="text-red">*</span>
+        </p>
         <input
           type="text"
           id="email"
           name="email"
-          placeholder="yourmail-mail.com"
+          placeholder={email.placeholder}
           {...register('email', {
             required: true,
             pattern: /^(?!-)[A-Za-z0-9._-]+@[-A-Za-z0-9]+\.[A-Za-z]{2,}$/,
@@ -124,9 +127,11 @@ export const FeedbackForm = ({ toggleModal }) => {
               : 'formInput border-accent placeholder:text-black'
           }
         />
-      </div>
+        {errors.email && <IncorrectForm text={email.errors} />}
+      </label>
+
       <label htmlFor="subject" className="formLabel">
-        Повідомлення
+        {message.label}
       </label>
       <textarea
         {...register('subject', {
@@ -134,19 +139,22 @@ export const FeedbackForm = ({ toggleModal }) => {
         })}
         id="subject"
         name="subject"
-        placeholder="Ваше повідомлення..."
-        className="mb-[24px] h-[146px] border rounded-[10px] border-accent px-[12px] py-[8px] leading-[1.15] placeholder:text-black placeholder:opacity-50 placeholder:text-base placeholder:font-normal  xl:px-[24px] xl:py-[16px] xl:placeholder:text-large xl:h-[287px]"
+        placeholder={message.placeholder}
+        className="mb-[24px] h-[146px] border rounded-10 border-accent px-[12px] py-[8px] leading-[1.15] placeholder:text-black placeholder:opacity-50 placeholder:text-base placeholder:font-normal  xl:px-[24px] xl:py-[16px] xl:placeholder:text-large xl:h-[287px]"
       ></textarea>
       <button
         type="submit"
-        className="bg-accent rounded-[10px] py-[8px] text-middle font-medium max-h-[35px] xl:max-h-[76px] xl:py-[16px] xl:text-large36 flex justify-center items-center hover:bg-white hover:border-[2px] border-accent duration-300 cursor-pointer"
+        className="bg-accent rounded-10 py-[8px] text-middle font-medium max-h-[35px] xl:max-h-[76px] xl:py-[16px] xl:text-large36 flex justify-center items-center hover:bg-white hover:border-[2px] border-accent duration-300 cursor-pointer"
       >
-        Відправити
+        {btnSend}
       </button>
 
       <div className="relative flex justify-center">
         {notificationState && (
-          <NotificationForm notificationState={notificationState} />
+          <NotificationForm
+            notificationState={notificationState}
+            text={notification}
+          />
         )}
       </div>
     </form>
@@ -155,23 +163,30 @@ export const FeedbackForm = ({ toggleModal }) => {
 
 FeedbackForm.propTypes = {
   toggleModal: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    name: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }),
+    phoneNumber: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }),
+    email: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }),
+    message: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+    }),
+    notification: PropTypes.shape({
+      error: PropTypes.string.isRequired,
+      success: PropTypes.string.isRequired,
+    }),
+    btnSend: PropTypes.string.isRequired,
+  }),
 };
-
-//----------ЩО ПОТРІБНО ПРОПИСАТИ В КОМПОМЕНТІ, ЯКИЙ БУДЕ ВИКЛИКАТИ ЦЮ ФОРМУ--------------:
-//
-// import { Transition } from '@headlessui/react';
-// const [isOpen, setIsOpen] = useState(false);
-// const toggleModal = () => {
-//  setIsOpen(!isOpen);
-// };
-// <Transition
-// show={isOpen}
-// enter="transition-opacity duration-300"
-// enterFrom="opacity-0"
-// enterTo="opacity-100"
-// leave="transition-opacity duration-300"
-// leaveFrom="opacity-100"
-// leaveTo="opacity-0"
-// >
-// <FeedbackForm toggleModal={toggleModal} />
-// </Transition>

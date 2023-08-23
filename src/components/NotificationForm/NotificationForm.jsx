@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import CorrectIcon from 'public/icons/correct.svg';
 import IncorrectIcon from 'public/icons/incorrect-notification.svg';
 
-export const NotificationForm = ({ notificationState }) => {
+export const NotificationForm = ({ notificationState, text }) => {
   const notificationCheck = notificationState === 'Correct';
+  const { error, success } = text;
 
   return (
     <div className="flex gap-[8px] justify-center items-center absolute top-[16px] xl:top-[24px] ">
@@ -20,14 +21,16 @@ export const NotificationForm = ({ notificationState }) => {
             : 'text-red notificationMessage'
         }
       >
-        {notificationCheck
-          ? 'Повідомлення успішно відправлено!'
-          : 'Виникла помилка при відправленні!'}
+        {notificationCheck ? `${success}` : `${error}`}
       </p>
     </div>
   );
 };
 
 NotificationForm.propTypes = {
-    notificationState: PropTypes.string.isRequired,
-  };
+  notificationState: PropTypes.string.isRequired,
+  text: PropTypes.shape({
+    error: PropTypes.string.isRequired,
+    success: PropTypes.string.isRequired,
+  }),
+};
