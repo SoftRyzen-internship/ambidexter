@@ -26,12 +26,16 @@ export async function generateStaticParams() {
 export default async function RootLayout({ children, params: { locale } }) {
   const localeData = await getDictionary(locale);
 
-  const { navBar, socialNetworks } = localeData;
+  const { navBar, socialNetworks, socialMedia } = localeData;
 
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <Header navBar={navBar} socialNetworks={socialNetworks} />
+        <Header
+          navBar={navBar}
+          socialNetworks={socialNetworks}
+          socialMedia={socialMedia}
+        />
         <main className="flex min-h-screen flex-col items-center">
           {children}
         </main>

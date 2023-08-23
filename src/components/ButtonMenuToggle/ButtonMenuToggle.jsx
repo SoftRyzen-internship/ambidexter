@@ -7,7 +7,7 @@ export const ButtonMenuToggle = ({ isOpenMenu, handleMenuToggle }) => {
   return (
     <button
       type="button"
-      className={`cursor-pointer p-[10px] xl:pt-0 ${isOpenMenu && 'z-10'}`}
+      className="cursor-pointer p-[10px] xl:pt-0  z-10"
       onClick={handleMenuToggle}
     >
       {!isOpenMenu ? (
