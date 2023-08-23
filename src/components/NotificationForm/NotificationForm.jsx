@@ -32,5 +32,5 @@ NotificationForm.propTypes = {
   text: PropTypes.shape({
     error: PropTypes.string.isRequired,
     success: PropTypes.string.isRequired,
-  }),
+  }).isRequired,
 };

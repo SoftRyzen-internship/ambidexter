@@ -4,8 +4,7 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import PropTypes from 'prop-types';
 
-import { IncorrectForm } from '../IncorrectForm/IncorrectForm';
-import { NotificationForm } from '../NotificationForm/NotificationForm';
+import { IncorrectForm, NotificationForm } from '..';
 import { sendMessageTelegram } from '@/utils/sendMessageTelegram';
 import { Loader } from '..';
 
@@ -68,7 +67,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
       <form
         onChange={onChange}
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col border border-accent rounded-10 bg-white w-[280px] mx-auto px-[12px] pb-[64px] pt-[56px] md:w-[452px] md:px-[24px] md:pt-[56px] xl:w-[844px] xl:px-[48px] xl:pt-[108px] xl:pb-[100px]"
+        className=" flex flex-col border border-accent rounded-10 bg-white w-[280px] mx-auto px-[12px] pb-[64px] pt-[56px] md:w-[452px] md:px-[24px] md:pt-[56px] xl:w-[844px] xl:px-[48px] xl:pt-[108px] xl:pb-[100px]"
       >
         <label className="formLabel relative flex flex-col">
           <p className="mb-[8px]">
@@ -87,8 +86,8 @@ export const FeedbackForm = ({ toggleModal, data }) => {
             })}
             className={
               errors.name
-                ? 'formInput border-red placeholder:text-red'
-                : 'formInput border-accent placeholder:text-black'
+                ? 'formInput border-red placeholder:text-red text-red'
+                : 'formInput border-accent placeholder:text-black '
             }
           />
           {errors.name && <IncorrectForm text={name.errors} />}
@@ -109,7 +108,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
             })}
             className={
               errors.phone
-                ? 'formInput border-red placeholder:text-red'
+                ? 'formInput border-red placeholder:text-red text-red'
                 : 'formInput border-accent placeholder:text-black'
             }
           />
@@ -133,7 +132,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
             })}
             className={
               errors.email
-                ? 'formInput border-red placeholder:text-red'
+                ? 'formInput border-red placeholder:text-red text-red'
                 : 'formInput border-accent placeholder:text-black'
             }
           />
@@ -150,11 +149,11 @@ export const FeedbackForm = ({ toggleModal, data }) => {
           id="subject"
           name="subject"
           placeholder={message.placeholder}
-          className="mb-[24px] h-[146px] border rounded-10 border-accent px-[12px] py-[8px] leading-[1.15] placeholder:text-black placeholder:opacity-50 placeholder:text-base placeholder:font-normal  xl:px-[24px] xl:py-[16px] xl:placeholder:text-large xl:h-[287px]"
+          className="resize-none mb-[24px] h-[146px] border rounded-10 border-accent px-[12px] py-[8px] leading-[1.15] placeholder:text-black placeholder:opacity-50 placeholder:text-base placeholder:font-normal  xl:px-[24px] xl:py-[16px] xl:placeholder:text-large xl:h-[287px]"
         ></textarea>
         <button
           type="submit"
-          className="bg-accent rounded-10 py-[8px] text-middle font-medium max-h-[35px] xl:max-h-[76px] xl:py-[16px] xl:text-large36 flex justify-center items-center hover:bg-white hover:border-[2px] border-accent duration-300 cursor-pointer"
+          className="bg-accent rounded-10 py-[8px] text-middle font-medium max-h-[35px] xl:max-h-[76px] xl:py-[16px] xl:text-large36 flex justify-center items-center hover:bg-white focus:bg-white hover:border-[2px] focus:border-[2px] border-accent duration-300 cursor-pointer"
         >
           {btnSend}
         </button>
@@ -179,25 +178,25 @@ FeedbackForm.propTypes = {
       label: PropTypes.string.isRequired,
       placeholder: PropTypes.string.isRequired,
       errors: PropTypes.arrayOf(PropTypes.string.isRequired),
-    }),
+    }).isRequired,
     phoneNumber: PropTypes.shape({
       label: PropTypes.string.isRequired,
       placeholder: PropTypes.string.isRequired,
       errors: PropTypes.arrayOf(PropTypes.string.isRequired),
-    }),
+    }).isRequired,
     email: PropTypes.shape({
       label: PropTypes.string.isRequired,
       placeholder: PropTypes.string.isRequired,
       errors: PropTypes.arrayOf(PropTypes.string.isRequired),
-    }),
+    }).isRequired,
     message: PropTypes.shape({
       label: PropTypes.string.isRequired,
       placeholder: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
     notification: PropTypes.shape({
       error: PropTypes.string.isRequired,
       success: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
     btnSend: PropTypes.string.isRequired,
-  }),
+  }).isRequired,
 };

@@ -367,7 +367,7 @@
     "name": {
       "label": "Імʼя",
       "placeholder": "Іван",
-      "errors": ["Невірнe ПІБ"]
+      "errors": ["Невірнe імʼя"]
     },
     "phoneNumber": {
       "label": "Номер телефону",

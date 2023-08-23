@@ -1,8 +1,8 @@
 'use client';
 
+import { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 
 import { ModalForm } from '..';
 
@@ -11,6 +11,7 @@ export const ApplyButton = ({ data, isFree, formData }) => {
   const toggleModal = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <>
       <button
@@ -49,25 +50,25 @@ ApplyButton.propTypes = {
       label: PropTypes.string.isRequired,
       placeholder: PropTypes.string.isRequired,
       errors: PropTypes.arrayOf(PropTypes.string.isRequired),
-    }),
+    }).isRequired,
     phoneNumber: PropTypes.shape({
       label: PropTypes.string.isRequired,
       placeholder: PropTypes.string.isRequired,
       errors: PropTypes.arrayOf(PropTypes.string.isRequired),
-    }),
+    }).isRequired,
     email: PropTypes.shape({
       label: PropTypes.string.isRequired,
       placeholder: PropTypes.string.isRequired,
       errors: PropTypes.arrayOf(PropTypes.string.isRequired),
-    }),
+    }).isRequired,
     message: PropTypes.shape({
       label: PropTypes.string.isRequired,
       placeholder: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
     notification: PropTypes.shape({
       error: PropTypes.string.isRequired,
       success: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
     btnSend: PropTypes.string.isRequired,
-  }),
+  }).isRequired,
 };

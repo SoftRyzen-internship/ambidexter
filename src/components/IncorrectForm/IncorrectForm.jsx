@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import IncorrectIcon from 'public/icons/incorrect.svg';
 
 export const IncorrectForm = ({ text }) => {
-  
   return (
     <div className="flex gap-[4px]  items-center absolute right-0 xl:top-[10px]">
       <IncorrectIcon className="w-[8px] h-[8px] xl:w-[10px] xl:h-[10px]" />
@@ -15,5 +14,5 @@ export const IncorrectForm = ({ text }) => {
 };
 
 IncorrectForm.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
 };
