@@ -47,6 +47,7 @@ export const Hero = ({ data, icons }) => {
           src={heroImg}
           alt={title}
           priority={true}
+          quality={100}
           width={737}
           height={951}
           className="absolute top-9 md:top-0 md:left-1/2 md:translate-x-[-35%] xl:translate-x-[-45%] z-0 max-w-[235px] md:max-w-[414px] xl:max-w-[737px]"
