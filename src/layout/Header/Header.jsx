@@ -9,9 +9,8 @@ import {
   Logo,
   MobileMenu,
   NavBar,
+  ButtonMenuToggle,
 } from '@/components';
-import CloseMobile from 'public/icons/close.svg';
-import MenuBtn from 'public/icons/menu.svg';
 
 export const Header = ({ navBar, socialNetworks }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -47,36 +46,29 @@ export const Header = ({ navBar, socialNetworks }) => {
 
   return (
     <header className="z-30 flex items-center h-[68px] md:h-[63px] xl:h-[93px]  fixed w-full  backdrop-blur-[100px] ">
-      <Container>
-        <div className="flex items-center justify-between md:h-[39px] xl:h-[29px]">
-          <Logo isColored={true} className={isOpenMenu && 'z-10'} />
-          {!isMobile && (
-            <NavBar className=" hidden text-[12px]" data={navBar} />
-          )}
-          {isMobile && (
-            <button
-              type="button"
-              className={`${
-                isOpenMenu && 'z-10'
-              } cursor-pointer p-[10px] xl:pt-0`}
-              onClick={handleMenuToggle}
-            >
-              {!isOpenMenu ? (
-                <MenuBtn width={20} height={20} className="duration-300" />
-              ) : (
-                <CloseMobile width={20} height={20} className="duration-300" />
-              )}
-            </button>
-          )}
-          {!isMobile && <LocaleSwitcher className="hidden" />}
-        </div>
+      <Container className="flex items-center justify-between md:h-[39px] xl:h-[29px]">
+        <Logo isColored={true} className={isOpenMenu && 'z-10'} />
 
-        <MobileMenu
-          handleMenuToggle={handleMenuToggle}
-          navBar={navBar}
-          socialNetworks={socialNetworks}
-          isModalShow={isOpenMenu}
-        />
+        {!isMobile && (
+          <NavBar className="max-md:hidden text-[12px]" data={navBar} />
+        )}
+        {!isMobile && <LocaleSwitcher className="max-md:hidden" />}
+
+        {isMobile && (
+          <ButtonMenuToggle
+            isOpenMenu={isOpenMenu}
+            handleMenuToggle={handleMenuToggle}
+          />
+        )}
+
+        {isMobile && (
+          <MobileMenu
+            handleMenuToggle={handleMenuToggle}
+            navBar={navBar}
+            socialNetworks={socialNetworks}
+            isModalShow={isOpenMenu}
+          />
+        )}
       </Container>
     </header>
   );

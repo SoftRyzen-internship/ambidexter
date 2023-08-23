@@ -5,15 +5,16 @@ import PropTypes from 'prop-types';
 
 export const LinkNavBar = ({ link, label, handleMenuToggle }) => {
   return (
-    <li className=" md:h-[39px] flex items-center  cursor-pointer hover:text-accent focus:text-accent duration-300 ">
+    <li className="md:h-[39px] flex items-center  cursor-pointer hover:text-accent focus:text-accent duration-300 ">
       <Link
         key={label}
         to={link}
-        smooth
-        spy
+        smooth="easeInOutQuart"
+        spy={true}
         href="/"
         onClick={handleMenuToggle}
-        activeClass="text-secondary "
+        activeClass="text-secondary"
+        offset={-100}
       >
         {label}
       </Link>
@@ -22,7 +23,7 @@ export const LinkNavBar = ({ link, label, handleMenuToggle }) => {
 };
 
 LinkNavBar.propTypes = {
-  link: PropTypes.string,
-  label: PropTypes.string,
+  link: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   handleMenuToggle: PropTypes.func,
 };

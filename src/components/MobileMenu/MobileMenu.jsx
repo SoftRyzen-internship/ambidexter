@@ -17,16 +17,18 @@ export const MobileMenu = ({
       className={`${
         isModalShow
           ? 'translate-x-0 opacity-100'
-          : ' opacity-0 translate-x-full '
-      } absolute block  md:hidden top-0 left-0   w-full bg-white duration-300 pt-[76px]  min-h-screen  `}
+          : ' opacity-0 translate-x-full'
+      } absolute block  md:hidden top-0 left-0 w-full bg-white duration-300 pt-[76px] h-[100vh]`}
     >
-      <Container>
+      <Container className="py-6 flex flex-col justify-start h-full overflow-y-auto">
         <NavBar
-          className={'flex flex-col text-[16px] mt-6 '}
+          className={'flex flex-col text-[16px]'}
           handleMenuToggle={handleMenuToggle}
           data={navBar}
         />
-        <LocaleSwitcher className=" flex items-center justify-center text-[12px] mt-9 mb-9 " />
+
+        <LocaleSwitcher className="flex items-center justify-center text-[12px] mt-9 mb-9" />
+
         <SocialNetworks socialNetworks={socialNetworks} />
       </Container>
     </div>
