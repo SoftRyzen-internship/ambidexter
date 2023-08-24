@@ -19,3 +19,4 @@ export * from './ButtonMenuToggle/ButtonMenuToggle';
 export * from './Loader/Loader';
 export * from './RelevantFor/RelevantFor';
 export * from './ForWhomImage/ForWhomImage';
+export * from './ForWhomImageBw/ForWhomImageBw';
