@@ -4,9 +4,8 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import PropTypes from 'prop-types';
 
-import { IncorrectForm, NotificationForm } from '..';
+import { IncorrectForm, NotificationForm, Loader } from '..';
 import { sendMessageTelegram } from '@/utils/sendMessageTelegram';
-import { Loader } from '..';
 
 export const FeedbackForm = ({ toggleModal, data }) => {
   const [notificationState, setNotificationState] = useState(null);
