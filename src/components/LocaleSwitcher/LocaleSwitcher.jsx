@@ -44,7 +44,7 @@ export const LocaleSwitcher = ({ className }) => {
             href={redirectedPathName(locale)}
             className={
               locale === getCurrentLocale()
-                ? ' font-bold text-secondary p-3 xl:p-0  hover:text-accent focus:text-accent '
+                ? ' font-bold text-secondary p-3 xl:p-0  cursor-default '
                 : '  font-normal  p-3 xl:p-0 hover:text-accent focus:text-accent'
             }
           >

@@ -11,7 +11,7 @@ export const AboutMeSection = ({
   data: { title, cards, subTitle, boldSubTitle, goals, videoLink },
 }) => {
   return (
-    <section id="aboutMe">
+    <section id="about_me">
       <Container>
         <SectionTitle text={title} />
         <div className="md:flex md:gap-5 md:items-center mb-3 md:mb-5">
