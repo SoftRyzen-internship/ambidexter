@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { Transition } from '@headlessui/react';
 import PropTypes from 'prop-types';
 
-import { ModalForm } from '..';
+import { ModalForm } from '@/components/ModalForm/ModalForm';
 
 export const ApplyButton = ({ data, isFree, formData }) => {
   const [isOpen, setIsOpen] = useState(false);
+
   const toggleModal = () => {
     setIsOpen(!isOpen);
   };
@@ -27,17 +27,8 @@ export const ApplyButton = ({ data, isFree, formData }) => {
       >
         {data}
       </button>
-      <Transition
-        show={isOpen}
-        enter="transition-opacity duration-300"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="transition-opacity duration-300"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-      >
-        <ModalForm toggleModal={toggleModal} isOpen={isOpen} data={formData} />
-      </Transition>
+
+      <ModalForm toggleModal={toggleModal} isOpen={isOpen} data={formData} />
     </>
   );
 };

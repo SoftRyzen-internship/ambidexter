@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import PropTypes from 'prop-types';
 
-import { IncorrectForm, NotificationForm, Loader } from '..';
+import { IncorrectForm, NotificationForm, Loader } from '@/components';
 import { sendMessageTelegram } from '@/utils/sendMessageTelegram';
 
 export const FeedbackForm = ({ toggleModal, data }) => {
@@ -63,6 +63,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
           <Loader />
         </div>
       )}
+
       <form
         onChange={onChange}
         onSubmit={handleSubmit(onSubmit)}
@@ -72,6 +73,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
           <p className="mb-[8px]">
             {name.label} <span className="text-red">*</span>
           </p>
+
           <input
             type="text"
             id="name"
@@ -96,6 +98,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
           <p className="mb-[8px]">
             {phoneNumber.label} <span className="text-red">*</span>
           </p>
+
           <input
             type="all"
             id="phone"
@@ -118,6 +121,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
           <p className="mb-[8px]">
             {email.label} <span className="text-red">*</span>
           </p>
+
           <input
             type="text"
             id="email"
@@ -141,6 +145,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
         <label htmlFor="subject" className="formLabel">
           {message.label}
         </label>
+
         <textarea
           {...register('subject', {
             required: false,
@@ -150,6 +155,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
           placeholder={message.placeholder}
           className="text-base xl:text-large resize-none mb-[24px] h-[146px] border rounded-10 border-accent px-[12px] py-[8px] leading-[1.15] placeholder:text-black placeholder:opacity-50 placeholder:text-base placeholder:font-normal  xl:px-[24px] xl:py-[16px] xl:placeholder:text-large xl:h-[287px]"
         ></textarea>
+
         <button
           type="submit"
           className="bg-accent rounded-10 py-[8px] text-middle font-medium max-h-[35px] xl:max-h-[76px] xl:py-[16px] xl:text-large36 flex justify-center items-center hover:bg-white focus:bg-white hover:border-[2px] focus:border-[2px] border-accent duration-300 cursor-pointer"

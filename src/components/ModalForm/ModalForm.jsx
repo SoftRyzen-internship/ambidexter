@@ -1,10 +1,10 @@
 'use client';
 
 import PropTypes from 'prop-types';
-import { Dialog } from '@headlessui/react';
+import { Dialog, Transition } from '@headlessui/react';
 
+import { FeedbackForm } from '@/components/FeedbackForm/FeedbackForm';
 import CloseIcon from 'public/icons/close.svg';
-import { FeedbackForm } from '..';
 
 export const ModalForm = ({ toggleModal, isOpen, data }) => {
   const { btnClose } = data;
@@ -16,35 +16,46 @@ export const ModalForm = ({ toggleModal, isOpen, data }) => {
   };
 
   return (
-    <Dialog
-      open={isOpen}
-      onClose={toggleModal}
-      className="relative top-0 left-0 z-40 "
+    <Transition
+      show={isOpen}
+      enter="transition-opacity duration-300"
+      enterFrom="opacity-0"
+      enterTo="opacity-100"
+      leave="transition-opacity duration-300"
+      leaveFrom="opacity-100"
+      leaveTo="opacity-0"
     >
-      <div className="bg-bgModal fixed left-0 right-0 top-0 bottom-0 flex justify-center items-center backdrop-blur-[12.5px] ">
-        <Dialog.Panel className="relative">
-          <div
-            className="fixed inset-0 overflow-y-scroll"
-            id="overlay"
-            onClick={handleClick}
-          >
-            <div className="mx-auto relative w-[260px] md:w-[452px] xl:w-[844px] flex justify-center items-center mt-[24px] xl:my-[64px]">
-              <button
-                onClick={toggleModal}
-                className=" w-[40px] h-[40px] flex justify-center items-center ml-auto mb-[24px] md:mb-[12px] xl:mb-[36px] absolute top-[12px] right-[12px] md:top-[24px] md:right-[24px] xl:top-[48px] xl:right-[48px] z-50"
-              >
-                <CloseIcon
-                  className="w-[20px] h-[20px] xl:w-[24px] xl:h-[24px]"
-                  aria-label={btnClose}
-                />
-              </button>
+      <Dialog
+        // open={isOpen}
+        onClose={toggleModal}
+        className="relative top-0 left-0 z-40 "
+      >
+        <div className="bg-bgModal fixed left-0 right-0 top-0 bottom-0 flex justify-center items-center backdrop-blur-[12.5px] ">
+          <Dialog.Panel className="relative">
+            <div
+              className="fixed inset-0 overflow-y-scroll"
+              id="overlay"
+              onClick={handleClick}
+            >
+              <div className="mx-auto relative w-[260px] md:w-[452px] xl:w-[844px] flex justify-center items-center mt-[24px] xl:my-[64px]">
+                <button
+                  type="button"
+                  onClick={toggleModal}
+                  className=" w-[40px] h-[40px] flex justify-center items-center ml-auto mb-[24px] md:mb-[12px] xl:mb-[36px] absolute top-[12px] right-[12px] md:top-[24px] md:right-[24px] xl:top-[48px] xl:right-[48px] z-50"
+                >
+                  <CloseIcon
+                    className="w-[20px] h-[20px] xl:w-[24px] xl:h-[24px]"
+                    aria-label={btnClose}
+                  />
+                </button>
 
-              <FeedbackForm toggleModal={toggleModal} data={data} />
+                <FeedbackForm toggleModal={toggleModal} data={data} />
+              </div>
             </div>
-          </div>
-        </Dialog.Panel>
-      </div>
-    </Dialog>
+          </Dialog.Panel>
+        </div>
+      </Dialog>
+    </Transition>
   );
 };
 

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ApplyButton } from '..';
+import { ApplyButton } from '@/components/ApplyButton/ApplyButton';
 
 export const FormatCard = ({ data, btnText, formData }) => {
   const { title, listLabel, list, marketing } = data;
@@ -21,6 +21,7 @@ export const FormatCard = ({ data, btnText, formData }) => {
         ))}
       </ul>
       <p className="text-center font-normal md:text-base mb-3">{marketing}</p>
+
       <ApplyButton data={btnText} isFree={false} formData={formData} />
     </li>
   );
