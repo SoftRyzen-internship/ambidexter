@@ -10,6 +10,7 @@ export const Contacts = ({ data }) => {
     Viber: <ViberIcon className="contactsIcon" />,
     Whatsapp: <WhatsappIcon className="contactsIcon" />,
   };
+
   return (
     <ul>
       <li className="flex justify-start items-center gap-[12px] xl:gap-[16px] mb-[16px] md:mb-[32px] xl:mb-[24px]">
@@ -24,20 +25,18 @@ export const Contacts = ({ data }) => {
           </a>
         </p>
         <ul className="flex gap-[8px] xl:gap-[12px]">
-          {data.map((el, index) => {
-            return (
-              <li key={index}>
-                <a
-                  href={el.link}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  aria-label={el.ariaLabel}
-                >
-                  {contactsIcons[el.name]}
-                </a>
-              </li>
-            );
-          })}
+          {data.map((el, index) => (
+            <li key={index}>
+              <a
+                href={el.link}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label={el.ariaLabel}
+              >
+                {contactsIcons[el.name]}
+              </a>
+            </li>
+          ))}
         </ul>
       </li>
       <li className="flex justify-start items-center">
@@ -57,9 +56,11 @@ export const Contacts = ({ data }) => {
 };
 
 Contacts.propTypes = {
-  data: PropTypes.arrayOf({
-    name: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    ariaLabel: PropTypes.string.isRequired,
-  }),
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+      ariaLabel: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };

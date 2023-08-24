@@ -7,7 +7,7 @@ export const Logo = ({ isColored, className }) => {
       href="/"
       className={`${
         isColored ? 'font-medium' : 'font-bold'
-      } ${className} placeholder:text-middle md:text-small xl:text-large uppercase cursor-pointer `}
+      } ${className} text-middle md:text-small xl:text-large uppercase cursor-pointer `}
     >
       AMBI
       <span
@@ -25,4 +25,5 @@ export const Logo = ({ isColored, className }) => {
 
 Logo.propTypes = {
   isColored: PropTypes.bool.isRequired,
+  className: PropTypes.string,
 };
