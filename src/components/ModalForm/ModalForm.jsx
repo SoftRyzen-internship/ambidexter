@@ -27,13 +27,13 @@ export const ModalForm = ({ toggleModal, isOpen, data }) => {
     >
       <Dialog onClose={toggleModal} className="relative top-0 left-0 z-40 ">
         <div className="bg-bgModal fixed left-0 right-0 top-0 bottom-0 flex justify-center items-center backdrop-blur-[12.5px] ">
-          <Dialog.Panel className="relative">
+          <Dialog.Panel className="relative ">
             <div
-              className="fixed inset-0 overflow-y-scroll"
+              className="fixed inset-0 overflow-y-auto flex justify-center items-center"
               id="overlay"
               onClick={handleClick}
             >
-              <div className="mx-auto relative w-[260px] md:w-[452px] xl:w-[844px] flex justify-center items-center mt-[24px] xl:my-[64px]">
+              <div className=" mx-auto relative w-[260px] md:w-[452px] xl:w-[844px]  xl:my-[64px]">
                 <button
                   type="button"
                   onClick={toggleModal}

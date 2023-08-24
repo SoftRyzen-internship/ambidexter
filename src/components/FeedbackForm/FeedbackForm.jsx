@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 
 import { IncorrectForm, NotificationForm, Loader } from '@/components';
 import { sendMessageTelegram } from '@/utils/sendMessageTelegram';
+import { clearLocalStorage } from '@/utils/clearLocalStorage';
 
 export const FeedbackForm = ({ toggleModal, data }) => {
   const [notificationState, setNotificationState] = useState(null);
@@ -42,7 +43,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
     sendMessageTelegram(data)
       .then(() => {
         setIsLoading(false);
-        localStorage.clear();
+        clearLocalStorage(Object.keys(data));
         setNotificationState('Correct');
         reset();
       })
