@@ -26,10 +26,10 @@
   }
 
   .videoPoster {
-    @apply absolute top-0 left-0 w-full h-full hover:cursor-pointer opacity-100 max-h-screen transition-opacity duration-300;
-    @apply after:h-0 after:w-0 after:absolute after:bottom-1/2 after:right-1/2 after:translate-x-3/4 after:translate-y-1/2;
-    @apply after:border-transparent after:border-l-[48px] after:border-y-[28px] after:border-l-accent;
-    @apply after:transition-transform duration-300 after:hover:scale-110;
+    @apply absolute top-0 left-0 w-full h-full hover:cursor-pointer opacity-100 max-h-screen transition-opacity duration-300
+            after:h-0 after:w-0 after:absolute after:bottom-1/2 after:right-1/2 after:translate-x-3/4 after:translate-y-1/2
+            after:border-transparent after:border-l-[48px] after:border-y-[28px] after:border-l-accent
+            after:transition-transform after:duration-300 after:hover:scale-110;
   }
 
   .videoActive .videoPoster {
@@ -48,8 +48,8 @@
   }
 
   .freeClassSection {
-    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/free-bg-xl.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit;
-    @apply dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/free-bg-xl-x2.png')];
+    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/free-bg-xl.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit
+            dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/free-bg-xl-x2.png')];
     background-image:
       linear-gradient(
         180deg,
