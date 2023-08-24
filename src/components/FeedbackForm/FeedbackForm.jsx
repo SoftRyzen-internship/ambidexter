@@ -197,5 +197,6 @@ FeedbackForm.propTypes = {
       success: PropTypes.string.isRequired,
     }).isRequired,
     btnSend: PropTypes.string.isRequired,
+    btnClose: PropTypes.string.isRequired,
   }).isRequired,
 };

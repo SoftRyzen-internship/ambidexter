@@ -6,6 +6,8 @@ import CloseIcon from 'public/icons/close.svg';
 import { FeedbackForm } from '..';
 
 export const ModalForm = ({ toggleModal, isOpen, data }) => {
+  const { btnClose } = data;
+
   const handleClick = e => {
     if (e.target.id === 'overlay') {
       toggleModal();
@@ -30,7 +32,10 @@ export const ModalForm = ({ toggleModal, isOpen, data }) => {
                 onClick={toggleModal}
                 className=" w-[40px] h-[40px] flex justify-center items-center ml-auto mb-[24px] md:mb-[12px] xl:mb-[36px] absolute top-[12px] right-[12px] md:top-[24px] md:right-[24px] xl:top-[48px] xl:right-[48px] z-50"
               >
-                <CloseIcon className="w-[20px] h-[20px] xl:w-[24px] xl:h-[24px]" />
+                <CloseIcon
+                  className="w-[20px] h-[20px] xl:w-[24px] xl:h-[24px]"
+                  aria-label={btnClose}
+                />
               </button>
 
               <FeedbackForm toggleModal={toggleModal} data={data} />
@@ -70,5 +75,6 @@ ModalForm.propTypes = {
       success: PropTypes.string.isRequired,
     }).isRequired,
     btnSend: PropTypes.string.isRequired,
+    btnClose: PropTypes.string.isRequired,
   }).isRequired,
 };
