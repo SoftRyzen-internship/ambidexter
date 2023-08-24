@@ -1,11 +1,9 @@
 import { Inter } from 'next/font/google';
-
-import { Header } from '@/layout';
-
-import { getMetaByLocale } from '@/utils/getMetaData';
-import { getDictionary } from '@/utils/getDictionary';
 import { i18n } from 'i18n';
 
+import { Header, Footer } from '@/layout';
+import { getMetaByLocale } from '@/utils/getMetaData';
+import { getDictionary } from '@/utils/getDictionary';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -26,7 +24,7 @@ export async function generateStaticParams() {
 export default async function RootLayout({ children, params: { locale } }) {
   const localeData = await getDictionary(locale);
 
-  const { navBar, socialNetworks, socialMedia } = localeData;
+  const { navBar, socialNetworks, socialMedia, contacts } = localeData;
 
   return (
     <html lang={locale}>
@@ -35,10 +33,17 @@ export default async function RootLayout({ children, params: { locale } }) {
           navBar={navBar}
           socialNetworks={socialNetworks}
           socialMedia={socialMedia}
+          locale={locale}
         />
         <main className="flex min-h-screen flex-col items-center">
           {children}
         </main>
+        <Footer
+          contacts={contacts}
+          navBar={navBar}
+          socialMedia={socialMedia}
+          locale={locale}
+        />
       </body>
     </html>
   );

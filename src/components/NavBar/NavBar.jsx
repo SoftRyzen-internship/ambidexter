@@ -1,8 +1,14 @@
 import PropTypes from 'prop-types';
 import { LinkNavBar } from '@/components';
 
-export const NavBar = ({ className, data, handleMenuToggle }) => {
+export const NavBar = ({
+  className,
+  data,
+  handleMenuToggle,
+  isFooter = false,
+}) => {
   return (
+
     <nav>
       <ul
         className={`${className} md:flex uppercase md:py-3  items-center gap-4 xl:gap-6 font-medium leading-normal xl:text-[24px] text-black `}
@@ -16,11 +22,14 @@ export const NavBar = ({ className, data, handleMenuToggle }) => {
           />
         ))}
       </ul>
+
     </nav>
   );
 };
+
 NavBar.propTypes = {
   className: PropTypes.string,
   handleMenuToggle: PropTypes.func,
-  data: PropTypes.arrayOf(PropTypes.object),
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  isFooter: PropTypes.bool,
 };
