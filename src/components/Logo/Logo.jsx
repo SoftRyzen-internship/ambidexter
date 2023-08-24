@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 
-export const Logo = ({ isColored, className }) => {
+export const Logo = ({ isColored, className, locale }) => {
   return (
     <Link
-      href="/"
+      href={`/${locale}`}
       className={`${
         isColored ? 'font-medium' : 'font-bold'
       } ${className} placeholder:text-middle md:text-small xl:text-large uppercase cursor-pointer `}

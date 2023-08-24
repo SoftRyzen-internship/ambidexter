@@ -12,7 +12,7 @@ import {
   ButtonMenuToggle,
 } from '@/components';
 
-export const Header = ({ navBar, socialNetworks, socialMedia }) => {
+export const Header = ({ navBar, socialNetworks, socialMedia, locale }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isScrollHeight, setIsScroll] = useState(0);
@@ -65,7 +65,7 @@ export const Header = ({ navBar, socialNetworks, socialMedia }) => {
       }  `}
     >
       <Container className="flex items-center justify-between md:h-[39px] xl:h-[29px]">
-        <Logo isColored={true} className="z-10" />
+        <Logo isColored={true} className="z-10" locale={locale} />
 
         {!isMobile && (
           <NavBar className="hidden md:block text-[12px]" data={navBar} />
