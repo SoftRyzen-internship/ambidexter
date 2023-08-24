@@ -2,6 +2,7 @@
 
 import PropTypes from 'prop-types';
 import { Dialog } from '@headlessui/react';
+
 import CloseIcon from 'public/icons/close.svg';
 import { FeedbackForm } from '..';
 
