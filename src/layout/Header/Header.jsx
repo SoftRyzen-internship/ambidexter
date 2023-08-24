@@ -62,7 +62,7 @@ export const Header = ({ navBar, socialNetworks, socialMedia, locale }) => {
     <header
       className={`z-30 flex items-center h-[68px] md:h-[63px] xl:h-[93px]  fixed w-full  ${
         returnBlur() && 'backdrop-blur-[100px]'
-      }  `}
+      }  bg-headerBg `}
     >
       <Container className="flex items-center justify-between md:h-[39px] xl:h-[29px]">
         <Logo isColored={true} locale={locale} />

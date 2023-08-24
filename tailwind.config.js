@@ -48,6 +48,7 @@ module.exports = {
         white: '#FFF',
         black: '#222',
         red: '#FF7272',
+        headerBg: 'rgba(255, 255, 255, 0.5)',
       },
 
       fontFamily: {
