@@ -19,3 +19,4 @@ export * from './VideoPlayer/VideoPlayer';
 export * from './ButtonMenuToggle/ButtonMenuToggle';
 export * from './Loader/Loader';
 export * from './FormatCard/FormatCard';
+export * from './ApplyButton/ApplyButton';
