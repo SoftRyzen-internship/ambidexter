@@ -9,9 +9,10 @@ import {
 
 export const AboutMeSection = ({
   data: { title, cards, subTitle, boldSubTitle, goals, videoLink },
+  id,
 }) => {
   return (
-    <section id="about_me">
+    <section id={id}>
       <Container>
         <SectionTitle text={title} />
         <div className="md:flex md:gap-5 md:items-center mb-3 md:mb-5">
@@ -63,4 +64,5 @@ AboutMeSection.propTypes = {
     ).isRequired,
     videoLink: PropTypes.string.isRequired,
   }).isRequired,
+  id: PropTypes.string.isRequired,
 };
