@@ -61,21 +61,26 @@
       -webkit-image-set(url('/images/free-bg-xl.webp') 1x, url('/images/free-bg-xl-x2.webp')
             2x);
   }
-}
 
-.spinner {
-  width: 80px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background:
-    radial-gradient(farthest-side, #7ed956 94%, #0000) top/8px 8px no-repeat,
-    conic-gradient(#0000 30%, #7ed956);
-  mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
-  animation: spin 1s infinite linear;
-}
+  .spinner {
+    width: 80px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+      radial-gradient(farthest-side, #7ed956 94%, #0000) top/8px 8px no-repeat,
+      conic-gradient(#0000 30%, #7ed956);
+    mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+    animation: spin 1s infinite linear;
+  }
 
-@keyframes spin {
-  100% {
-    transform: rotate(1turn);
+  @keyframes spin {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+
+  .footerLogo:hover > span,
+  .footerLogo:focus > span {
+    @apply text-white;
   }
 }

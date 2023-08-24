@@ -19,6 +19,7 @@ export const Footer = ({ contacts, navBar, socialMedia, locale }) => {
       <Container className="flex flex-col">
         <div className="h-4 mb-4 md:mb-8 xl:mb-12 md:flex md:items-center md:justify-between">
           <Logo isColored={false} locale={locale} />
+
           {!isMobile && (
             <NavBar
               className="md:text-small xl:text-large"
