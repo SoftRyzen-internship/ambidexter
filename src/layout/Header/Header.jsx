@@ -65,7 +65,7 @@ export const Header = ({ navBar, socialNetworks, socialMedia, locale }) => {
       }  `}
     >
       <Container className="flex items-center justify-between md:h-[39px] xl:h-[29px]">
-        <Logo isColored={true} className="z-10" locale={locale} />
+        <Logo isColored={true} locale={locale} />
 
         {!isMobile && (
           <NavBar className="hidden md:block text-[12px]" data={navBar} />
@@ -108,4 +108,5 @@ Header.propTypes = {
       ariaLabel: PropTypes.string.isRequired,
     }),
   ),
+  locale: PropTypes.string.isRequired,
 };
