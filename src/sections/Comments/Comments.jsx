@@ -8,13 +8,13 @@ import 'swiper/css';
 
 import { CommentCard, Container, MoreReviews } from '@/components';
 
-export const Comments = ({ data }) => {
+export const Comments = ({ data, id }) => {
   const { label, comments, btnLabel } = data;
 
   const mobile = useMediaQuery({ maxWidth: 767 });
 
   return (
-    <section>
+    <section id={id} className="bg-commentsBg bg-no-repeat bg-center bg-cover">
       <Container>
         <h2 className="mb-6 md:mb-9 xl:mb-16 text-center">{label}</h2>
 
@@ -53,4 +53,5 @@ Comments.propTypes = {
     ).isRequired,
     btnLabel: PropTypes.string.isRequired,
   }),
+  id: PropTypes.string.isRequired,
 };

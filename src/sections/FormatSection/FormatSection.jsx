@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 
 import { Container, SectionTitle, FormatCard } from '@/components';
 
-export const FormatSection = ({ data, btnText }) => {
+export const FormatSection = ({ data, btnText, id }) => {
   const { title, subTitle, boldSubTitle, cards, advantageList } = data;
 
   return (
-    <section className="bg-format bg-no-repeat bg-center bg-cover" id="format">
+    <section className="bg-formatBg bg-no-repeat bg-center bg-cover" id={id}>
       <Container>
         <SectionTitle text={title} />
         <p className="text-middle md:text-large xl:text-large36 text-center mb-4 md:mb-0">
@@ -53,4 +53,5 @@ FormatSection.propTypes = {
     advantageList: PropTypes.arrayOf(PropTypes.string.isRequired),
   }).isRequired,
   btnText: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };

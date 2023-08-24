@@ -4,3 +4,4 @@ export * from './Courses/Courses';
 export * from './AboutMeSection/AboutMeSection';
 export * from './FormatSection/FormatSection';
 export * from './Comments/Comments';
+export * from './FreeClass/FreeClass';

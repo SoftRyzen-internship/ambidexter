@@ -3,9 +3,9 @@
 import { Link } from 'react-scroll';
 import PropTypes from 'prop-types';
 
-export const LinkNavBar = ({ link, label, handleMenuToggle }) => {
+export const LinkNavBar = ({ link, label, handleMenuToggle, isFooter }) => {
   return (
-    <li className="md:h-[39px] flex items-center  cursor-pointer hover:text-accent focus:text-accent duration-300 ">
+    <li className={`md:h-[39px] flex items-center cursor-pointer duration-300`}>
       <Link
         key={label}
         to={link}
@@ -13,7 +13,8 @@ export const LinkNavBar = ({ link, label, handleMenuToggle }) => {
         spy={true}
         href="/"
         onClick={handleMenuToggle}
-        activeClass="text-secondary"
+        className={isFooter ? 'navBarLinkFooter' : 'navBarLinkHeader'}
+        activeClass={isFooter ? '' : 'text-secondary'}
         offset={-100}
       >
         {label}
@@ -26,4 +27,5 @@ LinkNavBar.propTypes = {
   link: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   handleMenuToggle: PropTypes.func,
+  isFooter: PropTypes.bool.isRequired,
 };
