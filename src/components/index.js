@@ -18,7 +18,4 @@ export * from './SocialMedia/SocialMedia';
 export * from './VideoPlayer/VideoPlayer';
 export * from './ButtonMenuToggle/ButtonMenuToggle';
 export * from './Loader/Loader';
-// export * from './FeedbackForm/FeedbackForm';
-// export * from './ModalForm/ModalForm';
-// export * from './ApplyButton/ApplyButton';
 export * from './FormatCard/FormatCard';

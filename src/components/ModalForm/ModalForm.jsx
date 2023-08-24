@@ -25,11 +25,7 @@ export const ModalForm = ({ toggleModal, isOpen, data }) => {
       leaveFrom="opacity-100"
       leaveTo="opacity-0"
     >
-      <Dialog
-        // open={isOpen}
-        onClose={toggleModal}
-        className="relative top-0 left-0 z-40 "
-      >
+      <Dialog onClose={toggleModal} className="relative top-0 left-0 z-40 ">
         <div className="bg-bgModal fixed left-0 right-0 top-0 bottom-0 flex justify-center items-center backdrop-blur-[12.5px] ">
           <Dialog.Panel className="relative">
             <div
