@@ -68,7 +68,7 @@ export const Header = ({ navBar, socialNetworks, socialMedia, locale }) => {
         <Logo isColored={true} locale={locale} />
 
         {!isMobile && (
-          <NavBar className="hidden md:block text-[12px]" data={navBar} />
+          <NavBar data={navBar} className="hidden md:block text-[12px]" />
         )}
         {!isMobile && <LocaleSwitcher className="hidden md:block " />}
 
