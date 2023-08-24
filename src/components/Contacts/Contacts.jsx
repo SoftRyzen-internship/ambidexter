@@ -56,7 +56,7 @@ export const Contacts = ({ data }) => {
 };
 
 Contacts.propTypes = {
-  contacts: PropTypes.arrayOf(
+  data: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,

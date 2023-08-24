@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 import { Container, Logo, Contacts, NavBar, SocialMedia } from '@/components';
 
-export const Footer = ({ contacts, navBar, socialMedia }) => {
+export const Footer = ({ contacts, navBar, socialMedia, locale }) => {
   const [isMobile, setIsMobile] = useState(false);
   const mobile = useMediaQuery({ maxWidth: 767 });
 
@@ -18,7 +18,7 @@ export const Footer = ({ contacts, navBar, socialMedia }) => {
     <footer className="py-10 xl:py-20 bg-accent">
       <Container className="flex flex-col">
         <div className="h-4 mb-4 md:mb-8 xl:mb-12 md:flex md:items-center md:justify-between">
-          <Logo isColored={false} />
+          <Logo isColored={false} locale={locale} />
           {!isMobile && (
             <NavBar className="md:text-small xl:text-large" data={navBar} />
           )}
@@ -45,25 +45,26 @@ export const Footer = ({ contacts, navBar, socialMedia }) => {
   );
 };
 
-Contacts.propTypes = {
+Footer.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,
       ariaLabel: PropTypes.string.isRequired,
     }),
-  ),
+  ).isRequired,
   navBar: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,
     }),
-  ),
+  ).isRequired,
   socialMedia: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,
       ariaLabel: PropTypes.string.isRequired,
     }),
-  ),
+  ).isRequired,
+  locale: PropTypes.string.isRequired,
 };

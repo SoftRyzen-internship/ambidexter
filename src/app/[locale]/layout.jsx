@@ -38,7 +38,12 @@ export default async function RootLayout({ children, params: { locale } }) {
         <main className="flex min-h-screen flex-col items-center">
           {children}
         </main>
-        <Footer contacts={contacts} navBar={navBar} socialMedia={socialMedia} />
+        <Footer
+          contacts={contacts}
+          navBar={navBar}
+          socialMedia={socialMedia}
+          locale={locale}
+        />
       </body>
     </html>
   );
