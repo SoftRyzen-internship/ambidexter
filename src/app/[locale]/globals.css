@@ -48,11 +48,34 @@
   }
 
   .freeClassSection {
-    @apply bg-[url('/images/free-bg-xl.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit;
-    @apply dpr:bg-[url('/images/free-bg-xl-x2.png')];
-    background-image: -webkit-image-set(
-      url('/images/free-bg-xl.webp') 1x,
-      url('/images/free-bg-xl-x2.webp') 2x
-    );
+    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/free-bg-xl.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit;
+    @apply dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/free-bg-xl-x2.png')];
+    background-image:
+      linear-gradient(
+        180deg,
+        #efefef 0%,
+        rgba(239, 239, 239, 0) 25%,
+        rgba(239, 239, 239, 0) 75%,
+        #efefef 100%
+      ),
+      -webkit-image-set(url('/images/free-bg-xl.webp') 1x, url('/images/free-bg-xl-x2.webp')
+            2x);
+  }
+}
+
+.spinner {
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, #7ed956 94%, #0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%, #7ed956);
+  mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
   }
 }

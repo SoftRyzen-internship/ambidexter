@@ -6,7 +6,7 @@ import { Container, CoursesCard, SectionTitle } from '@/components';
 import actorImg from 'public/images/actor.png';
 import oratorImg from 'public/images/orator.png';
 
-export const Courses = ({ data }) => {
+export const Courses = ({ data, id }) => {
   const { cards, title, subTitle, btnShowMore } = data;
 
   const newData = [
@@ -16,7 +16,7 @@ export const Courses = ({ data }) => {
 
   return (
     <section
-      id="courses"
+      id={id}
       className="bg-coursesBg bg-no-repeat bg-center bg-cover text-center"
     >
       <Container>
@@ -48,4 +48,5 @@ Courses.propTypes = {
     ).isRequired,
     btnShowMore: PropTypes.string.isRequired,
   }).isRequired,
+  id: PropTypes.string.isRequired,
 };

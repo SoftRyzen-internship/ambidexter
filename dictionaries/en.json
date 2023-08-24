@@ -1,6 +1,13 @@
 {
-  "applyButtonLabel": "Записатись",
-  "socialsLabel": "Соціальні мережі",
+  "mainTitle": "Halushka Kyrylo",
+  "navBar": [
+    { "label": "about me", "link": "about_me" },
+    { "label": "about school", "link": "about_school" },
+    { "label": "for whom", "link": "for_whom" },
+    { "label": "format", "link": "format" },
+    { "label": "courses", "link": "courses" },
+    { "label": "reviews", "link": "reviews" }
+  ],
   "navigation": {
     "aboutMe": "ПРО МЕНЕ",
     "aboutSchool": "ПРО ШКОЛУ",
@@ -9,6 +16,10 @@
     "courses": "КУРСИ",
     "reviews": "ВІДГУКИ"
   },
+  "socialNetworks": "social Networks",
+  "applyButtonLabel": "Записатись",
+  "socialsLabel": "Соціальні мережі",
+
   "hero": {
     "speciality": [
       [
@@ -19,8 +30,8 @@
         "Диктор"
       ],
       [
-        "Коуч ораторської та акторської майстерності",
-        "Засновник онлайн-школи AMBIDEXTER"
+        ["Коуч ораторської", "та акторської майстерності"],
+        ["Засновник", "онлайн-школи AMBIDEXTER"]
       ]
     ],
     "title": "Halushka Kyrylo"
