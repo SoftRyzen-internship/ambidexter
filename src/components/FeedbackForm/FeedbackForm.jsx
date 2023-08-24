@@ -148,7 +148,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
           id="subject"
           name="subject"
           placeholder={message.placeholder}
-          className="resize-none mb-[24px] h-[146px] border rounded-10 border-accent px-[12px] py-[8px] leading-[1.15] placeholder:text-black placeholder:opacity-50 placeholder:text-base placeholder:font-normal  xl:px-[24px] xl:py-[16px] xl:placeholder:text-large xl:h-[287px]"
+          className="text-base xl:text-large resize-none mb-[24px] h-[146px] border rounded-10 border-accent px-[12px] py-[8px] leading-[1.15] placeholder:text-black placeholder:opacity-50 placeholder:text-base placeholder:font-normal  xl:px-[24px] xl:py-[16px] xl:placeholder:text-large xl:h-[287px]"
         ></textarea>
         <button
           type="submit"

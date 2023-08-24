@@ -14,7 +14,7 @@
 
 @layer components {
   .formInput {
-    @apply border rounded-10  px-[12px] py-[8px] leading-[1.15] placeholder:opacity-50  placeholder:text-base placeholder:font-normal xl:px-[24px] xl:py-[16px] xl:placeholder:text-large;
+    @apply text-base xl:text-large border rounded-10  px-[12px] py-[8px] leading-[1.15] placeholder:opacity-50  placeholder:text-base placeholder:font-normal xl:px-[24px] xl:py-[16px] xl:placeholder:text-large;
   }
   .formLabel {
     @apply mb-[12px] text-base font-normal leading-[1.15] xl:text-large;
