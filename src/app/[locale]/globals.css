@@ -97,13 +97,21 @@
   }
 
   .forWhomImageBw {
-    @apply mx-auto relative md:w-[422px] md:h-[454px] xl:w-[813px] xl:h-[862px] opacity-100 transition-opacity duration-300 z-10;
+    @apply mx-auto relative  w-[272px] h-[293px] md:w-[422px] md:h-[454px] xl:w-[813px] xl:h-[862px] opacity-100 transition-opacity duration-300 z-10;
   }
   .forWhomImage {
-    @apply mx-auto absolute bottom-0 md:bottom-0 md:left-0 z-0 md:w-[422px] md:h-[454px] xl:w-[813px] xl:h-[862px];
+    @apply mx-auto absolute left-1/2 translate-x-[-50%] bottom-0 w-[272px] h-[293px] z-0 md:w-[422px] md:h-[454px] xl:w-[813px] xl:h-[862px];
   }
   .forWhoImageContainer:hover > .forWhomImageBw {
     @apply opacity-0;
+  }
+
+  .relevant {
+    @apply gap-[8px] flex justify-start items-center w-[216px] md:gap-[16px] xl:w-[413px];
+  }
+
+  .forThose {
+    @apply gap-[16px] flex justify-start items-center w-[216px] md:gap-[16px] xl:w-[413px];
   }
 
   .btnMoreReviews:hover .arrowMoreReviews,

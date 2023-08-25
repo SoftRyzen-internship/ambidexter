@@ -6,7 +6,7 @@ export const ForWhomImage = () => {
   return (
     <Image
       src={ForWhomImageColor}
-      alt=""
+      alt="Кирило задоволений"
       width={813}
       height={862}
       quality={100}
