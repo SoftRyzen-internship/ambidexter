@@ -1,4 +1,5 @@
 'use client';
+
 import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Keyboard } from 'swiper/modules';
@@ -11,12 +12,14 @@ import { CommentCard, Container, MoreReviews } from '@/components';
 export const Comments = ({ data, id }) => {
   const { label, comments, btnLabel } = data;
 
-  const mobile = useMediaQuery({ maxWidth: 767 });
+  const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
     <section id={id} className="bg-commentsBg bg-no-repeat bg-center bg-cover">
       <Container>
-        <h2 className="mb-6 md:mb-9 xl:mb-16 text-center">{label}</h2>
+        <h2 className="mb-6 md:mb-9 xl:mb-16 text-center text-middle md:text-large xl:text-large36">
+          {label}
+        </h2>
 
         <Swiper
           modules={[Keyboard]}
@@ -26,7 +29,7 @@ export const Comments = ({ data, id }) => {
             onlyInViewport: true,
           }}
           spaceBetween={20}
-          slidesPerView={mobile ? 1 : 3}
+          slidesPerView={isMobile ? 1 : 3}
         >
           {comments.map((element, index) => (
             <SwiperSlide key={index}>
