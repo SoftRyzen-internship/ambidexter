@@ -28,7 +28,9 @@ export const ApplyButton = ({ data, isFree, formData }) => {
         {data}
       </button>
 
-      <ModalForm toggleModal={toggleModal} isOpen={isOpen} data={formData} />
+      {formData && (
+        <ModalForm toggleModal={toggleModal} isOpen={isOpen} data={formData} />
+      )}
     </>
   );
 };

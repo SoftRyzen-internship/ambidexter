@@ -50,6 +50,7 @@ export default async function Home({ params: { locale } }) {
         data={advertise}
         btnLabel={applyButtonLabel}
         altText={hero.title}
+        formData={formData}
       />
     </>
   );

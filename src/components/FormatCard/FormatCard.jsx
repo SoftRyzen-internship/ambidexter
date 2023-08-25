@@ -9,7 +9,9 @@ export const FormatCard = ({ data, btnText, formData }) => {
       <h3 className="text-center text-middle md:text-large mb-4 md:mb-6">
         {title}
       </h3>
+
       <p className="md:text-middle mb-2">{listLabel}</p>
+
       <ul className="flex-grow pb-6">
         {list.map((item, index) => (
           <li
@@ -20,6 +22,7 @@ export const FormatCard = ({ data, btnText, formData }) => {
           </li>
         ))}
       </ul>
+
       <p className="text-center font-normal md:text-base mb-3">{marketing}</p>
 
       <ApplyButton data={btnText} isFree={false} formData={formData} />
