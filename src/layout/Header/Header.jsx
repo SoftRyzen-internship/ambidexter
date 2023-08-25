@@ -15,7 +15,8 @@ import {
 export const Header = ({ navBar, socialNetworks, socialMedia, locale }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [isScrollHeight, setIsScroll] = useState(0);
+  const scrollStart = 1;
+  const [isScrollHeight, setIsScroll] = useState(scrollStart);
 
   const mobile = useMediaQuery({ maxWidth: 767 });
 
