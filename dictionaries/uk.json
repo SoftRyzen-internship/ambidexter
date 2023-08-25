@@ -172,10 +172,10 @@
     "label": "Відгуки випускників",
     "comments": [
       {
-        "photo": "/images/review4.jpg",
-        "name": "Antonina Anisovich",
+        "photo": "/images/review9.jpg",
+        "name": "Fylyp",
         "rating": "5",
-        "comment": "I had the privilege of being a student of Kirill and I cannot express enough how grateful I am for the transformative experience. I wholeheartedly recommend Kirill to anyone seeking to enhance their public speaking abilities. He is a true professional and an invaluable asset for anyone aspiring to become a more persuasive, impactful, and confident speaker."
+        "comment": "It was interesting for me to study with Kirill. We worked with oratory, diction, and staged theatrical skits. I liked everything, more thanks to Kiril."
       },
       {
         "photo": "/images/review5.jpg",
@@ -199,7 +199,7 @@
         "photo": "/images/review8.jpg",
         "name": "Julia",
         "rating": "5",
-        "comment": "Kirill is a brilliant, warm, and friendly teacher. I highly recommend his lessons. I was not a total beginner to the subject, but my heart always sunk when I had to speak in public. Kirill helped me to drastically improve my public speaking skills in a fun and very practical way. His lessons are incredibly well structured and to the point, he makes difficult stuff look easy. His comments are always friendly and encouraging. Kirill gave me a lot of practical exercises that help in other domains as well (exercises for articulation and improving the voice, exercises to develop quick thinking and reaction, etc.) His lessons are really like going to a brain gym. Thanks to Kirill, I now sail through my presentations pain-free, and even took up a new interest in public speaking."
+        "comment": "Kirill is a brilliant, warm, and friendly teacher. I highly recommend his lessons. I was not a total beginner to the subject, but my heart always sunk when I had to speak in public. His lessons are incredibly well structured, Kirill gave me a lot of practical exercises that help in other domains as well (exercises for articulation and improving the voice, exercises to develop quick thinking and reaction, etc.) Thanks to Kirill, I now sail through my presentations pain-free, and even took up a new interest in public speaking."
       },
       {
         "photo": "/images/review3.jpg",
@@ -220,10 +220,10 @@
         "comment": "Кирилл превосходный коуч, он даёт много практических заданий, диалогов и объясняет очень много, на каждом уроке моя дочь получает большое количество полезных и ценных знаний, которые ей помогут в жизни. Уроки проходят в приятной атмосфере, насыщенно, живо, интересно. Мы просто счастливы, что занимаемся у Кирилла!"
       },
       {
-        "photo": "/images/review9.jpg",
-        "name": "Fylyp",
+        "photo": "/images/review4.jpg",
+        "name": "Antonina Anisovich",
         "rating": "5",
-        "comment": "It was interesting for me to study with Kirill. We worked with oratory, diction, and staged theatrical skits. I liked everything, more thanks to Kiril."
+        "comment": "I had the privilege of being a student of Kirill and I cannot express enough how grateful I am for the transformative experience. I wholeheartedly recommend Kirill to anyone seeking to enhance their public speaking abilities. He is a true professional and an invaluable asset for anyone aspiring to become a more persuasive, impactful, and confident speaker."
       }
     ],
     "btnLabel": "Більше відгуків"
