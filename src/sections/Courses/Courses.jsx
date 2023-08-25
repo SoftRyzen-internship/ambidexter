@@ -21,9 +21,11 @@ export const Courses = ({ data, id }) => {
     >
       <Container>
         <SectionTitle text={title} />
+
         <h2 className="text-middle md:text-large xl:text-large36 font-medium mb-6 md:mb-9">
           {subTitle}
         </h2>
+
         <ul className="flex flex-col items-center gap-4 md:flex-row md:gap-5">
           {newData.map((element, index) => (
             <li className="w-full" key={index}>
