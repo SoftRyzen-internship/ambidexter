@@ -387,7 +387,8 @@
       "error": "An error occurred while sending!",
       "success": "Message sent successfully!"
     },
-    "btnSend": "Send"
+    "btnSend": "Send",
+    "btnClose": "Close"
   },
   "contacts": [
     {

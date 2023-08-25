@@ -143,19 +143,18 @@ export const FeedbackForm = ({ toggleModal, data }) => {
           {errors.email && <IncorrectForm text={email.errors} />}
         </label>
 
-        <label htmlFor="subject" className="formLabel">
-          {message.label}
+        <label className="formLabel mb-[24px]">
+          <p className="mb-[8px]">{message.label}</p>
+          <textarea
+            {...register('subject', {
+              required: false,
+            })}
+            id="subject"
+            name="subject"
+            placeholder={message.placeholder}
+            className="w-full text-base xl:text-large resize-none  h-[146px] border rounded-10 border-accent px-[12px] py-[8px] leading-[1.15] placeholder:text-black placeholder:opacity-50 placeholder:text-base placeholder:font-normal  xl:px-[24px] xl:py-[16px] xl:placeholder:text-large xl:h-[287px]"
+          ></textarea>
         </label>
-
-        <textarea
-          {...register('subject', {
-            required: false,
-          })}
-          id="subject"
-          name="subject"
-          placeholder={message.placeholder}
-          className="text-base xl:text-large resize-none mb-[24px] h-[146px] border rounded-10 border-accent px-[12px] py-[8px] leading-[1.15] placeholder:text-black placeholder:opacity-50 placeholder:text-base placeholder:font-normal  xl:px-[24px] xl:py-[16px] xl:placeholder:text-large xl:h-[287px]"
-        ></textarea>
 
         <button
           type="submit"

@@ -1,5 +1,5 @@
 export const clearLocalStorage = keysArray => {
-  keysArray.map(el => {
+  keysArray.forEach(el => {
     localStorage.setItem(el, '');
   });
 };

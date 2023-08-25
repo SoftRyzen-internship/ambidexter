@@ -22,6 +22,7 @@
   .formLabel {
     @apply mb-[12px] text-base font-normal leading-[1.15] xl:text-large;
   }
+
   .notificationIcon {
     @apply w-[16px] h-[16px] xl:w-[24px] xl:h-[24px];
   }
