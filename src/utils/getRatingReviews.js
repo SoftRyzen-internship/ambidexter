@@ -23,7 +23,6 @@ export const ratingReviews = string => {
 
     default:
       result = Array(5).fill(src);
-      break;
   }
 
   return result.map((el, i) => (
