@@ -50,7 +50,6 @@ export const Header = ({ navBar, socialNetworks, socialMedia, locale }) => {
   }, []);
 
   const listenCallback = useCallback(() => {
-    console.log(window.scrollY);
     setScrollHeight(window.scrollY);
   }, []);
 
