@@ -91,4 +91,9 @@
   .footerLogo:focus > span {
     @apply text-white;
   }
+
+  .btnMoreReviews:hover .arrowMoreReviews,
+  .btnMoreReviews:focus .arrowMoreReviews {
+    @apply fill-accent duration-300;
+  }
 }
