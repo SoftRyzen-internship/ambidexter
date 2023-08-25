@@ -92,16 +92,17 @@
     @apply text-white;
   }
 
-  .forWhomImage {
-    @apply mx-auto md:absolute md:w-[422px] md:h-[454px] md:bottom-[30px] md:left-[196px] md:z-0 xl:w-[813px] xl:h-[862px] xl:bottom-0 xl:left-[347px];
+  .forWhoImageContainer {
+    @apply relative md:absolute md:bottom-[30px] md:left-[196px] xl:bottom-0 xl:left-[347px] md:z-0;
   }
+
   .forWhomImageBw {
-    @apply mx-auto md:absolute md:w-[422px] md:h-[454px] md:bottom-[30px] md:left-[196px] md:z-0 xl:w-[813px] xl:h-[862px] xl:bottom-0 xl:left-[347px] hidden;
+    @apply mx-auto relative md:w-[422px] md:h-[454px] xl:w-[813px] xl:h-[862px] opacity-100 transition-opacity duration-300 z-10;
   }
-  .forWhoImageContainer:hover > .forWhomImage {
-    @apply hidden;
+  .forWhomImage {
+    @apply mx-auto absolute bottom-0 md:bottom-0 md:left-0 z-0 md:w-[422px] md:h-[454px] xl:w-[813px] xl:h-[862px];
   }
   .forWhoImageContainer:hover > .forWhomImageBw {
-    @apply inline;
+    @apply opacity-0;
   }
 }

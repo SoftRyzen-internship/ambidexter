@@ -15,10 +15,12 @@ export const ForWhomSection = ({ data }) => {
     <section id="forWhom">
       <Container className="relative">
         <SectionTitle text={title} />
+
         <div className="forWhoImageContainer">
-          <ForWhomImage />
           <ForWhomImageBw />
+          <ForWhomImage />
         </div>
+
         <div className="flex flex-col gap-[24px] md:flex-row md:gap-[0px] md:justify-between md:z-20 relative xl:pb-[92px] pointer-events-none">
           <RelevantFor data={positions} mobileGap={'8px'} Icon={CrossIcon} />
           <RelevantFor data={goals} mobileGap={'16px'} Icon={CircleIcon} />
