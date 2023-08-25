@@ -21,6 +21,7 @@
     "eslint-config-next": "13.4.12",
     "negotiator": "^0.6.3",
     "next": "13.4.12",
+    "nodemailer": "^6.9.4",
     "postcss": "8.4.27",
     "prettier-plugin-tailwindcss": "^0.4.1",
     "prop-types": "^15.8.1",

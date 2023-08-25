@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import { IncorrectForm, NotificationForm, Loader } from '@/components';
 import { sendMessageTelegram } from '@/utils/sendMessageTelegram';
 import { clearLocalStorage } from '@/utils/clearLocalStorage';
+import { sendEmail } from '@/utils/sendEmail';
 
 export const FeedbackForm = ({ toggleModal, data }) => {
   const [notificationState, setNotificationState] = useState(null);
@@ -51,6 +52,9 @@ export const FeedbackForm = ({ toggleModal, data }) => {
         setIsLoading(false);
         setNotificationState('Incorrect');
       });
+    sendEmail(data).then(() => {
+      console.log('hi');
+    });
   };
 
   const onChange = e => {
@@ -152,7 +156,8 @@ export const FeedbackForm = ({ toggleModal, data }) => {
             id="subject"
             name="subject"
             placeholder={message.placeholder}
-            className="w-full text-base xl:text-large resize-none  h-[146px] border rounded-10 border-accent px-[12px] py-[8px] leading-[1.15] placeholder:text-black placeholder:opacity-50 placeholder:text-base placeholder:font-normal  xl:px-[24px] xl:py-[16px] xl:placeholder:text-large xl:h-[287px]"
+            className="w-full text-base xl:text-large resize-none 
+             h-[146px] border rounded-10 border-accent px-[12px] py-[8px] leading-[1.15] placeholder:text-black placeholder:opacity-50 placeholder:text-base placeholder:font-normal  xl:px-[24px] xl:py-[16px] xl:placeholder:text-large xl:h-[287px]"
           ></textarea>
         </label>
 
