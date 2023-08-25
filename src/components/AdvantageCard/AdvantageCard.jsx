@@ -3,18 +3,14 @@ import PropTypes from 'prop-types';
 export const AdvantageCard = ({ count, text, list: advantagesList }) => {
   return (
     <li
-      className={
-        advantagesList
-          ? 'py-4 xl:py-8 px-3 md:px-4 bg-accent rounded-10 row-span-2'
-          : 'py-4 xl:py-8 px-3 md:px-4 bg-accent rounded-10'
-      }
+      className={`${
+        advantagesList ? 'row-span-2' : ''
+      } py-4 md:py-5 xl:py-8 px-3 md:px-4 bg-accent rounded-10 `}
     >
       <p
-        className={
-          advantagesList
-            ? 'text-small xl:text-large font-medium flex items-center gap-2 mb-2'
-            : 'text-small xl:text-large font-medium flex items-center gap-2'
-        }
+        className={`${
+          advantagesList ? 'mb-2' : ''
+        } text-small xl:text-large font-medium flex items-center gap-2 leading-tight`}
       >
         <span className="text-large64/[1] md:text-large70 xl:text-large140/[143px] font-medium">
           {count}
