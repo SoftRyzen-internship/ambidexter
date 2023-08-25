@@ -2,6 +2,7 @@ import {
   Hero,
   AboutMeSection,
   FormatSection,
+  Comments,
   FreeClass,
   AboutSchool,
   Courses,
@@ -19,6 +20,7 @@ export default async function Home({ params: { locale } }) {
     aboutSchool,
     applyButtonLabel,
     formData,
+    reviews,
     socialMedia,
     advertise,
     navBar,
@@ -46,6 +48,7 @@ export default async function Home({ params: { locale } }) {
         id={id.format}
       />
       <Courses data={courses} id={id.courses} />
+      <Comments data={reviews} id={id.reviews} />
       <FreeClass
         data={advertise}
         btnLabel={applyButtonLabel}
