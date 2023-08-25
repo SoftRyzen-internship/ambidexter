@@ -7,6 +7,7 @@ export const ButtonMenuToggle = ({ isOpenMenu, handleMenuToggle }) => {
   return (
     <button
       type="button"
+      aria-label={isOpenMenu ? 'close menu button' : 'open menu button'}
       className="cursor-pointer p-[10px] xl:pt-0  z-10"
       onClick={handleMenuToggle}
     >
