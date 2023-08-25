@@ -33,23 +33,26 @@ export const LocaleSwitcher = ({ className }) => {
 
   return (
     <ul
-      className={`${className} uppercase text-[12px] xl:text-[24px]  md:flex xl:gap-3  navBar-text  `}
+      aria-label="language switcher"
+      className={`${className} uppercase text-[12px] xl:text-[24px] md:flex xl:gap-3 navBar-text`}
     >
       {locales.map(locale => (
         <li
           key={locale}
           className="w-[41px] h-[39px] flex justify-center items-center"
         >
-          <Link
-            href={redirectedPathName(locale)}
-            className={
-              locale === getCurrentLocale()
-                ? ' font-bold text-secondary p-3 xl:p-0  hover:text-accent focus:text-accent '
-                : '  font-normal  p-3 xl:p-0 hover:text-accent focus:text-accent'
-            }
-          >
-            {titleLocale(locale)}
-          </Link>
+          {locale === getCurrentLocale() ? (
+            <span className="font-bold text-secondary p-3 xl:p-0 cursor-default">
+              {titleLocale(locale)}
+            </span>
+          ) : (
+            <Link
+              href={redirectedPathName(locale)}
+              className="font-normal p-3 xl:p-0 hover:text-accent focus:text-accent"
+            >
+              {titleLocale(locale)}
+            </Link>
+          )}
         </li>
       ))}
     </ul>
