@@ -7,7 +7,7 @@ export const CommentCard = ({ data }) => {
   const { photo, name, rating, comment } = data;
 
   return (
-    <div className="rounded-10 border-2 border-accent backdrop-blur-[10px] py-8 px-[10px] md:px-[14px] xl:px-6 flex flex-col gap-3 xl:gap-6 items-center md:w-[216px] xl:w-[414px] min-h-[484px] md:min-h-[736px] xl:min-h-[834px]">
+    <div className="rounded-10 border-2 border-accent backdrop-blur-[10px] py-8 px-[10px] md:px-[14px] xl:px-6 flex flex-col gap-3 xl:gap-6 items-center md:w-[216px] xl:w-[414px] min-h-[430px] md:min-h-[592px] xl:min-h-[714px]">
       <Image
         src={photo}
         alt={name}
