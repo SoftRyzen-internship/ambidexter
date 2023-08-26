@@ -1,9 +1,24 @@
 import { getDictionary } from '@/utils/getDictionary';
-import { CoursePageList } from '@/sections';
+import { CoursePageList, FreeClass } from '@/sections';
 
 export default async function OratoricalSkillPage({ params: { locale } }) {
   const localeData = await getDictionary(locale);
-  const { orator, label } = localeData.coursePages;
+  const {
+    coursePages: { orator, label },
+    advertise,
+    applyButtonLabel,
+    hero,
+  } = localeData;
 
-  return <CoursePageList data={orator} label={label} />;
+  return (
+    <>
+      <CoursePageList data={orator} label={label} />
+      <FreeClass
+        data={advertise}
+        btnLabel={applyButtonLabel}
+        altText={hero.title}
+        isCoursePage
+      />
+    </>
+  );
 }

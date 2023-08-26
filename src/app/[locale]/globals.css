@@ -81,12 +81,6 @@
     animation: spin 1s infinite linear;
   }
 
-  @keyframes spin {
-    100% {
-      transform: rotate(1turn);
-    }
-  }
-
   .footerLogo:hover > span,
   .footerLogo:focus > span {
     @apply text-white;
@@ -99,5 +93,15 @@
 
   .swiper {
     @apply !max-w-[320px] md:!max-w-full;
+  }
+
+  .coursePageListItem {
+    @apply md:flex md:items-end mb-3 md:mb-0 md:even:before:mb-2 md:odd:after:mb-2 md:even:before:mx-5 md:odd:after:mx-5 md:even:before:-scale-x-100 md:even:before:w-[178px] md:even:before:ml-auto xl:even:before:w-[322px] xl:odd:after:w-[322px] md:odd:after:w-[178px];
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
   }
 }
