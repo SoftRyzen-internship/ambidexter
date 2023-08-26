@@ -21,3 +21,4 @@ export * from './Loader/Loader';
 export * from './FormatCard/FormatCard';
 export * from './CommentCard/CommentCard';
 export * from './MoreReviews/MoreRevievs';
+export * from './ModalForm/ModalForm';
