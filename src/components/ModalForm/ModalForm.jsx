@@ -37,7 +37,7 @@ export const ModalForm = ({ toggleModal, isOpen, data }) => {
                 <button
                   type="button"
                   onClick={toggleModal}
-                  className=" w-[40px] h-[40px] flex justify-center items-center  mb-[24px] md:mb-[12px] xl:mb-[36px] absolute top-[12px] right-[12px] md:top-[24px] md:right-[24px] xl:top-[48px] xl:right-[48px] z-50"
+                  className=" w-[40px] h-[40px] flex justify-center items-center absolute top-[2px] right-[2px] md:top-[14px] md:right-[14px] xl:top-[38px] xl:right-[38px] z-50"
                 >
                   <CloseIcon
                     className="w-[20px] h-[20px] xl:w-[24px] xl:h-[24px]"

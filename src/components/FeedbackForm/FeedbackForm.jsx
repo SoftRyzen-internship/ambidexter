@@ -9,8 +9,6 @@ import { sendMessageTelegram } from '@/utils/sendMessageTelegram';
 import { clearLocalStorage } from '@/utils/clearLocalStorage';
 import { sendEmail } from '@/utils/sendEmail';
 
-
-
 export const FeedbackForm = ({ toggleModal, data }) => {
   const [notificationState, setNotificationState] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -71,7 +69,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
       <form
         onChange={onChange}
         onSubmit={handleSubmit(onSubmit)}
-        className=" flex flex-col border border-accent rounded-10 bg-white w-[280px] mx-auto px-[12px] pb-[64px] pt-[56px] md:w-[452px] md:px-[24px] md:pt-[56px] xl:w-[844px] xl:px-[48px] xl:pt-[108px] xl:pb-[100px]"
+        className=" flex flex-col border border-accent rounded-10 bg-white w-[280px] mx-auto px-[12px] pb-[64px] pt-[56px] md:w-[452px] md:px-[24px] md:pt-[61px] xl:w-[844px] xl:px-[48px] xl:pt-[108px] xl:pb-[100px]"
       >
         <label className="formLabel relative flex flex-col">
           <p className="mb-[8px]">

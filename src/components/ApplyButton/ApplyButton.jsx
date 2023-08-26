@@ -21,9 +21,7 @@ export const ApplyButton = ({ data, isFree, formData }) => {
             : 'h-[43px] md:h-[61px]'
         } w-full flex items-center justify-center bg-accent border-2 border-accent rounded-10 text-middle md:text-large font-medium cursor-pointer duration-300 hover:bg-white focus:bg-white`}
         type="button"
-        onClick={() => {
-          toggleModal();
-        }}
+        onClick={toggleModal}
       >
         {data}
       </button>

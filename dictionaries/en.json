@@ -427,7 +427,7 @@
     },
     "phoneNumber": {
       "label": "Phone",
-      "placeholder": "+38 (097) 12 34 567",
+      "placeholder": "+380971234567",
       "errors": ["Invalid phone"]
     },
     "email": {
