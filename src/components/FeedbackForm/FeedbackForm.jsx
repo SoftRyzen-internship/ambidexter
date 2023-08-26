@@ -9,6 +9,8 @@ import { sendMessageTelegram } from '@/utils/sendMessageTelegram';
 import { clearLocalStorage } from '@/utils/clearLocalStorage';
 import { sendEmail } from '@/utils/sendEmail';
 
+
+
 export const FeedbackForm = ({ toggleModal, data }) => {
   const [notificationState, setNotificationState] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -39,22 +41,19 @@ export const FeedbackForm = ({ toggleModal, data }) => {
     };
   }, [toggleModal]);
 
-  const onSubmit = data => {
+  const onSubmit = async data => {
     setIsLoading(true);
-    sendMessageTelegram(data)
-      .then(() => {
-        setIsLoading(false);
-        clearLocalStorage(Object.keys(data));
-        setNotificationState('Correct');
-        reset();
-      })
-      .catch(() => {
-        setIsLoading(false);
-        setNotificationState('Incorrect');
-      });
-    sendEmail(data).then(() => {
-      console.log('hi');
-    });
+    try {
+      await sendMessageTelegram(data);
+      await sendEmail(data);
+      reset();
+      clearLocalStorage(Object.keys(data));
+      setNotificationState('Correct');
+      setIsLoading(false);
+    } catch {
+      setIsLoading(false);
+      setNotificationState('Incorrect');
+    }
   };
 
   const onChange = e => {

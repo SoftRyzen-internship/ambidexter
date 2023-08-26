@@ -1,11 +1,6 @@
 import axios from 'axios';
 
-export const sendEmail = formData =>
-  fetch('/api/form', {
-    method: 'POST',
-    body: JSON.stringify(formData),
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-  });
+export const sendEmail = async formData => {
+  const data = axios.post('/api/form', formData);
+  return data;
+};
