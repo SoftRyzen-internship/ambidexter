@@ -39,13 +39,13 @@ export const FeedbackForm = ({ toggleModal, data }) => {
     };
   }, [toggleModal]);
 
-  const onSubmit = async data => {
+  const onSubmit = async inputValues => {
     setIsLoading(true);
     try {
-      await sendMessageTelegram(data);
-      await sendEmail(data);
+      await sendMessageTelegram(inputValues);
+      await sendEmail(inputValues);
       reset();
-      clearLocalStorage(Object.keys(data));
+      clearLocalStorage(Object.keys(inputValues));
       setNotificationState('Correct');
       setIsLoading(false);
     } catch {
