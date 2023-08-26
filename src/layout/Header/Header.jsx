@@ -15,6 +15,7 @@ import {
 export const Header = ({ navBar, socialNetworks, socialMedia, locale }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
   const [scrollHeight, setScrollHeight] = useState(null);
   const [isHydrated, setIsHydrated] = useState(false);
 
