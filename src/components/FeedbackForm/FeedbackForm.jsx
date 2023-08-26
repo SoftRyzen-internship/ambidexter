@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import useFormPersist from 'react-hook-form-persist';
 import PropTypes from 'prop-types';
 
 import { IncorrectForm, NotificationForm, Loader } from '@/components';
 import { sendMessageTelegram } from '@/utils/sendMessageTelegram';
-import { clearLocalStorage } from '@/utils/clearLocalStorage';
 import { sendEmail } from '@/utils/sendEmail';
 
 export const FeedbackForm = ({ toggleModal, data }) => {
@@ -14,18 +14,30 @@ export const FeedbackForm = ({ toggleModal, data }) => {
   const [isLoading, setIsLoading] = useState(false);
   const { name, phoneNumber, email, message, notification, btnSend } = data;
 
+  const defaultValues = {
+    name: '',
+    phone: '',
+    email: '',
+    subject: '',
+  };
+
+  localStorage.setItem('form', JSON.stringify(defaultValues));
+
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
+    watch,
+    setValue,
   } = useForm({
     mode: 'onSubmit',
     defaultValues: {
-      name: localStorage?.getItem('name') || '',
-      phone: localStorage?.getItem('phone') || '',
-      email: localStorage?.getItem('email') || '',
-      subject: localStorage?.getItem('subject') || '',
+      name: Object.values(JSON.parse(localStorage?.getItem('form')))[0] || '',
+      phone: Object.values(JSON.parse(localStorage?.getItem('form')))[1] || '',
+      email: Object.values(JSON.parse(localStorage?.getItem('form')))[2] || '',
+      subject:
+        Object.values(JSON.parse(localStorage?.getItem('form')))[3] || '',
     },
   });
 
@@ -39,35 +51,26 @@ export const FeedbackForm = ({ toggleModal, data }) => {
     };
   }, [toggleModal]);
 
+  useFormPersist('form', { watch, storage: window.localStorage, setValue });
+
   const onSubmit = async inputValues => {
     setIsLoading(true);
     try {
       await sendMessageTelegram(inputValues);
       await sendEmail(inputValues);
       reset();
-      clearLocalStorage(Object.keys(inputValues));
       setNotificationState('Correct');
       setIsLoading(false);
+      localStorage.setItem('form', JSON.stringify(defaultValues));
     } catch {
       setIsLoading(false);
       setNotificationState('Incorrect');
     }
   };
 
-  const onChange = e => {
-    localStorage.setItem(e.target.name, e.target.value);
-  };
-
   return (
     <>
-      {isLoading && (
-        <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-50">
-          <Loader />
-        </div>
-      )}
-
       <form
-        onChange={onChange}
         onSubmit={handleSubmit(onSubmit)}
         className=" flex flex-col border border-accent rounded-10 bg-white w-[280px] mx-auto px-[12px] pb-[64px] pt-[56px] md:w-[452px] md:px-[24px] md:pt-[61px] xl:w-[844px] xl:px-[48px] xl:pt-[108px] xl:pb-[100px]"
       >
@@ -162,7 +165,13 @@ export const FeedbackForm = ({ toggleModal, data }) => {
           type="submit"
           className="bg-accent rounded-10 py-[8px] text-middle font-medium max-h-[35px] xl:max-h-[76px] xl:py-[16px] xl:text-large36 flex justify-center items-center hover:bg-white focus:bg-white hover:border-[2px] focus:border-[2px] border-accent duration-300 cursor-pointer"
         >
-          {btnSend}
+          {isLoading ? (
+            <div className="w-[20px] h-[20px] xl:h-[40px] xl:w-[40px] ">
+              <Loader />
+            </div>
+          ) : (
+            btnSend
+          )}
         </button>
 
         <div className="relative flex justify-center">
