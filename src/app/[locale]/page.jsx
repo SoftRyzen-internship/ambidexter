@@ -7,11 +7,13 @@ import {
   AboutSchool,
   Courses,
 } from '@/sections';
+import { ForWhomSection } from '@/sections/ForWhomSection/ForWhomSection';
 
 import { getDictionary } from '@/utils/getDictionary';
 
 export default async function Home({ params: { locale } }) {
   const localeData = await getDictionary(locale);
+
   const {
     hero,
     aboutMe,
@@ -21,6 +23,7 @@ export default async function Home({ params: { locale } }) {
     applyButtonLabel,
     reviews,
     socialMedia,
+    orientedClient,
     advertise,
     navBar,
   } = localeData;
@@ -40,6 +43,7 @@ export default async function Home({ params: { locale } }) {
       <Hero data={hero} icons={socialMedia} />
       <AboutMeSection data={aboutMe} id={id.about} />
       <AboutSchool aboutSchool={aboutSchool} id={id.school} />
+      <ForWhomSection data={orientedClient} id={id.forWhom} />
       <FormatSection data={format} btnText={applyButtonLabel} id={id.format} />
       <Courses data={courses} id={id.courses} />
       <Comments data={reviews} id={id.reviews} />
