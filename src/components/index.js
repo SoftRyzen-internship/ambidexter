@@ -17,5 +17,8 @@ export * from './VideoPlayer/VideoPlayer';
 export * from './FormatCard/FormatCard';
 export * from './ButtonMenuToggle/ButtonMenuToggle';
 export * from './Loader/Loader';
+export * from './RelevantFor/RelevantFor';
+export * from './ForWhomImage/ForWhomImage';
+export * from './ForWhomImageBw/ForWhomImageBw';
 export * from './CommentCard/CommentCard';
 export * from './MoreReviews/MoreRevievs';

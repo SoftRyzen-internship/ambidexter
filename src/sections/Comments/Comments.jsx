@@ -32,7 +32,10 @@ export const Comments = ({ data, id }) => {
           slidesPerView={isMobile ? 1 : 3}
         >
           {comments.map((element, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide
+              key={index}
+              className="max-w-[320px] md:max-w-[216px] xl:max-w-[414px]"
+            >
               <CommentCard data={element} />
             </SwiperSlide>
           ))}
