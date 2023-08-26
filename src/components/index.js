@@ -19,3 +19,4 @@ export * from './ButtonMenuToggle/ButtonMenuToggle';
 export * from './Loader/Loader';
 export * from './CommentCard/CommentCard';
 export * from './MoreReviews/MoreRevievs';
+export * from './ItemCourseCard/ItemCourseCard';
