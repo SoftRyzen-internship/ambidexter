@@ -2,7 +2,9 @@
 
 import { useCallback, useEffect, useLayoutEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { usePathname } from 'next/navigation';
 import PropTypes from 'prop-types';
+
 import {
   Container,
   LocaleSwitcher,
@@ -19,6 +21,8 @@ export const Header = ({ navBar, socialNetworks, socialMedia, locale }) => {
   const [isHydrated, setIsHydrated] = useState(false);
 
   const mobile = useMediaQuery({ maxWidth: 767 });
+  const pathname = usePathname();
+  const isHome = pathname === `/${locale}`;
 
   useLayoutEffect(() => {
     if (scrollHeight === null) {
@@ -69,16 +73,17 @@ export const Header = ({ navBar, socialNetworks, socialMedia, locale }) => {
     <>
       {isHydrated && (
         <header
-          className={`z-30 flex items-center h-[68px] md:h-[63px] xl:h-[93px]  fixed w-full  ${
+          className={`z-30 flex items-center h-[68px] md:h-[111px] fixed w-full  ${
             scrollHeight > 0 && 'backdrop-blur-[100px] bg-headerBg'
           }`}
         >
           <Container className="flex items-center justify-between md:h-[39px] xl:h-[29px]">
             <Logo isColored={true} locale={locale} />
 
-            {!isMobile && (
+            {!isMobile && isHome && (
               <NavBar data={navBar} className="hidden md:block text-[12px]" />
             )}
+
             {!isMobile && <LocaleSwitcher className="hidden md:block " />}
 
             {isMobile && (
