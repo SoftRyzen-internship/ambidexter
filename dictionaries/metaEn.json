@@ -1,4 +1,14 @@
 {
-  "title": "AMBIDEXTER",
-  "description": "AMBIDEXTER - online school of acting and oratory skills"
+  "home": {
+    "title": "AMBIDEXTER",
+    "description": "AMBIDEXTER - online school of acting and oratory skills"
+  },
+  "actor": {
+    "title": "AMBIDEXTER - Acting skills courses",
+    "description": "AMBIDEXTER online school. Acting skills courses"
+  },
+  "orator": {
+    "title": "AMBIDEXTER - Oratorical skills courses",
+    "description": "AMBIDEXTER online school. Oratorical skills courses"
+  }
 }

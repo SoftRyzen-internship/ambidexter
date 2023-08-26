@@ -1,5 +1,17 @@
 import { getDictionary } from '@/utils/getDictionary';
+import { getMetaByLocale } from '@/utils/getMetaData';
 import { CoursePageList, FreeClass } from '@/sections';
+
+export async function generateMetadata(params) {
+  const { orator: metaDictionary } = await getMetaByLocale(
+    params.params.locale,
+  );
+
+  return {
+    title: metaDictionary.title,
+    description: metaDictionary.description,
+  };
+}
 
 export default async function OratoricalSkillPage({ params: { locale } }) {
   const localeData = await getDictionary(locale);

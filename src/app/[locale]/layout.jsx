@@ -12,8 +12,8 @@ export async function generateMetadata({ params }) {
   const metaDictionary = await getMetaByLocale(params.locale);
 
   return {
-    title: metaDictionary.title,
-    description: metaDictionary.description,
+    title: metaDictionary.home.title,
+    description: metaDictionary.home.description,
   };
 }
 
