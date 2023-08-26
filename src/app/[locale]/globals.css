@@ -105,4 +105,13 @@
   .forWhoImageContainer:hover > .forWhomImageBw {
     @apply opacity-0;
   }
+
+  .btnMoreReviews:hover .arrowMoreReviews,
+  .btnMoreReviews:focus .arrowMoreReviews {
+    @apply fill-accent duration-300;
+  }
+
+  .swiper {
+    @apply !max-w-[320px] md:!max-w-full;
+  }
 }

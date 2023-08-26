@@ -2,6 +2,7 @@ import {
   Hero,
   AboutMeSection,
   FormatSection,
+  Comments,
   FreeClass,
   AboutSchool,
   Courses,
@@ -20,6 +21,7 @@ export default async function Home({ params: { locale } }) {
     format,
     aboutSchool,
     applyButtonLabel,
+    reviews,
     socialMedia,
     orientedClient,
     advertise,
@@ -44,6 +46,7 @@ export default async function Home({ params: { locale } }) {
       <ForWhomSection data={orientedClient} />
       <FormatSection data={format} btnText={applyButtonLabel} id={id.format} />
       <Courses data={courses} id={id.courses} />
+      <Comments data={reviews} id={id.reviews} />
       <FreeClass
         data={advertise}
         btnLabel={applyButtonLabel}
