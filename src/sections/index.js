@@ -6,3 +6,4 @@ export * from './FormatSection/FormatSection';
 export * from './ForWhomSection/ForWhomSection';
 export * from './Comments/Comments';
 export * from './FreeClass/FreeClass';
+export * from './CoursePageList/CoursePageList';

@@ -2,13 +2,18 @@
 
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import PropTypes from 'prop-types';
 
 import { Container, Logo, Contacts, NavBar, SocialMedia } from '@/components';
 
-export const Footer = ({ contacts, navBar, socialMedia, locale }) => {
+export const Footer = ({ contacts, navBar, socialMedia, locale, goHome }) => {
   const [isMobile, setIsMobile] = useState(false);
   const mobile = useMediaQuery({ maxWidth: 767 });
+  const pathname = usePathname();
+
+  const isHome = pathname === `/${locale}` || pathname === '/';
 
   useEffect(() => {
     setIsMobile(mobile);
@@ -20,13 +25,21 @@ export const Footer = ({ contacts, navBar, socialMedia, locale }) => {
         <div className="h-4 mb-4 md:mb-8 xl:mb-12 md:flex md:items-center md:justify-between">
           <Logo isColored={false} locale={locale} />
 
-          {!isMobile && (
-            <NavBar
-              className="md:text-small xl:text-large"
-              data={navBar}
-              isFooter={true}
-            />
-          )}
+          {!isMobile &&
+            (isHome ? (
+              <NavBar
+                className="md:text-small xl:text-large"
+                data={navBar}
+                isFooter={true}
+              />
+            ) : (
+              <Link
+                className="text-middle md:text-small xl:text-large font-medium uppercase duration-300 hover:text-white  focus:text-white cursor-pointer"
+                href={`/${locale}`}
+              >
+                {goHome}
+              </Link>
+            ))}
         </div>
 
         <div className="mb-6 md:mb-4 xl:mb-6 md:flex md:items-end md:justify-between">
@@ -72,4 +85,5 @@ Footer.propTypes = {
     }),
   ).isRequired,
   locale: PropTypes.string.isRequired,
+  goHome: PropTypes.string.isRequired,
 };

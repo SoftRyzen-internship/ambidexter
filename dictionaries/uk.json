@@ -19,6 +19,7 @@
   "socialNetworks": "соціальні мережі",
   "applyButtonLabel": "Записатись",
   "socialsLabel": "Соціальні мережі",
+  "goHome": "На головну",
 
   "hero": {
     "speciality": [
@@ -235,7 +236,7 @@
   },
   "coursePages": {
     "label": "Курс",
-    "orator": {
+    "oratory-skill": {
       "title": "Ораторська майстерність",
       "cards": [
         {
@@ -348,7 +349,7 @@
         }
       ]
     },
-    "actor": {
+    "acting-skill": {
       "title": "Акторська майстерність",
       "cards": [
         {

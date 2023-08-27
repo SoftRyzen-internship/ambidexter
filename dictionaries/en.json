@@ -19,6 +19,7 @@
   "socialNetworks": "Social media",
   "applyButtonLabel": "Sign up",
   "socialsLabel": "Social media",
+  "goHome": "To Home page",
 
   "hero": {
     "speciality": [
@@ -235,7 +236,7 @@
   },
   "coursePages": {
     "label": "Course",
-    "orator": {
+    "oratory-skill": {
       "title": "Oratorical skill",
       "cards": [
         {
@@ -348,7 +349,7 @@
         }
       ]
     },
-    "actor": {
+    "acting-skill": {
       "title": "Acting skills",
       "cards": [
         {
