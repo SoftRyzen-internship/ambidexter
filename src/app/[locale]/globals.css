@@ -20,6 +20,9 @@
   .navBarLinkFooter {
     @apply hover:text-white focus:text-white;
   }
+  .navBarLinkActive {
+    @apply text-secondary focus:text-secondary;
+  }
 
   .contactsIcon {
     @apply fill-black w-[12px] h-[12px] xl:w-[24px] xl:h-[24px] hover:fill-white focus:fill-white duration-300;
