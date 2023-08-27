@@ -236,7 +236,7 @@
   },
   "coursePages": {
     "label": "Курс",
-    "orator": {
+    "oratory-skill": {
       "title": "Ораторська майстерність",
       "cards": [
         {
@@ -349,7 +349,7 @@
         }
       ]
     },
-    "actor": {
+    "acting-skill": {
       "title": "Акторська майстерність",
       "cards": [
         {

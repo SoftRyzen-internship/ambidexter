@@ -23,7 +23,7 @@ export const Header = ({ navBar, socialNetworks, socialMedia, locale }) => {
 
   const mobile = useMediaQuery({ maxWidth: 767 });
   const pathname = usePathname();
-  const isHome = pathname === `/${locale}`;
+  const isHome = pathname === `/${locale}` || pathname === '/';
 
   useLayoutEffect(() => {
     if (scrollHeight === null) {

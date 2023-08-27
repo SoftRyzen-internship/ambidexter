@@ -14,10 +14,12 @@ export const CoursePageList = ({ data, label, isActor = false }) => {
         <p className="mb-2 md:mb-3 xl:mb-4 text-center md:text-middle xl:text-large">
           {label}
         </p>
+
         <h1 className="text-middle/[1.2] md:text-large36/[1.22] xl:text-large56/[1.2] text-center font-bold mb-6 md:mb-9 xl:mb-16">
           {title}
         </h1>
-        <ul className="">
+
+        <ul>
           {cards.map((card, index) => (
             <li
               className={`coursePageListItem md:even:before:content-pageArrowMd md:odd:after:content-pageArrowMd ${iconContent} last:before:!content-none last:after:!content-none last:justify-end last:mb-0`}

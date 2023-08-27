@@ -10,10 +10,10 @@ import { Container, Logo, Contacts, NavBar, SocialMedia } from '@/components';
 
 export const Footer = ({ contacts, navBar, socialMedia, locale, goHome }) => {
   const [isMobile, setIsMobile] = useState(false);
-  const mobile = useMediaQuery({ maxWidth: 767.8 });
+  const mobile = useMediaQuery({ maxWidth: 767 });
   const pathname = usePathname();
 
-  const isHome = pathname === `/${locale}`;
+  const isHome = pathname === `/${locale}` || pathname === '/';
 
   useEffect(() => {
     setIsMobile(mobile);
