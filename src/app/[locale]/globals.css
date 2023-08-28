@@ -12,6 +12,15 @@
   }
 }
 
+@media (hover: none) {
+  .navBarLinkHeader {
+    @apply hover:text-black;
+  }
+  .navBarLinkActive {
+    @apply hover:text-secondary;
+  }
+}
+
 @layer components {
   .formInput {
     @apply text-base xl:text-large border rounded-10  px-[12px] py-[8px] leading-[1.15] placeholder:opacity-50  placeholder:text-base placeholder:font-normal xl:px-[24px] xl:py-[16px] xl:placeholder:text-large;
@@ -56,6 +65,9 @@
   .navBarLinkFooter {
     @apply hover:text-white focus:text-white;
   }
+  .navBarLinkActive {
+    @apply text-secondary focus:text-secondary  hover:text-secondary;
+  }
 
   .contactsIcon {
     @apply fill-black w-[12px] h-[12px] xl:w-[24px] xl:h-[24px] hover:fill-white focus:fill-white duration-300;
@@ -95,15 +107,31 @@
     animation: spin 1s infinite linear;
   }
 
-  @keyframes spin {
-    100% {
-      transform: rotate(1turn);
-    }
-  }
-
   .footerLogo:hover > span,
   .footerLogo:focus > span {
     @apply text-white;
+  }
+
+  .forWhoImageContainer {
+    @apply relative md:absolute md:bottom-[30px] md:left-[196px] xl:bottom-0 xl:left-[347px] md:z-0;
+  }
+
+  .forWhomImageBw {
+    @apply mx-auto relative  w-[272px] h-[293px] md:w-[422px] md:h-[454px] xl:w-[813px] xl:h-[862px] opacity-100 transition-opacity duration-300 z-10;
+  }
+  .forWhomImage {
+    @apply mx-auto absolute left-1/2 translate-x-[-50%] bottom-0 w-[272px] h-[293px] z-0 md:w-[422px] md:h-[454px] xl:w-[813px] xl:h-[862px];
+  }
+  .forWhoImageContainer:hover > .forWhomImageBw {
+    @apply opacity-0;
+  }
+
+  .relevant {
+    @apply gap-[8px] flex justify-start items-center w-[216px] md:gap-[16px] xl:w-[413px];
+  }
+
+  .forThose {
+    @apply gap-[16px] flex justify-start items-center w-[216px] md:gap-[16px] xl:w-[413px];
   }
 
   .btnMoreReviews:hover .arrowMoreReviews,
@@ -113,5 +141,15 @@
 
   .swiper {
     @apply !max-w-[320px] md:!max-w-full;
+  }
+
+  .coursePageListItem {
+    @apply md:flex md:items-end mb-3 md:mb-0 md:even:before:mb-2 md:odd:after:mb-2 md:even:before:mx-5 md:odd:after:mx-5 md:even:before:-scale-x-100 md:even:before:w-[178px] md:even:before:ml-auto xl:even:before:w-[322px] xl:odd:after:w-[322px] md:odd:after:w-[178px];
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
   }
 }

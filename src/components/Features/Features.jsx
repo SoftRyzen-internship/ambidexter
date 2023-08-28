@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
 
@@ -11,13 +11,24 @@ export const Features = ({ data }) => {
   });
   const timerId = useRef(null);
 
-  if (timerId.current === null && inView) {
-    timerId.current = setInterval(() => {
-      setActiveNumber(prev =>
-        prev === Number(data.length) - 1 ? 0 : prev + 1,
-      );
-    }, 4000);
-  }
+  const stopTimerInterval = () => {
+    timerId.current !== null && clearInterval(timerId.current);
+  };
+
+  useEffect(() => {
+    if (timerId.current === null && inView) {
+      timerId.current = setInterval(() => {
+        setActiveNumber(prev =>
+          prev === Number(data.length) - 1 ? 0 : prev + 1,
+        );
+      }, 4000);
+    }
+
+    return () => {
+      stopTimerInterval();
+      timerId.current = null;
+    };
+  }, [data, inView]);
 
   const getNumber = number => {
     if (String(number).length < 2) {

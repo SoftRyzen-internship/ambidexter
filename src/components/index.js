@@ -22,3 +22,7 @@ export * from './FormatCard/FormatCard';
 export * from './CommentCard/CommentCard';
 export * from './MoreReviews/MoreRevievs';
 export * from './ModalForm/ModalForm';
+export * from './RelevantFor/RelevantFor';
+export * from './ForWhomImage/ForWhomImage';
+export * from './ForWhomImageBw/ForWhomImageBw';
+export * from './ItemCourseCard/ItemCourseCard';

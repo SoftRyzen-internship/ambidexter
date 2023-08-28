@@ -31,6 +31,9 @@ module.exports = {
         arrowDown: "url('/icons/arrow-down.svg')",
         formatLeft: "url('/icons/format-left.svg')",
         formatRight: "url('/icons/format-right.svg')",
+        pageArrowMd: "url('/icons/arrow-page-md.svg')",
+        pageArrowOrator: "url('/icons/arrow-page-orator-xl.svg')",
+        pageArrowActor: "url('/icons/arrow-page-actor-xl.svg')",
       },
 
       container: {

@@ -19,6 +19,7 @@
   "socialNetworks": "Social media",
   "applyButtonLabel": "Sign up",
   "socialsLabel": "Social media",
+  "goHome": "To Home page",
 
   "hero": {
     "speciality": [
@@ -169,7 +170,7 @@
     "btnShowMore": "Learn more"
   },
   "reviews": {
-    "label": "Відгуки випускників",
+    "label": "Feedback from graduates",
     "comments": [
       {
         "photo": "/images/review9.jpg",
@@ -226,7 +227,7 @@
         "comment": "I had the privilege of being a student of Kirill and I cannot express enough how grateful I am for the transformative experience. I wholeheartedly recommend Kirill to anyone seeking to enhance their public speaking abilities. He is a true professional and an invaluable asset for anyone aspiring to become a more persuasive, impactful, and confident speaker."
       }
     ],
-    "btnLabel": "Більше відгуків"
+    "btnLabel": "More reviews"
   },
   "advertise": {
     "label": "The first class",
@@ -235,7 +236,7 @@
   },
   "coursePages": {
     "label": "Course",
-    "orator": {
+    "oratory-skill": {
       "title": "Oratorical skill",
       "cards": [
         {
@@ -348,7 +349,7 @@
         }
       ]
     },
-    "actor": {
+    "acting-skill": {
       "title": "Acting skills",
       "cards": [
         {
