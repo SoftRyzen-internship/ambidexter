@@ -63,7 +63,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
     try {
       await sendMessageTelegram(inputValues);
       await sendEmail(inputValues);
-      reset();
+      reset(defaultValues);
       setNotificationState('Correct');
       setIsLoading(false);
       localStorage.setItem('form', JSON.stringify(defaultValues));
