@@ -21,6 +21,7 @@ export default async function Home({ params: { locale } }) {
     format,
     aboutSchool,
     applyButtonLabel,
+    formData,
     reviews,
     socialMedia,
     orientedClient,
@@ -44,13 +45,19 @@ export default async function Home({ params: { locale } }) {
       <AboutMeSection data={aboutMe} id={id.about} />
       <AboutSchool aboutSchool={aboutSchool} id={id.school} />
       <ForWhomSection data={orientedClient} id={id.forWhom} />
-      <FormatSection data={format} btnText={applyButtonLabel} id={id.format} />
+      <FormatSection
+        data={format}
+        btnText={applyButtonLabel}
+        formData={formData}
+        id={id.format}
+      />
       <Courses data={courses} id={id.courses} />
       <Comments data={reviews} id={id.reviews} />
       <FreeClass
         data={advertise}
         btnLabel={applyButtonLabel}
         altText={hero.title}
+        formData={formData}
       />
     </>
   );
