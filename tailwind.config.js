@@ -8,8 +8,34 @@ module.exports = {
       sm: '480px',
       md: '768px',
       xl: '1440px',
+      dpr: {
+        raw: 'screen and (min-device-pixel-ratio: 2)',
+      },
     },
+
     extend: {
+      backgroundImage: {
+        heroBg:
+          "linear-gradient(180deg, #efefef 0%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 100%), url('/images/hero-bg.png')",
+        schoolBg:
+          "linear-gradient(180deg, #efefef 0%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 100%), url('/images/school-bg.png')",
+        coursesBg:
+          "linear-gradient(180deg, #efefef 0%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 100%), url('/images/courses-bg.png')",
+        commentsBg:
+          "linear-gradient(180deg, #efefef 0%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 100%), url('/images/reviews-bg.png')",
+        formatBg:
+          "linear-gradient(180deg, #efefef 0%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 100%), url('/images/format-bg-x2.png')",
+      },
+      content: {
+        tickIcon: "url('/icons/tick.svg')",
+        arrowDown: "url('/icons/arrow-down.svg')",
+        formatLeft: "url('/icons/format-left.svg')",
+        formatRight: "url('/icons/format-right.svg')",
+        pageArrowMd: "url('/icons/arrow-page-md.svg')",
+        pageArrowOrator: "url('/icons/arrow-page-orator-xl.svg')",
+        pageArrowActor: "url('/icons/arrow-page-actor-xl.svg')",
+      },
+
       container: {
         center: true,
         padding: {
@@ -22,8 +48,12 @@ module.exports = {
 
       colors: {
         accent: '#7ED956',
+        secondary: '#A1A1A1',
+        bgColor: '#EFEFEF',
         white: '#FFF',
         black: '#222',
+        red: '#FF7272',
+        headerBg: 'rgba(255, 255, 255, 0.5)',
       },
 
       fontFamily: {
@@ -31,8 +61,27 @@ module.exports = {
       },
 
       fontSize: {
-        // little: ['12px', '24px'], // class="text-little"
-        // small: ['18px', '24px'], // class="text-small"
+        extraSmall: ['8px'],
+        small: ['12px'],
+        base: ['14px'],
+        middle: ['16px'],
+        medium: ['18px'],
+        large: ['24px'],
+        large36: ['36px'],
+        large42: ['42px'],
+        large46: ['46px'],
+        large48: ['48px'],
+        large56: ['56px'],
+        large62: ['62px'],
+        large64: ['64px'],
+        large70: ['70px'],
+        large92: ['92px'],
+        large124: ['124px'],
+        large134: ['134px'],
+        large140: ['140px'],
+      },
+      borderRadius: {
+        10: ['10px'],
       },
     },
   },

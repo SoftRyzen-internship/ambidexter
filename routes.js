@@ -1,5 +1,5 @@
 export const routes = {
   HOME: '/',
-  ORATORICAL_SKILL: '/oratorical-skill',
+  ORATORY_SKILL: '/oratory-skill',
   ACTING_SKILL: '/acting-skill',
 };

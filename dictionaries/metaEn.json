@@ -1,4 +1,14 @@
 {
-  "title": "Next Application",
-  "description": "This is Next.js starter template"
+  "home": {
+    "title": "AMBIDEXTER",
+    "description": "AMBIDEXTER - online school of acting and oratory skills"
+  },
+  "acting-skill": {
+    "title": "AMBIDEXTER - Acting skills courses",
+    "description": "AMBIDEXTER online school. Acting skills courses"
+  },
+  "oratory-skill": {
+    "title": "AMBIDEXTER - Oratorical skills courses",
+    "description": "AMBIDEXTER online school. Oratorical skills courses"
+  }
 }
