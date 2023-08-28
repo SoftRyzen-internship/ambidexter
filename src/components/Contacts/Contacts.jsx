@@ -18,7 +18,7 @@ export const Contacts = ({ data }) => {
           Phone:
           <a
             href="tel:+380680619457"
-            className="hover:text-white focus:fill-white duration-300"
+            className="hover:text-white focus:text-white duration-300"
             target="_blank"
           >
             &nbsp;+38 (068) 06 19 457
@@ -28,6 +28,7 @@ export const Contacts = ({ data }) => {
           {data.map((el, index) => (
             <li key={index}>
               <a
+                className="fill-black hover:fill-white focus:fill-white duration-300"
                 href={el.link}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
@@ -44,7 +45,7 @@ export const Contacts = ({ data }) => {
           E-mail:
           <a
             href="mailto:ambidexterschool@gmail.com"
-            className="hover:text-white focus:fill-white duration-300"
+            className="hover:text-white focus:text-white duration-300"
             target="_blank"
           >
             &nbsp;ambidexterschool@gmail.com

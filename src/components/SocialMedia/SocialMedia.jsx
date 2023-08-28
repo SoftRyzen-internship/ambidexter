@@ -45,8 +45,8 @@ export const SocialMedia = ({ data, section }) => {
             key={index}
             className={
               circleClassName
-                ? 'circleSocialItems hover:bg-accent focus:bg-accent'
-                : 'circleSocialItems hover:bg-white focus:bg-white'
+                ? 'circleSocialItems hover:bg-accent focus-within:bg-accent'
+                : 'circleSocialItems hover:bg-white focus-within:bg-white'
             }
           >
             <a
