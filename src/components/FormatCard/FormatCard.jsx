@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import { ApplyButton } from '..';
+import { ApplyButton } from '@/components/ApplyButton/ApplyButton';
 
-export const FormatCard = ({ data, btnText }) => {
+export const FormatCard = ({ data, btnText, formData }) => {
   const { title, listLabel, list, marketing } = data;
 
   return (
@@ -9,6 +9,7 @@ export const FormatCard = ({ data, btnText }) => {
       <h3 className="text-center text-middle md:text-large mb-4 md:mb-6">
         {title}
       </h3>
+
       <p className="md:text-middle mb-2">{listLabel}</p>
       <ul className="flex-grow flex-shrink">
         {list.map((item, index) => (
@@ -20,9 +21,10 @@ export const FormatCard = ({ data, btnText }) => {
           </li>
         ))}
       </ul>
+
       <div className="flex-shrink-0">
         <p className="text-center font-normal md:text-base mb-3">{marketing}</p>
-        <ApplyButton data={btnText} isFree={false} />
+        <ApplyButton data={btnText} isFree={false} formData={formData} />
       </div>
     </li>
   );
@@ -36,4 +38,31 @@ FormatCard.propTypes = {
     marketing: PropTypes.string.isRequired,
   }).isRequired,
   btnText: PropTypes.string.isRequired,
+  formData: PropTypes.shape({
+    name: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }).isRequired,
+    phoneNumber: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }).isRequired,
+    email: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }).isRequired,
+    message: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+    }).isRequired,
+    notification: PropTypes.shape({
+      error: PropTypes.string.isRequired,
+      success: PropTypes.string.isRequired,
+    }).isRequired,
+    btnSend: PropTypes.string.isRequired,
+    btnClose: PropTypes.string.isRequired,
+  }).isRequired,
 };

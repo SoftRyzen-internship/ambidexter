@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 
-import { ApplyButton, Container } from '@/components';
+import { Container } from '@/components';
+import { ApplyButton } from '@/components/ApplyButton/ApplyButton';
 import image from 'public/images/free.png';
 
 export const FreeClass = ({
@@ -9,6 +10,7 @@ export const FreeClass = ({
   altText,
   btnLabel,
   isCoursePage = false,
+  formData,
 }) => {
   return (
     <section
@@ -36,7 +38,8 @@ export const FreeClass = ({
             <p className="text-small/[1.25] md:text-middle/[1.208] xl:text-large/[1.208] font-medium text-justify md:text-left mb-4 xl:mb-6">
               {text}
             </p>
-            <ApplyButton data={btnLabel} isFree />
+
+            <ApplyButton data={btnLabel} isFree formData={formData} />
           </div>
         </div>
       </Container>
@@ -53,4 +56,31 @@ FreeClass.propTypes = {
   altText: PropTypes.string.isRequired,
   btnLabel: PropTypes.string.isRequired,
   isCoursePage: PropTypes.bool,
+  formData: PropTypes.shape({
+    name: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }).isRequired,
+    phoneNumber: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }).isRequired,
+    email: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+      errors: PropTypes.arrayOf(PropTypes.string.isRequired),
+    }).isRequired,
+    message: PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+    }).isRequired,
+    notification: PropTypes.shape({
+      error: PropTypes.string.isRequired,
+      success: PropTypes.string.isRequired,
+    }).isRequired,
+    btnSend: PropTypes.string.isRequired,
+    btnClose: PropTypes.string.isRequired,
+  }).isRequired,
 };
