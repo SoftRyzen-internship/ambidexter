@@ -53,6 +53,7 @@ module.exports = {
         white: '#FFF',
         black: '#222',
         red: '#FF7272',
+        bgModal: '#A3A3A3E6',
         headerBg: 'rgba(255, 255, 255, 0.5)',
       },
 
