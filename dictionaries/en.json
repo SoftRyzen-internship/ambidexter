@@ -16,10 +16,14 @@
     "courses": "Courses",
     "reviews": "Feedback"
   },
+  "siteMap": {
+    "goHome": "To Home page",
+    "toOratorPage": "Oratorical skill",
+    "toActorPage": "Acting skills"
+  },
   "socialNetworks": "Social media",
-  "applyButtonLabel": "Sign up",
   "socialsLabel": "Social media",
-  "goHome": "To Home page",
+  "applyButtonLabel": "Sign up",
 
   "hero": {
     "speciality": [
