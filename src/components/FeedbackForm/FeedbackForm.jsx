@@ -21,7 +21,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
     subject: '',
   };
 
-  localStorage.setItem('form', JSON.stringify(defaultValues));
+  // localStorage.setItem('form', JSON.stringify(defaultValues));
 
   const {
     register,
@@ -33,11 +33,18 @@ export const FeedbackForm = ({ toggleModal, data }) => {
   } = useForm({
     mode: 'onSubmit',
     defaultValues: {
-      name: Object.values(JSON.parse(localStorage?.getItem('form')))[0] || '',
-      phone: Object.values(JSON.parse(localStorage?.getItem('form')))[1] || '',
-      email: Object.values(JSON.parse(localStorage?.getItem('form')))[2] || '',
-      subject:
-        Object.values(JSON.parse(localStorage?.getItem('form')))[3] || '',
+      name: localStorage.getItem('form')
+        ? Object.values(JSON.parse(localStorage?.getItem('form')))[0]
+        : '',
+      phone: localStorage.getItem('form')
+        ? Object.values(JSON.parse(localStorage?.getItem('form')))[1]
+        : '',
+      email: localStorage.getItem('form')
+        ? Object.values(JSON.parse(localStorage?.getItem('form')))[2]
+        : '',
+      subject: localStorage.getItem('form')
+        ? Object.values(JSON.parse(localStorage?.getItem('form')))[3]
+        : '',
     },
   });
 
