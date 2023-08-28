@@ -21,8 +21,6 @@ export const FeedbackForm = ({ toggleModal, data }) => {
     subject: '',
   };
 
-  // localStorage.setItem('form', JSON.stringify(defaultValues));
-
   const {
     register,
     handleSubmit,
