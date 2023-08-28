@@ -11,7 +11,7 @@ export const Courses = ({ data, id }) => {
 
   const newData = [
     { cardImg: actorImg, linkForBtn: routes.ACTING_SKILL },
-    { cardImg: oratorImg, linkForBtn: routes.ORATORICAL_SKILL },
+    { cardImg: oratorImg, linkForBtn: routes.ORATORY_SKILL },
   ].map((element, index) => ({ ...element, ...cards[index], btnShowMore }));
 
   return (

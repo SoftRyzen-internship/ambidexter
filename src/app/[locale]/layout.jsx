@@ -12,8 +12,8 @@ export async function generateMetadata({ params }) {
   const metaDictionary = await getMetaByLocale(params.locale);
 
   return {
-    title: metaDictionary.title,
-    description: metaDictionary.description,
+    title: metaDictionary.home.title,
+    description: metaDictionary.home.description,
   };
 }
 
@@ -24,7 +24,7 @@ export async function generateStaticParams() {
 export default async function RootLayout({ children, params: { locale } }) {
   const localeData = await getDictionary(locale);
 
-  const { navBar, socialNetworks, socialMedia, contacts } = localeData;
+  const { navBar, socialNetworks, socialMedia, contacts, goHome } = localeData;
 
   return (
     <html lang={locale}>
@@ -43,6 +43,7 @@ export default async function RootLayout({ children, params: { locale } }) {
           navBar={navBar}
           socialMedia={socialMedia}
           locale={locale}
+          goHome={goHome}
         />
       </body>
     </html>

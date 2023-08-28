@@ -22,3 +22,4 @@ export * from './ForWhomImage/ForWhomImage';
 export * from './ForWhomImageBw/ForWhomImageBw';
 export * from './CommentCard/CommentCard';
 export * from './MoreReviews/MoreRevievs';
+export * from './ItemCourseCard/ItemCourseCard';
