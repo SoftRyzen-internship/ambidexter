@@ -22,7 +22,7 @@
   }
 
   .contactsIcon {
-    @apply fill-black w-[12px] h-[12px] xl:w-[24px] xl:h-[24px] hover:fill-white focus:fill-white duration-300;
+    @apply fill-inherit w-[12px] h-[12px] xl:w-[24px] xl:h-[24px];
   }
 
   .circleSocialItems {
