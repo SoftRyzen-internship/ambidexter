@@ -12,6 +12,15 @@
   }
 }
 
+@media (hover: none) {
+  .navBarLinkHeader {
+    @apply hover:text-black;
+  }
+  .navBarLinkActive {
+    @apply hover:text-secondary;
+  }
+}
+
 @layer components {
   .navBarLinkHeader {
     @apply hover:text-accent focus:text-accent;
@@ -19,6 +28,9 @@
 
   .navBarLinkFooter {
     @apply hover:text-white focus:text-white;
+  }
+  .navBarLinkActive {
+    @apply text-secondary focus:text-secondary  hover:text-secondary;
   }
 
   .contactsIcon {
