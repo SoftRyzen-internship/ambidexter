@@ -6,13 +6,15 @@ import { useSwiper } from 'swiper/react';
 import ArrowLeft from 'public/icons/arrow-left.svg';
 import ArrowRight from 'public/icons/arrow-right.svg';
 
-export const MoreReviews = ({ label }) => {
+export const MoreReviews = ({ btnLabel }) => {
+  const { ariaLeft, label, ariaRight } = btnLabel;
   const swiper = useSwiper();
 
   return (
     <div className="flex justify-center items-center mt-6 md:mt-9">
       <button
         type="button"
+        aria-label={ariaLeft}
         className="px-6 xl:px-9 btnMoreReviews"
         onClick={() => swiper.slidePrev()}
       >
@@ -21,6 +23,7 @@ export const MoreReviews = ({ label }) => {
       <p className="text-middle xl:text-large">{label}</p>
       <button
         type="button"
+        aria-label={ariaRight}
         className="px-6 xl:px-9 btnMoreReviews"
         onClick={() => swiper.slideNext()}
       >
@@ -31,5 +34,9 @@ export const MoreReviews = ({ label }) => {
 };
 
 MoreReviews.propTypes = {
-  label: PropTypes.string.isRequired,
+  btnLabel: PropTypes.shape({
+    ariaLeft: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    ariaRight: PropTypes.string.isRequired,
+  }).isRequired,
 };
