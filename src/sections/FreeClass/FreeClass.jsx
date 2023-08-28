@@ -15,9 +15,9 @@ export const FreeClass = ({
   return (
     <section
       id="freeClass"
-      className={
-        isCoursePage ? 'freeClassSection xl:pb-20' : 'freeClassSection'
-      }
+      className={`${
+        isCoursePage ? '' : 'xl:pb-40'
+      } freeClassSection pb-10 md:pb-20`}
     >
       <Container>
         <div className="md:flex md:gap-5 xl:gap-11 md:items-center">

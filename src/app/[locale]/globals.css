@@ -8,7 +8,7 @@
   }
 
   section {
-    @apply w-full pb-10 md:pb-20 xl:pb-40;
+    @apply w-full py-5 md:py-10 xl:py-20;
   }
 }
 
@@ -70,7 +70,7 @@
   }
 
   .contactsIcon {
-    @apply fill-black w-[12px] h-[12px] xl:w-[24px] xl:h-[24px] hover:fill-white focus:fill-white duration-300;
+    @apply fill-inherit w-[12px] h-[12px] xl:w-[24px] xl:h-[24px];
   }
 
   .circleSocialItems {
