@@ -236,7 +236,7 @@
   },
   "coursePages": {
     "label": "Course",
-    "oratory-skill": {
+    "oratorySkill": {
       "title": "Oratorical skill",
       "cards": [
         {
@@ -349,7 +349,7 @@
         }
       ]
     },
-    "acting-skill": {
+    "actingSkill": {
       "title": "Acting skills",
       "cards": [
         {

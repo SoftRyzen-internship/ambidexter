@@ -3,6 +3,6 @@ const metaDictionaries = {
   uk: () => import('../../dictionaries/metaUk.json').then(r => r.default),
 };
 
-export const getMetaByLocale = locale => {
-  return metaDictionaries[locale]();
+export const getMetaByLocale = async locale => {
+  return await metaDictionaries[locale]();
 };
