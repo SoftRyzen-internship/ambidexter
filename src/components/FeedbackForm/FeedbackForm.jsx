@@ -168,6 +168,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
         </label>
 
         <button
+          disabled={isLoading}
           type="submit"
           className="bg-accent rounded-10 py-[8px] text-middle font-medium max-h-[35px] xl:max-h-[76px] xl:py-[16px] xl:text-large36 flex justify-center items-center hover:bg-white focus:bg-white hover:border-[2px] focus:border-[2px] border-accent duration-300 cursor-pointer"
         >
