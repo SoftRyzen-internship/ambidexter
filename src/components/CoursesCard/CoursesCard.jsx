@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 
 import { BtnShowMore } from '@/components';
+import pixels from '@/data/blurPixel.json';
 
 export const CoursesCard = ({ data }) => {
   const { label, cardImg, alt, linkForBtn, btnShowMore } = data;
@@ -15,7 +16,7 @@ export const CoursesCard = ({ data }) => {
           height={500}
           alt={alt}
           placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNcaAwAAXsA1kevnFAAAAAASUVORK5CYII="
+          blurDataURL={pixels.greyPixel}
         />
       </div>
 

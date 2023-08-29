@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Container } from '@/components';
 import { ApplyButton } from '@/components/ApplyButton/ApplyButton';
 import image from 'public/images/free.png';
+import pixels from '@/data/blurPixel.json';
 
 export const FreeClass = ({
   data: { label, title, text },
@@ -27,7 +28,7 @@ export const FreeClass = ({
               src={image}
               alt={altText}
               placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNcaAwAAXsA1kevnFAAAAAASUVORK5CYII="
+              blurDataURL={pixels.greyPixel}
             />
           </div>
           <div className="md:w-[calc(50%-10px)] xl:h-[410px] max-w-[320px] md:max-w-none mx-auto md:mx-0">

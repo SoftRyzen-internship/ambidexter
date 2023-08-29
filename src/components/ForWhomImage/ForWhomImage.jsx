@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import ForWhomImageColor from 'public/images/for-who-color.jpg';
+import pixels from '@/data/blurPixel.json';
 
 export const ForWhomImage = () => {
   return (
@@ -12,7 +13,7 @@ export const ForWhomImage = () => {
       quality={100}
       className="forWhomImage"
       placeholder="blur"
-      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNcaAwAAXsA1kevnFAAAAAASUVORK5CYII="
+      blurDataURL={pixels.greyPixel}
     />
   );
 };
