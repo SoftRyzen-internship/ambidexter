@@ -91,7 +91,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
             placeholder={name.placeholder}
             {...register('name', {
               required: true,
-              pattern: /^[а-яА-ЯіІїЇєЄґҐa-zA-Z\s'-]+$/,
+              pattern: /^(?!.*[ ]-|.*-(?=[ ]))([а-яА-ЯіІїЇєЄґҐa-zA-Z\s'-]+)$/,
               minLength: 3,
               maxLength: 100,
             })}
