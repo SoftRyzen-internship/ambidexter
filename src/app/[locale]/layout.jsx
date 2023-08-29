@@ -17,8 +17,8 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: metaDictionary.home.title,
       description: metaDictionary.home.description,
-      url: 'https://example.vercel.app/',
-      siteName: 'Example Site Name',
+      url: 'https://ambidexter.vercel.app/',
+      siteName: 'Ambidexter',
       images: [
         {
           url: '/public/images/opengraph-image.jpg',
@@ -30,8 +30,8 @@ export async function generateMetadata({ params }) {
       type: 'website',
       // manifest: '/meta/site.webmanifest',
       // alternates: {
-      //   canonical: 'https://example.vercel.app/',
-      //   metadataBase: new URL('https://example.vercel.app/'),
+      //   canonical: 'https://ambidexter.vercel.app/',
+      //   metadataBase: new URL('https://ambidexter.vercel.app/'),
       // },
     },
   };
