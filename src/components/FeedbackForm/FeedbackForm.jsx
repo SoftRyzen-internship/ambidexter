@@ -67,6 +67,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
       setNotificationState('Correct');
       setIsLoading(false);
       localStorage.setItem('form', JSON.stringify(defaultValues));
+      setTimeout(toggleModal, 3000);
     } catch {
       setIsLoading(false);
       setNotificationState('Incorrect');
