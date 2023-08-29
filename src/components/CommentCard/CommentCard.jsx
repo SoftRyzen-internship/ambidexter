@@ -15,6 +15,8 @@ export const CommentCard = ({ data }) => {
         width={250}
         height={250}
         className="w-40 h-40 xl:w-[250px] xl:h-[250px] rounded-full border-2 border-accent object-cover"
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOsuxlmDAAFbAHiebSbfwAAAABJRU5ErkJggg=="
       />
       <h3 className="text-middle xl:text-large">{name}</h3>
       <div className="flex gap-1">{ratingReviews(rating)}</div>

@@ -26,6 +26,8 @@ export const FreeClass = ({
               className="w-full h-auto md:absolute md:w-[409px] md:right-0 xl:w-[721px] max-w-none"
               src={image}
               alt={altText}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNcaAwAAXsA1kevnFAAAAAASUVORK5CYII="
             />
           </div>
           <div className="md:w-[calc(50%-10px)] xl:h-[410px] max-w-[320px] md:max-w-none mx-auto md:mx-0">
