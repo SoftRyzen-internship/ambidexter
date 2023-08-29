@@ -39,7 +39,7 @@ export const Comments = ({ data, id }) => {
               <CommentCard data={element} />
             </SwiperSlide>
           ))}
-          <MoreReviews label={btnLabel} />
+          <MoreReviews btnLabel={btnLabel} />
         </Swiper>
       </Container>
     </section>
@@ -55,9 +55,14 @@ Comments.propTypes = {
         name: PropTypes.string.isRequired,
         rating: PropTypes.string.isRequired,
         comment: PropTypes.string.isRequired,
+        alt: PropTypes.string.isRequired,
       }).isRequired,
     ).isRequired,
-    btnLabel: PropTypes.string.isRequired,
+    btnLabel: PropTypes.shape({
+      ariaLeft: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      ariaRight: PropTypes.string.isRequired,
+    }).isRequired,
   }),
   id: PropTypes.string.isRequired,
 };
