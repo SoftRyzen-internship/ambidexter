@@ -11,6 +11,10 @@ export async function generateMetadata({ params: { locale, skill } }) {
   return {
     title: metaDictionary[pageSkill].title,
     description: metaDictionary[pageSkill].description,
+    openGraph: {
+      title: metaDictionary[pageSkill].title,
+      description: metaDictionary[pageSkill].description,
+    },
   };
 }
 

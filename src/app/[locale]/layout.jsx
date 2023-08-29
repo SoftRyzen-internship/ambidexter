@@ -14,6 +14,26 @@ export async function generateMetadata({ params }) {
   return {
     title: metaDictionary.home.title,
     description: metaDictionary.home.description,
+    openGraph: {
+      title: metaDictionary.home.title,
+      description: metaDictionary.home.description,
+      url: 'https://ambidexter.vercel.app/',
+      siteName: 'Ambidexter',
+      images: [
+        {
+          url: '/public/images/opengraph-image.jpg',
+          width: 1200,
+          height: 630,
+        },
+      ],
+      locale: 'en',
+      type: 'website',
+      // manifest: '/meta/site.webmanifest',
+      // alternates: {
+      //   canonical: 'https://ambidexter.vercel.app/',
+      //   metadataBase: new URL('https://ambidexter.vercel.app/'),
+      // },
+    },
   };
 }
 
