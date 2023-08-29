@@ -33,7 +33,7 @@ export const ItemCourseCard = ({ data }) => {
   return (
     <div className=" w-full md:w-[334px] sm:w-[440px] xl:w-[630px]  border-2 border-accent rounded-10 overflow-hidden">
       <div className="text-middle xl:text-[24px] py-3 md:py-4 bg-accent text-center font-medium ">
-        <h3>
+        <h2>
           {!title.includes('.') ? (
             <span>{title}</span>
           ) : (
@@ -43,7 +43,7 @@ export const ItemCourseCard = ({ data }) => {
               </span>
             ))
           )}
-        </h3>
+        </h2>
       </div>
       <div className="p-3 md:px-6 xl:py-6 text-small xl:text-middle">
         <ul className=" ">

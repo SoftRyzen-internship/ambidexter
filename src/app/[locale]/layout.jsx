@@ -37,13 +37,14 @@ export async function generateStaticParams() {
 export default async function RootLayout({ children, params: { locale } }) {
   const localeData = await getDictionary(locale);
 
-  const { navBar, socialNetworks, socialMedia, contacts, goHome } = localeData;
+  const { navBar, socialNetworks, socialMedia, contacts, siteMap } = localeData;
 
   return (
     <html lang={locale}>
       <body className={inter.className}>
         <Header
           navBar={navBar}
+          siteMap={siteMap}
           socialNetworks={socialNetworks}
           socialMedia={socialMedia}
           locale={locale}
@@ -56,7 +57,7 @@ export default async function RootLayout({ children, params: { locale } }) {
           navBar={navBar}
           socialMedia={socialMedia}
           locale={locale}
-          goHome={goHome}
+          goHome={siteMap.goHome}
         />
       </body>
     </html>
