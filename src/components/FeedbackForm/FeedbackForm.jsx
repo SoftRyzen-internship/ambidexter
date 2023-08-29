@@ -29,7 +29,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
     watch,
     setValue,
   } = useForm({
-    mode: 'onSubmit',
+    mode: 'onChange',
     defaultValues: {
       name: localStorage.getItem('form')
         ? Object.values(JSON.parse(localStorage?.getItem('form')))[0]
@@ -139,7 +139,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
             placeholder={email.placeholder}
             {...register('email', {
               required: true,
-              pattern: /^(?!-)[A-Za-z0-9._-]+@[-A-Za-z0-9]+\.[A-Za-z]{2,}$/,
+              pattern: /^(?!-)[A-Za-z0-9._-]+@[-A-Za-z0-9]+(\.[A-Za-z]{2,})+$/,
               minLength: 6,
               maxLength: 63,
             })}
