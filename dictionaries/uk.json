@@ -16,10 +16,13 @@
     "courses": "КУРСИ",
     "reviews": "ВІДГУКИ"
   },
-  "socialNetworks": "соціальні мережі",
+  "siteMap": {
+    "goHome": "На головну",
+    "toOratorPage": "Ораторська майстерність",
+    "toActorPage": "Акторська майстерність"
+  },
+  "socialNetworks": "Соціальні мережі",
   "applyButtonLabel": "Записатись",
-  "socialsLabel": "Соціальні мережі",
-  "goHome": "На головну",
 
   "hero": {
     "speciality": [
