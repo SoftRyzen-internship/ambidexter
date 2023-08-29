@@ -35,13 +35,15 @@ export const MobileMenu = ({
       } absolute block md:hidden top-0 left-0 w-full bg-white duration-300 pt-[76px] h-[100vh]`}
     >
       <Container className="py-6 flex flex-col justify-start h-full overflow-y-auto">
-        {isHome ? (
+        {isHome && (
           <NavBar
             className={'flex flex-col text-middle'}
             handleMenuToggle={handleMenuToggle}
             data={navBar}
           />
-        ) : (
+        )}
+
+        {!isHome && (
           <div className="flex flex-col items-center gap-4 text-middle font-medium uppercase">
             <Link
               className="navBarLinkHeader"
