@@ -17,6 +17,22 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: metaDictionary.home.title,
       description: metaDictionary.home.description,
+      url: 'https://example.vercel.app/',
+      siteName: 'Example Site Name',
+      images: [
+        {
+          url: '/public/images/opengraph-image.jpg',
+          width: 1200,
+          height: 630,
+        },
+      ],
+      locale: 'en',
+      type: 'website',
+      // manifest: '/meta/site.webmanifest',
+      // alternates: {
+      //   canonical: 'https://example.vercel.app/',
+      //   metadataBase: new URL('https://example.vercel.app/'),
+      // },
     },
   };
 }
