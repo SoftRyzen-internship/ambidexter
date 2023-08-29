@@ -14,6 +14,10 @@ export async function generateMetadata({ params }) {
   return {
     title: metaDictionary.home.title,
     description: metaDictionary.home.description,
+    openGraph: {
+      title: metaDictionary.home.title,
+      description: metaDictionary.home.description,
+    },
   };
 }
 
