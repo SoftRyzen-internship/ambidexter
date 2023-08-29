@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import ForWhomImageBlack from 'public/images/for-who-bw.jpg';
-import pixels from '@/data/blurPixel.json';
+import pixels from '@/constants/blurPixel';
 
 export const ForWhomImageBw = () => {
   return (

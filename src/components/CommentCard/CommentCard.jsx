@@ -2,7 +2,7 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 
 import { ratingReviews } from '@/utils/getRatingReviews';
-import pixels from '@/data/blurPixel.json';
+import pixels from '@/constants/blurPixel';
 
 export const CommentCard = ({ data }) => {
   const { photo, name, rating, comment } = data;

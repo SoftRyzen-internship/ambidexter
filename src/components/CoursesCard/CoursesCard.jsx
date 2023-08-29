@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Image from 'next/image';
 
 import { BtnShowMore } from '@/components';
-import pixels from '@/data/blurPixel.json';
+import pixels from '@/constants/blurPixel';
 
 export const CoursesCard = ({ data }) => {
   const { label, cardImg, alt, linkForBtn, btnShowMore } = data;

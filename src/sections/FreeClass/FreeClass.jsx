@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Container } from '@/components';
 import { ApplyButton } from '@/components/ApplyButton/ApplyButton';
 import image from 'public/images/free.png';
-import pixels from '@/data/blurPixel.json';
+import pixels from '@/constants/blurPixel';
 
 export const FreeClass = ({
   data: { label, title, text },
