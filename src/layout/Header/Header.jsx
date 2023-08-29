@@ -14,13 +14,7 @@ import {
   ButtonMenuToggle,
 } from '@/components';
 
-export const Header = ({
-  navBar,
-  siteMap,
-  socialNetworks,
-  socialMedia,
-  locale,
-}) => {
+export const Header = ({ navBar, socialNetworks, socialMedia, locale }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -104,13 +98,9 @@ export const Header = ({
               <MobileMenu
                 handleMenuToggle={handleMenuToggle}
                 navBar={navBar}
-                siteMap={siteMap}
                 socialNetworks={socialNetworks}
                 isModalShow={isOpenMenu}
                 socialMedia={socialMedia}
-                locale={locale}
-                isHome={isHome}
-                pathname={pathname}
               />
             )}
           </Container>
@@ -127,11 +117,6 @@ Header.propTypes = {
       link: PropTypes.string.isRequired,
     }),
   ),
-  siteMap: PropTypes.shape({
-    goHome: PropTypes.string.isRequired,
-    toOratorPage: PropTypes.string.isRequired,
-    toActorPage: PropTypes.string.isRequired,
-  }),
   socialNetworks: PropTypes.string.isRequired,
   socialMedia: PropTypes.arrayOf(
     PropTypes.shape({
