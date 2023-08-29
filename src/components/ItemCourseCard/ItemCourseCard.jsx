@@ -31,7 +31,7 @@ export const ItemCourseCard = ({ data }) => {
   };
 
   return (
-    <div className=" w-full md:w-[334px] sm:w-[440px] xl:w-[630px]  border-2 border-accent rounded-10">
+    <div className=" w-full md:w-[334px] sm:w-[440px] xl:w-[630px]  border-2 border-accent rounded-10 overflow-hidden">
       <div className="text-middle xl:text-[24px] py-3 md:py-4 bg-accent text-center font-medium ">
         <h3>
           {!title.includes('.') ? (
