@@ -19,13 +19,6 @@ export async function generateMetadata({ params }) {
       description: metaDictionary.home.description,
       url: 'https://ambidexter.vercel.app/',
       siteName: 'Ambidexter',
-      images: [
-        {
-          url: '/public/images/opengraph-image.jpg',
-          width: 1200,
-          height: 630,
-        },
-      ],
       locale: 'en',
       type: 'website',
       // manifest: '/meta/site.webmanifest',
