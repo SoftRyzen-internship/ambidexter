@@ -14,6 +14,7 @@ export async function generateMetadata({ params }) {
   return {
     title: metaDictionary.home.title,
     description: metaDictionary.home.description,
+    metadataBase: new URL('https://ambidexter.vercel.app/'),
     openGraph: {
       title: metaDictionary.home.title,
       description: metaDictionary.home.description,
@@ -22,10 +23,9 @@ export async function generateMetadata({ params }) {
       locale: 'en',
       type: 'website',
       // manifest: '/meta/site.webmanifest',
-      alternates: {
-        //   canonical: 'https://ambidexter.vercel.app/',
-        metadataBase: new URL('https://ambidexter.vercel.app/'),
-      },
+      // alternates: {
+      //  canonical: 'https://ambidexter.vercel.app/',
+      // },
     },
   };
 }
