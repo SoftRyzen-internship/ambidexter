@@ -5,9 +5,7 @@ import { CoursePageList, FreeClass } from '@/sections';
 
 export const dynamicParams = false;
 
-export async function generateStaticParams({ params }) {
-  const { locale } = params;
-
+export async function generateStaticParams({ params: { locale } }) {
   return [
     { locale: locale, skill: 'oratory-skill' },
     { locale: locale, skill: 'acting-skill' },
