@@ -1,7 +1,9 @@
+import { Suspense } from 'react';
 import { Inter } from 'next/font/google';
 import { i18n } from 'i18n';
 
 import { Header, Footer } from '@/layout';
+import { Loader } from '@/components/Loader/Loader';
 import { getMetaByLocale } from '@/utils/getMetaData';
 import { getDictionary } from '@/utils/getDictionary';
 import './globals.css';
@@ -83,7 +85,7 @@ export default async function RootLayout({ children, params: { locale } }) {
           locale={locale}
         />
         <main className="flex min-h-screen flex-col items-center">
-          {children}
+          <Suspense fallback={<Loader />}>{children}</Suspense>
         </main>
         <Footer
           contacts={contacts}
