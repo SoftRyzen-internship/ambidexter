@@ -24,7 +24,7 @@ module.exports = {
         commentsBg:
           "linear-gradient(180deg, #efefef 0%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 100%), url('/images/reviews-bg.png')",
         formatBg:
-          "linear-gradient(180deg, #efefef 0%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 100%), url('/images/format-bg-x2.png')",
+          "linear-gradient(180deg, #efefef 0%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 100%), url('/images/format-bg.png')",
       },
       content: {
         tickIcon: "url('/icons/tick.svg')",

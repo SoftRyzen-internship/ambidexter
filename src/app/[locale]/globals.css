@@ -92,7 +92,7 @@
         rgba(239, 239, 239, 0) 75%,
         #efefef 100%
       ),
-      -webkit-image-set(url('/images/free-bg-xl.webp') 1x, url('/images/free-bg-xl-x2.webp')
+      -webkit-image-set(url('/images/free-bg-xl.png') 1x, url('/images/free-bg-xl-x2.png')
             2x);
   }
 
