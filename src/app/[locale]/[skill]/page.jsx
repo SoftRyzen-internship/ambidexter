@@ -1,7 +1,9 @@
+import { Suspense } from 'react';
 import { getMetaByLocale } from '@/utils/getMetaData';
 import { getDictionary } from '@/utils/getDictionary';
 
 import { CoursePageList, FreeClass } from '@/sections';
+import { Loader } from '@/components/Loader/Loader';
 
 export const dynamicParams = false;
 
@@ -37,7 +39,7 @@ export default async function OratorySkillPage({ params }) {
     localeData;
 
   return (
-    <>
+    <Suspense fallback={<Loader />}>
       <CoursePageList
         data={coursePages[pageSkill]}
         label={coursePages.label}
@@ -50,6 +52,6 @@ export default async function OratorySkillPage({ params }) {
         isCoursePage
         formData={formData}
       />
-    </>
+    </Suspense>
   );
 }
