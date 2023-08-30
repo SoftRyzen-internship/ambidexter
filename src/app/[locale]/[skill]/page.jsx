@@ -3,6 +3,17 @@ import { getDictionary } from '@/utils/getDictionary';
 
 import { CoursePageList, FreeClass } from '@/sections';
 
+export const dynamicParams = false;
+
+export async function generateStaticParams({ params }) {
+  const { locale } = params;
+
+  return [
+    { locale: locale, skill: 'oratory-skill' },
+    { locale: locale, skill: 'acting-skill' },
+  ];
+}
+
 export async function generateMetadata({ params: { locale, skill } }) {
   const metaDictionary = await getMetaByLocale(locale);
 
