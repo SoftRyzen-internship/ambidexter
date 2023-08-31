@@ -60,6 +60,9 @@ export async function generateMetadata({ params }) {
         url: '/favicon/apple-touch-icon.png',
       },
     },
+    twitter: {
+      card: 'summary_large_image',
+    },
   };
 }
 

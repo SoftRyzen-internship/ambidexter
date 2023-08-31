@@ -117,7 +117,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
             placeholder={phoneNumber.placeholder}
             {...register('phone', {
               required: true,
-              pattern: /^\+\d{12}$/,
+              pattern: /^\+\d{11,12}$/,
             })}
             className={
               errors.phone
