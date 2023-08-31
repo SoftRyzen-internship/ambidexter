@@ -3,7 +3,7 @@ import { Container, SectionTitle, Features } from '@/components';
 
 export const AboutSchool = ({ aboutSchool, id }) => {
   return (
-    <section id={id} className="bg-schoolBg  bg-no-repeat bg-center  bg-cover ">
+    <section id={id} className="schoolSection">
       <Container>
         <div className=" text-center flex flex-col gap-[8px] md:gap-3 mb-6 md:mb-[72px]">
           <SectionTitle text={aboutSchool.title} />

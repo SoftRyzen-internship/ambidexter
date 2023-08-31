@@ -15,10 +15,7 @@ export const Courses = ({ data, id, locale }) => {
   ].map((element, index) => ({ ...element, ...cards[index], btnShowMore }));
 
   return (
-    <section
-      id={id}
-      className="bg-coursesBg bg-no-repeat bg-center bg-cover text-center"
-    >
+    <section id={id} className="coursesSection text-center">
       <Container>
         <SectionTitle text={title} />
 

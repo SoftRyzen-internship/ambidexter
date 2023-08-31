@@ -14,18 +14,6 @@ module.exports = {
     },
 
     extend: {
-      backgroundImage: {
-        heroBg:
-          "linear-gradient(180deg, #efefef 0%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 100%), url('/images/hero-bg.png')",
-        schoolBg:
-          "linear-gradient(180deg, #efefef 0%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 100%), url('/images/school-bg.png')",
-        coursesBg:
-          "linear-gradient(180deg, #efefef 0%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 100%), url('/images/courses-bg.png')",
-        commentsBg:
-          "linear-gradient(180deg, #efefef 0%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 100%), url('/images/reviews-bg.png')",
-        formatBg:
-          "linear-gradient(180deg, #efefef 0%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 100%), url('/images/format-bg.png')",
-      },
       content: {
         tickIcon: "url('/icons/tick.svg')",
         arrowDown: "url('/icons/arrow-down.svg')",

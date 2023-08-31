@@ -11,7 +11,7 @@ export const Hero = ({ data, icons }) => {
   } = data;
 
   return (
-    <section className="bg-heroBg bg-no-repeat bg-top bg-cover pt-20 md:pt-[75px] xl:pt-[93px] min-h-[460px] md:min-h-[689px] xl:min-h-[1204px] md:text-base xl:text-large font-medium leading-[1.2]">
+    <section className="heroSection pt-20 md:pt-[75px] xl:pt-[93px] min-h-[460px] md:min-h-[689px] xl:min-h-[1204px] md:text-base xl:text-large font-medium leading-[1.2]">
       <Container
         className={
           'relative flex justify-center w-full h-full md:pt-[63px] xl:pt-[124px]'
