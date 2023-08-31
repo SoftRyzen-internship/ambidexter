@@ -1,11 +1,11 @@
 import { Suspense } from 'react';
 import { Inter } from 'next/font/google';
-import { i18n } from 'i18n';
 
 import { Header, Footer } from '@/layout';
 import { Loader } from '@/components/Loader/Loader';
 import { getMetaByLocale } from '@/utils/getMetaData';
 import { getDictionary } from '@/utils/getDictionary';
+import { i18n } from 'i18n';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -28,6 +28,9 @@ export async function generateMetadata({ params }) {
       // alternates: {
       //  canonical: 'https://ambidexter.vercel.app/',
       // },
+    },
+    twitter: {
+      card: 'summary_large_image',
     },
     icons: {
       icon: [
