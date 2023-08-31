@@ -29,6 +29,7 @@ export async function generateMetadata({ params }) {
       //  canonical: 'https://ambidexter.vercel.app/',
       // },
     },
+
     icons: {
       icon: [
         {
@@ -61,6 +62,10 @@ export async function generateMetadata({ params }) {
         rel: '/meta/apple-touch-icon.png',
         url: '/meta/apple-touch-icon.png',
       },
+
+    twitter: {
+      card:'summary_large_image',
+
     },
   };
 }
