@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
     icons: {
       icon: [
         {
-          url: './favicon.ico',
+          url: '/src/app/favicon.ico',
         },
         {
           url: '/favicon/favicon-16x16.png',
