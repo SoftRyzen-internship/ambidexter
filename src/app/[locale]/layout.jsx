@@ -24,44 +24,44 @@ export async function generateMetadata({ params }) {
       siteName: 'Ambidexter',
       locale: 'en',
       type: 'website',
-      // manifest: '/meta/site.webmanifest',
+      manifest: '/meta/site.webmanifest',
       // alternates: {
       //  canonical: 'https://ambidexter.vercel.app/',
       // },
     },
-    // icons: {
-    //   icon: [
-    //     {
-    //       url: '/meta/favicon.ico',
-    //     },
-    //     {
-    //       url: '/meta/favicon-16x16.png',
-    //       sizes: '16x16',
-    //       type: 'image/png',
-    //     },
-    //     {
-    //       url: '/meta/favicon-32x32.png',
-    //       sizes: '32x32',
-    //       type: 'image/png',
-    //     },
-    //     {
-    //       url: '/meta/android-chrome-192x192.png',
-    //       sizes: '192x192',
-    //       type: 'image/png',
-    //     },
-    //     {
-    //       url: '/meta/android-chrome-512x512.png',
-    //       sizes: '512x512',
-    //       type: 'image/png',
-    //     },
-    //   ],
-    //   shortcut: '/meta/favicon.ico',
-    //   apple: '/meta/apple-touch-icon.png',
-    //   other: {
-    //     rel: '/meta/apple-touch-icon.png',
-    //     url: '/meta/apple-touch-icon.png',
-    //   },
-    // },
+    icons: {
+      icon: [
+        {
+          url: '/meta/favicon.ico',
+        },
+        {
+          url: '/meta/favicon-16x16.png',
+          sizes: '16x16',
+          type: 'image/png',
+        },
+        {
+          url: '/meta/favicon-32x32.png',
+          sizes: '32x32',
+          type: 'image/png',
+        },
+        {
+          url: '/meta/android-chrome-192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          url: '/meta/android-chrome-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+      ],
+      shortcut: '/meta/favicon.ico',
+      apple: '/meta/apple-touch-icon.png',
+      other: {
+        rel: '/meta/apple-touch-icon.png',
+        url: '/meta/apple-touch-icon.png',
+      },
+    },
   };
 }
 
