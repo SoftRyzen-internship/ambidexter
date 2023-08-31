@@ -12,6 +12,14 @@
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
 @media (hover: none) {
   .navBarLinkHeader {
     @apply hover:text-black;
@@ -92,7 +100,7 @@
         rgba(239, 239, 239, 0) 75%,
         #efefef 100%
       ),
-      -webkit-image-set(url('/images/free-bg-xl.png') 1x, url('/images/free-bg-xl-x2.png')
+      -webkit-image-set(url('/images/free-bg-xl.webp') 1x, url('/images/free-bg-xl-x2.webp')
             2x);
   }
 
