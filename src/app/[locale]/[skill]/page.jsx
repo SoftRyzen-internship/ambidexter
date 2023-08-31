@@ -20,9 +20,17 @@ export async function generateMetadata({ params: { locale, skill } }) {
   return {
     title: metaDictionary[pageSkill].title,
     description: metaDictionary[pageSkill].description,
+    metadataBase: new URL('https://ambidexter.vercel.app/'),
     openGraph: {
       title: metaDictionary[pageSkill].title,
       description: metaDictionary[pageSkill].description,
+      url: 'https://ambidexter.vercel.app/',
+      siteName: 'Ambidexter',
+      locale: 'en',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
     },
   };
 }
