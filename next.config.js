@@ -7,6 +7,10 @@ const nextConfig = {
     dirs: ['src'], // Only run ESLint on the 'src' directory during production builds (next build)
   },
 
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
+
   webpack: config => {
     config.module.rules.push({
       test: /\.svg$/,
