@@ -27,6 +27,9 @@ export async function generateMetadata({ params }) {
       //  canonical: 'https://ambidexter.vercel.app/',
       // },
     },
+    twitter: {
+      card:'summary_large_image',
+    },
   };
 }
 

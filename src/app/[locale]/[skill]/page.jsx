@@ -29,6 +29,9 @@ export async function generateMetadata({ params: { locale, skill } }) {
       locale: 'en',
       type: 'website',
     },
+    twitter: {
+      card: 'summary_large_image',
+    },
   };
 }
 
