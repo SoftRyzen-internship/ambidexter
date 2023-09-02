@@ -10,6 +10,12 @@
   section {
     @apply w-full py-5 md:py-10 xl:py-20;
   }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      @apply bg-bgColor text-black;
+    }
+  }
 }
 
 @media (hover: none) {
@@ -55,7 +61,7 @@
   }
 
   .videoWrapper {
-    @apply border-accent border rounded-10 relative w-full md:w-[calc(50%-10px)] h-[calc(((min(100vw,480px)-40px)/280)*191)] md:h-[227px] xl:h-[428px] overflow-hidden md:mb-3;
+    @apply border-accent border rounded-10 relative w-full md:w-[calc(50%-10px)] h-[calc(((min(100vw,480px)-40px)/280)*191)] md:h-[227px] xl:h-[428px] overflow-hidden mb-3 md:mb-0;
   }
 
   .navBarLinkHeader {
@@ -96,8 +102,83 @@
             2x);
   }
 
+  .heroSection {
+    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/hero-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit
+            dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/hero-bg-x2.png')];
+    background-image:
+      linear-gradient(
+        180deg,
+        #efefef 0%,
+        rgba(239, 239, 239, 0) 25%,
+        rgba(239, 239, 239, 0) 75%,
+        #efefef 100%
+      ),
+      -webkit-image-set(url('/images/hero-bg.webp') 1x, url('/images/hero-bg-x2.webp')
+            2x);
+  }
+
+  .schoolSection {
+    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/school-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit
+            dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/school-bg-x2.png')];
+    background-image:
+      linear-gradient(
+        180deg,
+        #efefef 0%,
+        rgba(239, 239, 239, 0) 25%,
+        rgba(239, 239, 239, 0) 75%,
+        #efefef 100%
+      ),
+      -webkit-image-set(url('/images/school-bg.webp') 1x, url('/images/school-bg-x2.webp')
+            2x);
+  }
+
+  .formatSection {
+    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/format-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit
+            dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/format-bg-x2.png')];
+    background-image:
+      linear-gradient(
+        180deg,
+        #efefef 0%,
+        rgba(239, 239, 239, 0) 25%,
+        rgba(239, 239, 239, 0) 75%,
+        #efefef 100%
+      ),
+      -webkit-image-set(url('/images/format-bg.webp') 1x, url('/images/format-bg-x2.webp')
+            2x);
+  }
+
+  .coursesSection {
+    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/courses-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit
+            dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/courses-bg-x2.png')];
+    background-image:
+      linear-gradient(
+        180deg,
+        #efefef 0%,
+        rgba(239, 239, 239, 0) 25%,
+        rgba(239, 239, 239, 0) 75%,
+        #efefef 100%
+      ),
+      -webkit-image-set(url('/images/courses-bg.webp') 1x, url('/images/courses-bg-x2.webp')
+            2x);
+  }
+
+  .reviewsSection {
+    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/reviews-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit
+            dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/reviews-bg-x2.png')];
+    background-image:
+      linear-gradient(
+        180deg,
+        #efefef 0%,
+        rgba(239, 239, 239, 0) 25%,
+        rgba(239, 239, 239, 0) 75%,
+        #efefef 100%
+      ),
+      -webkit-image-set(url('/images/reviews-bg.webp') 1x, url('/images/reviews-bg-x2.webp')
+            2x);
+  }
+
   .spinner {
-    width: 80px;
+    width: 120px;
     aspect-ratio: 1;
     border-radius: 50%;
     background:

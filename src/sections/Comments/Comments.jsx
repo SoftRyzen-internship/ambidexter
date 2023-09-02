@@ -15,7 +15,7 @@ export const Comments = ({ data, id }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
-    <section id={id} className="bg-commentsBg bg-no-repeat bg-center bg-cover">
+    <section id={id} className="reviewsSection">
       <Container>
         <h2 className="mb-6 md:mb-9 xl:mb-16 text-center text-middle md:text-large xl:text-large36">
           {label}
@@ -39,7 +39,7 @@ export const Comments = ({ data, id }) => {
               <CommentCard data={element} />
             </SwiperSlide>
           ))}
-          <MoreReviews label={btnLabel} />
+          <MoreReviews btnLabel={btnLabel} />
         </Swiper>
       </Container>
     </section>
@@ -55,9 +55,14 @@ Comments.propTypes = {
         name: PropTypes.string.isRequired,
         rating: PropTypes.string.isRequired,
         comment: PropTypes.string.isRequired,
+        alt: PropTypes.string.isRequired,
       }).isRequired,
     ).isRequired,
-    btnLabel: PropTypes.string.isRequired,
+    btnLabel: PropTypes.shape({
+      ariaLeft: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      ariaRight: PropTypes.string.isRequired,
+    }).isRequired,
   }),
   id: PropTypes.string.isRequired,
 };

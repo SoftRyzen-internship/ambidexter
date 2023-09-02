@@ -51,7 +51,7 @@ export default async function Home({ params: { locale } }) {
         formData={formData}
         id={id.format}
       />
-      <Courses data={courses} id={id.courses} />
+      <Courses data={courses} id={id.courses} locale={locale} />
       <Comments data={reviews} id={id.reviews} />
       <FreeClass
         data={advertise}

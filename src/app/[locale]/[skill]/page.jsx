@@ -3,6 +3,15 @@ import { getDictionary } from '@/utils/getDictionary';
 
 import { CoursePageList, FreeClass } from '@/sections';
 
+export const dynamicParams = false;
+
+export async function generateStaticParams({ params: { locale } }) {
+  return [
+    { locale: locale, skill: 'oratory-skill' },
+    { locale: locale, skill: 'acting-skill' },
+  ];
+}
+
 export async function generateMetadata({ params: { locale, skill } }) {
   const metaDictionary = await getMetaByLocale(locale);
 
@@ -11,6 +20,18 @@ export async function generateMetadata({ params: { locale, skill } }) {
   return {
     title: metaDictionary[pageSkill].title,
     description: metaDictionary[pageSkill].description,
+    metadataBase: new URL('https://ambidexter.vercel.app/'),
+    openGraph: {
+      title: metaDictionary[pageSkill].title,
+      description: metaDictionary[pageSkill].description,
+      url: 'https://ambidexter.vercel.app/',
+      siteName: 'Ambidexter',
+      locale: 'en',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+    },
   };
 }
 

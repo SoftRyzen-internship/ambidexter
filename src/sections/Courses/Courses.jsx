@@ -6,19 +6,16 @@ import { Container, CoursesCard, SectionTitle } from '@/components';
 import actorImg from 'public/images/actor.png';
 import oratorImg from 'public/images/orator.png';
 
-export const Courses = ({ data, id }) => {
+export const Courses = ({ data, id, locale }) => {
   const { cards, title, subTitle, btnShowMore } = data;
 
   const newData = [
-    { cardImg: actorImg, linkForBtn: routes.ACTING_SKILL },
-    { cardImg: oratorImg, linkForBtn: routes.ORATORY_SKILL },
+    { cardImg: actorImg, linkForBtn: `/${locale}${routes.ACTING_SKILL}` },
+    { cardImg: oratorImg, linkForBtn: `/${locale}${routes.ORATORY_SKILL}` },
   ].map((element, index) => ({ ...element, ...cards[index], btnShowMore }));
 
   return (
-    <section
-      id={id}
-      className="bg-coursesBg bg-no-repeat bg-center bg-cover text-center"
-    >
+    <section id={id} className="coursesSection text-center">
       <Container>
         <SectionTitle text={title} />
 

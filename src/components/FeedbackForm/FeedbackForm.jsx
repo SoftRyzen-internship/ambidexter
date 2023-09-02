@@ -29,7 +29,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
     watch,
     setValue,
   } = useForm({
-    mode: 'onSubmit',
+    mode: 'onChange',
     defaultValues: {
       name: localStorage.getItem('form')
         ? Object.values(JSON.parse(localStorage?.getItem('form')))[0]
@@ -67,6 +67,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
       setNotificationState('Correct');
       setIsLoading(false);
       localStorage.setItem('form', JSON.stringify(defaultValues));
+      setTimeout(toggleModal, 3000);
     } catch {
       setIsLoading(false);
       setNotificationState('Incorrect');
@@ -91,7 +92,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
             placeholder={name.placeholder}
             {...register('name', {
               required: true,
-              pattern: /^[а-яА-ЯіІїЇєЄґҐa-zA-Z\s'-]+$/,
+              pattern: /^(?!.*[ ]-|.*-(?=[ ]))([а-яА-ЯіІїЇєЄґҐa-zA-Z\s'-]+)$/,
               minLength: 3,
               maxLength: 100,
             })}
@@ -116,7 +117,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
             placeholder={phoneNumber.placeholder}
             {...register('phone', {
               required: true,
-              pattern: /^\+\d{12}$/,
+              pattern: /^\+\d{11,12}$/,
             })}
             className={
               errors.phone
@@ -139,7 +140,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
             placeholder={email.placeholder}
             {...register('email', {
               required: true,
-              pattern: /^(?!-)[A-Za-z0-9._-]+@[-A-Za-z0-9]+\.[A-Za-z]{2,}$/,
+              pattern: /^(?!-)[A-Za-z0-9._-]+@[-A-Za-z0-9]+(\.[A-Za-z]{2,})+$/,
               minLength: 6,
               maxLength: 63,
             })}
@@ -168,6 +169,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
 
         <button
           type="submit"
+          disabled={isLoading}
           className="bg-accent rounded-10 py-[8px] text-middle font-medium max-h-[35px] xl:max-h-[76px] xl:py-[16px] xl:text-large36 flex justify-center items-center hover:bg-white focus:bg-white hover:border-[2px] focus:border-[2px] border-accent duration-300 cursor-pointer"
         >
           {isLoading ? (
