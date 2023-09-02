@@ -1,46 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with
-[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=SoftRyzen+welcomes+you+to+this+resource)](https://softryzen.com/)
 
-## Getting Started
+# AMBIDEXTER
 
-First, run the development server:
+If you want to improve the ability to improvise, create interesting scenarios,
+interest and captivate the audience, learn not to lose balance in conflict
+situations, then you need to come to us. We wish you success and we are very
+glad that you will be able to use this resource
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the
-result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates
-as you edit the file.
+- Frontend
 
-This project uses
-[`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to
-automatically optimize and load Inter, a custom Google Font.
+  - [Next.js 13](https://nextjs.org/)
+  - [JavaSkript](https://uk.javascript.info/)
+  - [TailwindCSS](https://tailwindcss.com/)
+  - [Axios](https://axios-http.com/)
+  - [React Hook Form](https://react-hook-form.com/)
+  - [React-sckroll](https://www.npmjs.com/package/react-scroll)
+  - [React responsive](https://www.npmjs.com/package/react-responsive)
+  - [Swiper](https://swiperjs.com/)
+  - [EsLint](https://eslint.org/)
+  - [PropTypes](https://www.npmjs.com/package/prop-types)
 
-## Learn More
+- Backend
+  - [Nodemailer](https://nodemailer.com/)
+  - [Telegram API](https://core.telegram.org/)
+  - [Json](https://docs.fileformat.com/uk/web/json/)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Screenshots
 
-You can check out
-[the Next.js GitHub repository](https://github.com/vercel/next.js/) - your
-feedback and contributions are welcome!
+![AMBIDEXTER](./public/images/ambirexter.jpg)
 
-## Deploy on Vercel
+## Use of the site
 
-The easiest way to deploy your Next.js app is to use the
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-from the creators of Next.js.
+- The site is adapted for any devices
+- You will easily choose the language of communication
 
-Check out our
-[Next.js deployment documentation](https://nextjs.org/docs/deployment) for more
-details.
+  ![Locale](./public/images/locale.jpg)
+
+- Сlicking on the link will take you to the desired section
+
+  ![Navigation](./public/images/navigation.jpg)
+
+- You can sign up for the first free training at any time convenient for you
+
+  [<img src="./public/images/sign_up.jpg" width="120"/>](https://softryzen.com/)
+
+- Feedback service with Telegram-bot
+
+## Documentation
+
+1. [How to run the project locally ](./READMY.start.md)
+2. [localization ](./READMY.locale.md)
+3. [Feedback Form ](./READMY.feedback_form.md)
+
+Feedback Form
+
+## Contacts
+
+#### Web site
+
+[<img src="./public/images/softRyzen.jpg" width="150"/>](https://softryzen.com/)
+
+#### YouTube
+
+[<img src="./public/images/softRyzen.jpg" width="150"/>](https://www.youtube.com/watch?v=_X7NLwgdfgI)
