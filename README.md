@@ -43,6 +43,8 @@ resource
   - [React Hook Form](https://react-hook-form.com/)
   - [React-scroll](https://www.npmjs.com/package/react-scroll)
   - [React responsive](https://www.npmjs.com/package/react-responsive)
+  - [Nodemailer](https://nodemailer.com/)
+  - [Telegram API](https://core.telegram.org/)
   - [Swiper](https://swiperjs.com/)
   - [EsLint](https://eslint.org/)
   - [PropTypes](https://www.npmjs.com/package/prop-types)
