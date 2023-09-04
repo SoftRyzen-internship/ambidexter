@@ -81,9 +81,9 @@ export const FeedbackForm = ({ toggleModal, data }) => {
         className=" flex flex-col border border-accent rounded-10 bg-white w-[280px] mx-auto px-[12px] pb-[64px] pt-[56px] md:w-[452px] md:px-[24px] md:pt-[61px] xl:w-[844px] xl:px-[48px] xl:pt-[108px] xl:pb-[100px]"
       >
         <label className="formLabel relative flex flex-col">
-          <p className="mb-[8px]">
+          <span className="mb-[8px]">
             {name.label} <span className="text-red">*</span>
-          </p>
+          </span>
 
           <input
             type="text"
@@ -106,9 +106,9 @@ export const FeedbackForm = ({ toggleModal, data }) => {
         </label>
 
         <label className="formLabel relative flex flex-col">
-          <p className="mb-[8px]">
+          <span className="mb-[8px]">
             {phoneNumber.label} <span className="text-red">*</span>
-          </p>
+          </span>
 
           <input
             type="all"
@@ -129,9 +129,9 @@ export const FeedbackForm = ({ toggleModal, data }) => {
         </label>
 
         <label className="formLabel relative flex flex-col">
-          <p className="mb-[8px]">
+          <span className="mb-[8px]">
             {email.label} <span className="text-red">*</span>
-          </p>
+          </span>
 
           <input
             type="text"
@@ -154,7 +154,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
         </label>
 
         <label className="formLabel mb-[24px]">
-          <p className="mb-[8px]">{message.label}</p>
+          <span className="block mb-[8px]">{message.label}</span>
           <textarea
             {...register('subject', {
               required: false,
