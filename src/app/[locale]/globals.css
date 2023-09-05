@@ -163,7 +163,7 @@
   }
 
   .reviewsSection {
-    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/reviews-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit
+    @apply min-h-[630px] md:min-h-[835px] xl:min-h-[1080px] bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/reviews-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit
             dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/reviews-bg-x2.png')];
     background-image:
       linear-gradient(
