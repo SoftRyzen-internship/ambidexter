@@ -24,6 +24,7 @@ export const Comments = ({ data, id }) => {
         <Swiper
           modules={[Keyboard]}
           loop={true}
+          lazyPreloadPrevNext={1}
           keyboard={{
             enabled: true,
             onlyInViewport: true,
