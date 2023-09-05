@@ -65,7 +65,7 @@
   }
 
   .navBarLinkHeader {
-    @apply hover:text-accent focus:text-accent;
+    @apply hover:text-accent focus:text-accent transition-colors duration-300;
   }
 
   .navBarLinkFooter {
