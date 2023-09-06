@@ -42,10 +42,7 @@
     @apply font-normal md:text-base xl:text-large;
   }
   .videoPoster {
-    @apply absolute top-0 left-0 w-full h-full hover:cursor-pointer opacity-100 max-h-screen transition-opacity duration-300;
-    @apply after:h-0 after:w-0 after:absolute after:bottom-1/2 after:right-1/2 after:translate-x-3/4 after:translate-y-1/2;
-    @apply after:border-transparent after:border-l-[48px] after:border-y-[28px] after:border-l-accent;
-    @apply after:transition-transform duration-300 after:hover:scale-110;
+    @apply absolute top-0 left-0 w-full h-full hover:cursor-pointer opacity-100 max-h-screen transition-opacity duration-300 after:h-0 after:w-0 after:absolute after:bottom-1/2 after:right-1/2 after:translate-x-3/4 after:translate-y-1/2 after:border-transparent after:border-l-[48px] after:border-y-[28px] after:border-l-accent after:transition-transform after:hover:scale-110;
   }
 
   .videoActive .videoPoster {
@@ -88,8 +85,8 @@
   }
 
   .freeClassSection {
-    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/free-bg-xl.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit
-            dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/free-bg-xl-x2.png')];
+    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/free-bg-xl.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/free-bg-xl-x2.png')];
+
     background-image:
       linear-gradient(
         180deg,
@@ -103,8 +100,8 @@
   }
 
   .heroSection {
-    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/hero-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit
-            dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/hero-bg-x2.png')];
+    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/hero-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/hero-bg-x2.png')];
+
     background-image:
       linear-gradient(
         180deg,
@@ -118,8 +115,8 @@
   }
 
   .schoolSection {
-    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/school-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit
-            dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/school-bg-x2.png')];
+    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/school-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/school-bg-x2.png')];
+
     background-image:
       linear-gradient(
         180deg,
@@ -133,8 +130,8 @@
   }
 
   .formatSection {
-    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/format-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit
-            dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/format-bg-x2.png')];
+    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/format-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/format-bg-x2.png')];
+
     background-image:
       linear-gradient(
         180deg,
@@ -148,8 +145,8 @@
   }
 
   .coursesSection {
-    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/courses-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit
-            dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/courses-bg-x2.png')];
+    @apply bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/courses-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/courses-bg-x2.png')];
+
     background-image:
       linear-gradient(
         180deg,
@@ -163,8 +160,8 @@
   }
 
   .reviewsSection {
-    @apply min-h-[630px] md:min-h-[835px] xl:min-h-[1080px] bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/reviews-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit
-            dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/reviews-bg-x2.png')];
+    @apply min-h-[630px] md:min-h-[835px] xl:min-h-[1080px] bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/reviews-bg.png')] overflow-hidden bg-cover bg-center bg-no-repeat dpr:bg-inherit dpr:bg-[linear-gradient(180deg,#efefef_0%,rgba(239,239,239,0)25%,rgba(239,239,239,0)75%,#efefef_100%),url('/images/reviews-bg-x2.png')];
+
     background-image:
       linear-gradient(
         180deg,

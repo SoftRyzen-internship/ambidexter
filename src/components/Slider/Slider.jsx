@@ -14,6 +14,7 @@ export const Slider = ({ children, data, Component }) => {
     <Swiper
       modules={[Keyboard]}
       loop={true}
+      lazyPreloadPrevNext={1}
       keyboard={{
         enabled: true,
         onlyInViewport: true,
