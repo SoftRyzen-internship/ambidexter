@@ -1,14 +1,9 @@
 'use client';
 
 import PropTypes from 'prop-types';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Keyboard } from 'swiper/modules';
-import { useMediaQuery } from 'react-responsive';
 import { useInView } from 'react-intersection-observer';
 
-import 'swiper/css';
-
-import { CommentCard, Container, MoreReviews } from '@/components';
+import { CommentCard, Container, MoreReviews, Slider } from '@/components';
 
 export const Comments = ({ data, id }) => {
   const { label, comments, btnLabel } = data;
@@ -16,8 +11,6 @@ export const Comments = ({ data, id }) => {
   const { ref, inView } = useInView({
     threshold: 0,
   });
-
-  const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
     <section ref={ref} id={id} className="reviewsSection">
@@ -27,26 +20,9 @@ export const Comments = ({ data, id }) => {
         </h2>
 
         {inView && (
-          <Swiper
-            modules={[Keyboard]}
-            loop={true}
-            keyboard={{
-              enabled: true,
-              onlyInViewport: true,
-            }}
-            spaceBetween={20}
-            slidesPerView={isMobile ? 1 : 3}
-          >
-            {comments.map((element, index) => (
-              <SwiperSlide
-                key={index}
-                className="max-w-[320px] md:max-w-[216px] xl:max-w-[414px]"
-              >
-                <CommentCard data={element} />
-              </SwiperSlide>
-            ))}
+          <Slider data={comments} Component={CommentCard}>
             <MoreReviews btnLabel={btnLabel} />
-          </Swiper>
+          </Slider>
         )}
       </Container>
     </section>

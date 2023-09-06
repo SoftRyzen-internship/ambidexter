@@ -25,3 +25,4 @@ export * from './RelevantFor/RelevantFor';
 export * from './ForWhomImage/ForWhomImage';
 export * from './ForWhomImageBw/ForWhomImageBw';
 export * from './ItemCourseCard/ItemCourseCard';
+export * from './Slider/Slider';
