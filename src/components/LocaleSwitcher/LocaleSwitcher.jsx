@@ -48,7 +48,7 @@ export const LocaleSwitcher = ({ className }) => {
           ) : (
             <Link
               href={redirectedPathName(locale)}
-              className="font-normal p-3 xl:p-0 hover:text-accent focus:text-accent"
+              className="font-normal p-3 xl:p-0 hover:text-accent focus:text-accent transition-colors duration-300"
             >
               {titleLocale(locale)}
             </Link>
