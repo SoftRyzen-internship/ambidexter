@@ -66,10 +66,10 @@
   }
 
   .navBarLinkFooter {
-    @apply hover:text-white focus:text-white;
+    @apply hover:text-white focus:text-white transition-colors duration-300;
   }
   .navBarLinkActive {
-    @apply text-secondary focus:text-secondary  hover:text-secondary;
+    @apply text-secondary focus:text-secondary hover:text-secondary;
   }
 
   .contactsIcon {
