@@ -35,7 +35,7 @@ export const Slider = ({ children, data, Component }) => {
   );
 };
 
-Swiper.propTypes = {
+Slider.propTypes = {
   children: PropTypes.node,
   data: PropTypes.arrayOf(
     PropTypes.shape({
@@ -46,5 +46,5 @@ Swiper.propTypes = {
       alt: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
-  Component: PropTypes.node.isRequired,
+  Component: PropTypes.elementType.isRequired,
 };
