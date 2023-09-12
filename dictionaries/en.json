@@ -454,7 +454,8 @@
     },
     "message": {
       "label": "Message",
-      "placeholder": "Your message..."
+      "placeholder": "Your message...",
+      "errors": ["Message is too long"]
     },
     "notification": {
       "error": "An error occurred while sending!",
