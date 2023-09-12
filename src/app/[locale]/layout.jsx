@@ -16,18 +16,18 @@ export async function generateMetadata({ params }) {
   return {
     title: metaDictionary.home.title,
     description: metaDictionary.home.description,
-    metadataBase: new URL('https://ambidexter.vercel.app/'),
+    metadataBase: new URL('https://www.ambidexterschool.com/'),
     openGraph: {
       title: metaDictionary.home.title,
       description: metaDictionary.home.description,
-      url: 'https://ambidexter.vercel.app/',
+      url: 'https://www.ambidexterschool.com/',
       siteName: 'Ambidexter',
-      locale: 'en',
+      locale: params.locale,
       type: 'website',
       manifest: '/meta/site.webmanifest',
-      // alternates: {
-      //  canonical: 'https://ambidexter.vercel.app/',
-      // },
+      alternates: {
+        canonical: 'https://www.ambidexterschool.com/',
+      },
     },
     twitter: {
       card: 'summary_large_image',
