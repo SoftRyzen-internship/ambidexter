@@ -18,7 +18,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
     name: '',
     phone: '',
     email: '',
-    subject: '',
+    message: '',
   };
 
   const {
@@ -40,7 +40,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
       email: localStorage.getItem('form')
         ? Object.values(JSON.parse(localStorage?.getItem('form')))[2]
         : '',
-      subject: localStorage.getItem('form')
+      message: localStorage.getItem('form')
         ? Object.values(JSON.parse(localStorage?.getItem('form')))[3]
         : '',
     },
@@ -88,7 +88,7 @@ export const FeedbackForm = ({ toggleModal, data }) => {
           <input
             type="text"
             id="name"
-            name="fullname"
+            name="name"
             placeholder={name.placeholder}
             {...register('name', {
               required: true,
@@ -153,18 +153,26 @@ export const FeedbackForm = ({ toggleModal, data }) => {
           {errors.email && <IncorrectForm text={email.errors} />}
         </label>
 
-        <label className="formLabel mb-[24px]">
+        <label className="formLabel relative mb-[24px]">
           <span className="block mb-[8px]">{message.label}</span>
           <textarea
-            {...register('subject', {
+            {...register('message', {
               required: false,
+              maxLength: 500,
             })}
-            id="subject"
-            name="subject"
+            id="message"
+            name="message"
             placeholder={message.placeholder}
-            className="w-full text-base xl:text-large resize-none 
-             h-[146px] border rounded-10 border-accent px-[12px] py-[8px] leading-[1.15] placeholder:text-black placeholder:opacity-50 placeholder:text-base placeholder:font-normal  xl:px-[24px] xl:py-[16px] xl:placeholder:text-large xl:h-[287px]"
+            className={`w-full text-base xl:text-large resize-none 
+             h-[146px] border border-accent rounded-10 px-[12px] py-[8px] leading-[1.15] placeholder:text-black placeholder:opacity-50 placeholder:text-base placeholder:font-normal  xl:px-[24px] xl:py-[16px] xl:placeholder:text-large xl:h-[287px] 
+              ${
+                errors.message
+                  ? 'formInput border-red placeholder:text-red text-red'
+                  : 'formInput'
+              }`}
           ></textarea>
+
+          {errors.message && <IncorrectForm text={message.errors} />}
         </label>
 
         <button
